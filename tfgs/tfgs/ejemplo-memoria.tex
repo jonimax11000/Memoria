@@ -1,0 +1,131 @@
+\documentclass[twoside,spanish,a4paper,12pt]{tfg}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, shapes.geometric, positioning}
+
+
+% Editar la titulación
+\titulacion{Grado en Ingeniería \\ Multimedia}
+
+% Editar el título
+\title{Diseño e implementación de un teclado virtual multilingüe para proyectos de VR}
+
+% Si es una alumna se debe usar
+% \authorlabel{Autora}
+\authorlabel{Autor}
+% Editar el nombre
+\author{Jonathan David Signes Falcó}
+
+
+% Si hay varios tutores:
+% \tutorlabel{Tutores}
+% \tutor{Nombre del tutor 1 \\[2mm] Nombre del turor2}
+% Si el tutor es masculino:
+% \tutorlabel{Tutor}
+\tutorlabel{Tutor}
+% Editar
+\tutor{Javier Peris Sevilla}
+
+% Editar: Poner mes y año de la convocatoria de lectura del TFM
+\convocatoria{Marzo 2025}
+
+\begin{document}
+	
+	% NO QUITAR ESTOS ELEMENTOS
+	\portada
+	\cleardoublepage
+	\contraportada
+	\cleardoublepage
+	\declaracion
+	\cleardoublepage
+	
+	
+	% Editar: Resumen en Español (obligatorio)
+	\begin{resumen}
+		Diseño e implementación de un teclado virtual configurable para tener una simulación de un teclado físico y un teclado plano .
+		
+		Este estaría hecho con Unity y estarían implementados siete u ocho idiomas cuyos teclados usen sus propios caracteres. Entre estos estarían el ruso, alemán, francés, español, griego coreano y árabe.
+	\end{resumen}
+	\cleardoublepage
+	
+	% Editar: Resumen en Inglés
+	\begin{abstract}
+		Disseny i implementació d'un teclat virtual configurable per a tindre una simulació d'un teclat físic i un teclat pla.
+		
+		Aquest estaria fet amb Unity i estarien implementats set o huit idiomes els teclats dels quals usen els seus propis caràcters. Entre ells estarien el rus, alemany, francés, espanyol, grec, coreà i àrab.
+	\end{abstract}
+	\cleardoublepage
+	
+	% Editar: Resumen en Valenciano
+	\begin{resum}
+		Design and implementation of a configurable virtual keyboard to simulate a physical keyboard and a flat keyboard.
+		
+		This would be made with Unity and would implement seven or eight languages whose keyboards use their own characters. These would include Russian, German, French, Spanish, Greek, Korean, and Arabic.
+	\end{resum}
+	\cleardoublepage
+	
+	
+	% Editar: Agradecimientos (opcional)
+	\begin{agradecimientos}
+		En primer lugar quiero agradecer a todos aquellos que me han apoyado durante estos años, en especial al profesorado que me ha acompañado en las distintas etapas de mi vida académica, han sabido ver en mi valores y capacidades que han ido desarrollándose.
+		
+		Asimismo quiero dar las gracias a mi familia por apoyarme incondicionalmente y soportar mis desvelos con cariño y paciencia.
+	\end{agradecimientos}
+	\cleardoublepage
+	
+	\tableofcontents
+	
+	\pagestyle{tfg}
+	\justify
+	
+	% Las figuras se buscan en el directorio figs
+	
+	% Cada capítulo está en su propio fichero tex. Ver el directorio tex.
+	
+	% La bibliografía está dentro del directorio bib
+	\chapter{Introducción}
+	\input{tex/introduccion.tex}
+	
+	\chapter{Estado del arte}
+	\input{tex/estado_arte.tex}
+	
+	\chapter{Requisitos, especificaciones, coste, riesgos, viabilidad}
+	\input{tex/requisitos.tex}
+	
+	\chapter{Análisis}
+	\input{tex/analisis.tex}
+	
+	\chapter{Diseño}
+	\input{tex/diseno.tex}
+	
+	\chapter{Implementación y pruebas}
+	\input{tex/implementacion_pruebas.tex}
+	
+	\chapter{Conclusiones}
+	\input{tex/conclusiones.tex}
+	
+	
+	
+	\pagestyle{appendix}
+	
+	\appendix
+	\chapter{Apéndice}
+	\input{tex/apendice.tex}
+	
+	\addcontentsline{toc}{chapter}{Bibliografía}
+	\bibliographystyle{unsrt}
+	\bibliography{bib/bibliografia}
+	
+	
+	
+	
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
