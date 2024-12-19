@@ -1,3 +1,117 @@
 % Contenidos del capítulo.
 % Las secciones presentadas son orientativas y no representan
 % necesariamente la organización que debe tener este capítulo.
+\section{Modelado del dominio}
+%Diagrama de Clases del Dominio:
+%Explicación de las clases principales, atributos y métodos.
+%Relación entre clases (asociaciones, generalizaciones, dependencias).
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{Diagrama_de_Clases.png}
+	\caption{Diagrama de Clases Detallado - Relación entre clases}
+	\label{fig:diagrama_clases}
+\end{figure}
+
+Ahora ya con el diagrama de clases ya hecho, se requiere recalcar que se le nombrará teclado al conjunto de todas estas a la hora de la realización de los otros diagramas
+de la memoria para facilitar su visualización.
+
+\section{Análisis de casos de uso}
+%Diagrama de Casos de Uso:
+%Descripción de los casos de uso principales.
+%Interacción entre actores y el sistema.
+%Escenarios de casos de uso con flujos de eventos.
+En el apartado \ref{sec:3.1}, se han mostrado todos los requisitos del sistema, por lo que a continuación se mostrará un diagrama de casos de uso que contiene todas las funcionalidades que reflejan esos requisitos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{casos_de_uso_completados.png}
+	\caption{Diagrama de casos de uso}
+	\label{fig:diagrama_casos_uso_si}
+\end{figure}
+
+
+
+\section{Modelado de interacción}
+%Diagramas de Secuencia:
+%Ejemplos de secuencias para casos de uso importantes.
+%Descripción de la interacción entre objetos a lo largo del tiempo.
+Como, por un lado, hay casos de uso que no se han podido realizar y, por el otro, los casos de uso puede que si que se han completado se pueden realizar sin un orden específico, a continuación se van a mostrar  distintos diagramas de secuencia de los casos de uso completados, poniendo el de escribir como caso final en todos.
+
+
+En este diagrama de secuencia se muestra el cambio entre todos los idiomas en orden. Como se podrá observar, el tipo de dato de entrada en la función de cambio de idioma es un int, representados del cero al cinco, ya que se trata de un vector interno que contiene todos los idiomas. Esto no afecta al usuario ya que el interfaz visual que tiene, son los nombres de los distintos idiomas escritos en su sus grafías correspondientes mostrados en un dropbox.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Secuencia Idiomas.png}
+	\caption{Diagrama de secuencia para cambiar de idiomas y escribir una letra}
+	\label{fig:diagrama_secuencia_idiomas}
+\end{figure}
+
+En el próximo diagrama, se mostrará el cambio al teclado plano seguido de un cambio al teclado físico y finalizando con la escritura de un espacio. El usuario solo debe tocar un botón predefinido para esto.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Secuencia Cambio Teclados.png}
+	\caption{Diagrama de secuencia para cambiar tipo de teclado y añadir un espacio}
+	\label{fig:diagrama_secuencia_tipo_teclado}
+\end{figure}
+
+
+\section{Análisis de comportamiento}
+%Escenarios de Uso:
+%Descripción detallada de escenarios típicos de uso.
+%Ejemplos prácticos de cómo se utilizará el sistema.
+
+\begin{itemize}
+	\item Descripción detallada de escenarios típicos de uso:
+	\begin{itemize}
+		\item Escenario 1: Cambio de idioma en el teclado virtual
+		\begin{itemize}
+			\item El usuario inicia la aplicación de realidad virtual.
+			\item El teclado aparece con el idioma del sistema operativo si coincide con uno de los idiomas disponibles, si no, aparece en inglés.
+			\item El usuario selecciona el menú de configuración del teclado.
+			\item El usuario elige uno de los seis idiomas disponibles.
+			\item El teclado virtual cambia al idioma seleccionado.
+		\end{itemize}
+		\item Escenario 2: Cambio de tipo de teclado (físico y plano)
+		\begin{itemize}
+			\item El usuario inicia la aplicación de realidad virtual.
+			\item El teclado virtual aparece en su configuración predeterminada, que es el teclado físico.
+			\item El usuario pulsa el botón de cambio de teclado.
+			\item El teclado virtual cambia de una representación física a una plana.
+		\end{itemize}
+	\end{itemize}
+	
+	\item Ejemplos prácticos de cómo se utilizará el sistema:
+	\begin{itemize}
+		\item Ejemplo 1: Uso en un juego de RV en varios idiomas
+		\begin{itemize}
+			\item El usuario crea el juego y necesita usar el Asset.
+			\item El usuario selecciona el tipo de teclado (físico o plano) según su preferencia.
+			\item El usuario cambia la forma de cambiar de idioma para adaptarlo a su propio menú.
+			\item El usuario configura el juego y el teclado según sus necesidades.
+		\end{itemize}
+		
+		\item Ejemplo 2: Redacción de datos en un programa de RV
+		\begin{itemize}
+			\item El usuario crea el programa y se descarga el Asset.
+			\item El usuario pone el teclado virtual en el idioma deseado.
+			\item El usuario selecciona el tipo de teclado (físico o plano) según su preferencia.
+			\item El usuario configura la introducción de datos para usar el teclado.
+		\end{itemize}
+		
+		\item Ejemplo 3: Simulación de mecanografía en RV
+		\begin{itemize}
+			\item El usuario crea el simulador y se descarga el Asset.
+			\item El usuario pone el teclado virtual en el idioma deseado.
+			\item El usuario selecciona el de teclado físico o plano.
+			\item El usuario configura la introducción de datos para usar el teclado.
+			\item El usuario configura los objetivos mecanográficos necesarios.
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+
+
+
+
