@@ -1,24 +1,245 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{rojas2024accented}
+Cristopher Rojas, Marius Broecker, Colin Asch, Pascal Knierim, Thomas Kosch,
+  and Florian Alt.
+\newblock Accented character entry using physical keyboards in virtual reality.
+\newblock {\em arXiv preprint arXiv:2409.01709}, 2024.
+
+\bibitem{peng2024exploring}
+Xinzhu Peng, Hassan Awad, Yifan Li, I.~Scott MacKenzie, and Jindong He.
+\newblock Exploring alternative text input modalities in virtual reality: A
+  comparative study.
+\newblock In {\em Proceedings of the 2024 CHI Conference on Human Factors in
+  Computing Systems}. ACM, 2024.
+
+\bibitem{gonzalez2019reconviguration}
+Mariano Gonzalez, Pascal Knierim, Jan Gugenheimer, and Enrico Rukzio.
+\newblock Reconviguration: Reconfiguring physical keyboards in virtual reality.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  25(11):3190--3201, 2019.
+
+\bibitem{rojas2024}
+Rojas et~al.
+\newblock Teachers' educational design using adaptive vr-environments in
+  multilingual study guidance to promote students' conceptual knowledge.
+\newblock 2024.
+
+\bibitem{adaptiveVR}
+Rojas et~al.
+\newblock The use of adaptive vr environments to foster students learning in
+  multilingual study guidance.
+\newblock 2023.
+
+\bibitem{vrscience}
+Zhang et~al.
+\newblock The integration of virtual reality-enhanced multimodal meaning-making
+  improves knowledge acquisition and disciplinary literacy development in
+  science classrooms.
+\newblock 2023.
+
+\bibitem{reconviguration}
+D.~Schneider, Alexander Otte, Travis Gesslein, P.~Gagel, Bastian Kuth,
+  Mohamad~Shahm Damlakhi, Oliver Dietz, E.~Ofek, M.~Pahud, P.~Kristensson,
+  Jörg Müller, and Jens Grubert.
+\newblock Reconviguration: Reconfiguring physical keyboards in virtual reality.
+\newblock volume~25, pages 3190--3201, 2019.
+
+\bibitem{kat}
+Author Unknown.
+\newblock Creating and augmenting keyboards for extended reality with the
+  keyboard augmentation toolkit.
+\newblock 2023.
+
+\bibitem{hololingo}
+Schmidt et~al.
+\newblock Foreign language tandem learning in social vr.
+\newblock 2023.
+
+\bibitem{mdst}
+Author Unknown.
+\newblock Increasing inclusion and engagement in foreign language learning.
+\newblock 2023.
+
+\bibitem{embracing}
+Author Unknown.
+\newblock Embracing physical keyboards for virtual reality.
+\newblock 2020.
+
+\bibitem{Human-Drone}
+Giovanni Caggianese, Luigi Gallo, Paolo Neroni, and Giuseppe Vitiello.
+\newblock A natural human-drone embodied interface: Empirical comparison with a
+  traditional interface.
+\newblock {\em Frontiers in Robotics and AI}, 2020.
+
+\bibitem{NaturalUserInterfaces}
+Yasin Kaya.
+\newblock Natural user interfaces.
+\newblock {\em arXiv preprint arXiv:1709.01066}, 2017.
+
+\bibitem{TheNaturalUserInterfaces}
+Daniel Wigdor and Dennis Wixon.
+\newblock The natural user interface.
+\newblock In {\em Brave NUI World: Designing Natural User Interfaces for Touch
+  and Gesture}, pages 1--24. Morgan Kaufmann, 2011.
+
+\bibitem{GestureUserInterfaces}
+Prashant Kumar and Sandeep Singh.
+\newblock Gesture based natural user interfaces.
+\newblock {\em International Journal of Computer Applications}, 75(7), 2013.
+
+\bibitem{AlexaVSCortana}
+Matthew~B. Hoy.
+\newblock Alexa vs. siri vs. cortana vs. google assistant: A comparison of
+  speech-based natural user interfaces.
+\newblock {\em Medical Reference Services Quarterly}, 37(1):81--88, 2018.
+
+\bibitem{NotNaturalUserInterfaces}
+Donald~A. Norman.
+\newblock Natural user interfaces are not natural.
+\newblock {\em Interactions}, 17(3):6--10, 2010.
+
+\bibitem{NUI-VR2}
+Yi~Gao, Cheng Chang, Xiaxia Yu, Pengjin Pang, Nian Xiong, and Chuan Huang.
+\newblock A vr-based volumetric medical image segmentation and visualization
+  system with natural human interaction.
+\newblock {\em Virtual Reality}, 26(3):645--661, 2022.
+
+\bibitem{FrameworkVR}
+Giovanni Caggianese, Luigi Gallo, Paolo Neroni, and Nicola Turturro.
+\newblock Virtual reality applications: Guidelines to design natural user
+  interface.
+\newblock In {\em Proceedings of the 2018 International Conference on Augmented
+  Reality, Virtual Reality and Computer Graphics (SALENTO AVR)}, pages 3--14,
+  2018.
+
+\bibitem{ZoomFwd}
+Samir Bourouis, Amina Messaci, and Nadia Zenati-Henda.
+\newblock Zoom‐fwd: Efficient technique for 3d gestual interaction with
+  distant and occluded objects in virtual reality.
+\newblock {\em Computer Animation and Virtual Worlds}, 31(5):e2033, 2020.
+
+\bibitem{abdlkarim2024methodological}
+Diar Abdlkarim, Massimiliano Di~Luca, Poppy Aves, Mohamed Maaroufi, Sang-Hoon
+  Yeo, R.~Chris Miall, Peter Holland, and Joseph~M. Galea.
+\newblock A methodological framework to assess the accuracy of virtual reality
+  hand-tracking systems: A case study with the meta quest 2.
+\newblock {\em Behavior Research Methods}, 56:1052--1063, 2024.
+
+\bibitem{GestureOverview}
+S.~Kumar, M.~Singh, and A.~Rai.
+\newblock Gesture based interaction nui: An overview.
+\newblock {\em International Journal of Engineering Trends and Technology
+  (IJETT)}, 9(1):319--324, 2014.
+
+\bibitem{RedefiningNUI}
+Luigi Gallo, Giovanni Caggianese, Paolo Neroni, and Nicola Turturro.
+\newblock Redefining natural user interface.
+\newblock In {\em Extended Abstracts of the 2018 CHI Conference on Human
+  Factors in Computing Systems}, pages 1--4. ACM, 2018.
+
+\bibitem{AffordanceHMD}
+Jinhyuk Kim, Jaekwang Cha, Hojun Lee, and Shiho Kim.
+\newblock Natural user interaction requires good affordance when using a
+  head-mounted display.
+\newblock In {\em Proceedings of the 8th International Conference on Advances
+  in Multimedia (MMEDIA)}, pages 56--61, 2016.
+
+\bibitem{FacialGesture}
+Jinhyuk Kim, Jaekwang Cha, Hojun Lee, and Shiho Kim.
+\newblock Hand-free natural user interface for vr hmd with ir based facial
+  gesture tracking sensor.
+\newblock In {\em Proceedings of the 19th ACM Symposium on Virtual Reality
+  Software and Technology (VRST)}, pages 1--2, 2017.
+
+\bibitem{Frazier2018An}
+Zackery Frazier.
+\newblock An implementation and usability study of a natural user interface
+  virtual piano.
+\newblock 2018.
+
+\bibitem{Kim2014Message}
+Hyun-Woo Kim, Eun-Ha Song, and Y.~Jeong.
+\newblock Message input scheme based on gyro sensor in smart embedded devices
+  for nui.
+\newblock pages 529--534, 2014.
+
+\bibitem{two_hands_vr}
+Caglar Yildirim.
+\newblock Designing with two hands in mind?: A review of mainstream vr
+  applications with upper-limb impairments in mind.
+\newblock In {\em Proceedings of the 16th International Workshop on Immersive
+  Mixed and Virtual Environment Systems (MMVE)}, 2024.
+
+\bibitem{reinforcement_learning_vr}
+M.~Rasel Mahmud and Eshed Ohn-Bar.
+\newblock Designing accessible virtual reality interfaces using reinforcement
+  learning for users with motor and sensory impairments.
+\newblock {\em Assistive Technologies}, 2024.
+\newblock Preprint disponible en ArXiv: https://arxiv.org/abs/2312.15196.
+
+\bibitem{analyzing_challenges}
+Noor Al-Mansoori, Ahmad Bader, Rawad Al-Haddad, and Hossam Helal.
+\newblock Analyzing the challenges and opportunities for making vr/ar
+  experiences accessible to individuals with visual, auditory and mobility
+  impairments.
+\newblock {\em International Journal of Innovative Science and Research
+  Technology}, 2024.
+
+\bibitem{inclusive_arvr}
+Chris Creed, Maadh Al-Kalbani, Arthur Theil, Sayan Sarcar, and Ian Williams.
+\newblock Inclusive ar/vr: Accessibility barriers for immersive technologies.
+\newblock {\em Universal Access in the Information Society}, 2023.
+
+\bibitem{vr_cultural_heritage}
+Valeria Minucciani, Michela Benente, Francesco Strada, and Andrea Bottino.
+\newblock Virtual reality for cultural heritage: Emotional involvement and
+  design for all.
+\newblock In {\em Proceedings of the 9th International Conference on Applied
+  Human Factors and Ergonomics (AHFE 2024)}, 2024.
+
+\bibitem{multimodal_feedback}
+Jacob~A. Tate, Samantha~L. Rhea, Kathleen~E. Norman, Samantha~J. Heldt, Aryn~Z.
+  Gittis, Conrad Tucker, and Bradley~S. Dicianno.
+\newblock Multimodal feedback methods for advancing the accessibility of
+  immersive virtual reality for people with balance impairments due to multiple
+  sclerosis.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics}, 2024.
+
+\bibitem{neurodivergent_xr}
+Tamari Lukava and Dafne Zuleima~Morgado Ramirez.
+\newblock Two sides of the same coin: Accessibility practices and
+  neurodivergent users' experience of extended reality.
+\newblock {\em Journal of Enabling Technologies}, 2022.
+
+\bibitem{Wu2017A}
+Chien-Min Wu, Chih-Wen Hsu, Tzu-Kuei Lee, and Shana Smith.
+\newblock A virtual reality keyboard with realistic haptic feedback in a fully
+  immersive virtual environment.
+\newblock {\em Virtual Reality}, 21:19--29, 2017.
+
+\bibitem{Kern2023Text}
+Florian Kern, Florian Niebling, and Marc~Erich Latoschik.
+\newblock Text input for non-stationary xr workspaces: Investigating tap and
+  word-gesture keyboards in virtual and augmented reality.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  29:2658--2669, 2023.
+
+\bibitem{Boletsis2019Text}
+Costas Boletsis and Stian Kongsvik.
+\newblock Text input in virtual reality: A preliminary evaluation of the
+  drum-like vr keyboard.
+\newblock {\em Technologies}, 2019.
+
+\bibitem{Banerjee2024Machine-Learning-Based}
+Kakoli Banerjee, Amarjeet Singh, Naved Akhtar, and Indira Vats.
+\newblock Machine-learning-based accessibility system.
+\newblock {\em SN Comput. Sci.}, 5:294, 2024.
 
 \bibitem{ieee830-1993}
 {IEEE}.
 \newblock {IEEE Recommended Practice for Software Requirements Specifications
   (IEEE Std 830-1993)}.
 \newblock Standard IEEE Std 830-1993, IEEE, 1993.
-
-\bibitem{latexcompanion}
-Michel Goossens, Frank Mittelbach, and Alexander Samarin.
-\newblock {\em The \LaTeX\ Companion}.
-\newblock Addison-Wesley, Reading, Massachusetts, 1993.
-
-\bibitem{einstein}
-Albert Einstein.
-\newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
-  electrodynamics of moving bodies].
-\newblock {\em Annalen der Physik}, 322(10):891--921, 1905.
-
-\bibitem{knuthwebsite}
-Donald Knuth.
-\newblock Knuth: Computers and typesetting.
 
 \end{thebibliography}

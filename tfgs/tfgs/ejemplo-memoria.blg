@@ -5,44 +5,59 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bib/bibliografia.bib
-You've used 4 entries,
+Warning--I didn't find a database entry for "Wan2024Design"
+Warning--I didn't find a database entry for "latexcompanion"
+Warning--I didn't find a database entry for "einstein"
+Warning--I didn't find a database entry for "knuthwebsite"
+Warning--empty journal in rojas2024
+Warning--empty journal in adaptiveVR
+Warning--empty journal in vrscience
+Warning--empty booktitle in reconviguration
+Warning--empty journal in kat
+Warning--empty booktitle in hololingo
+Warning--empty journal in mdst
+Warning--empty journal in embracing
+Warning--empty journal in Frazier2018An
+Warning--empty journal in Kim2014Message
+You've used 39 entries,
             1791 wiz_defined-function locations,
-            468 strings with 4022 characters,
-and the built_in function-call counts, 664 in all, are:
-= -- 56
-> -- 23
-< -- 1
-+ -- 10
-- -- 6
-* -- 32
-:= -- 114
-add.period$ -- 11
-call.type$ -- 4
-change.case$ -- 3
+            657 strings with 11300 characters,
+and the built_in function-call counts, 8407 in all, are:
+= -- 688
+> -- 437
+< -- 9
++ -- 163
+- -- 124
+* -- 507
+:= -- 1384
+add.period$ -- 121
+call.type$ -- 39
+change.case$ -- 39
 chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 31
-empty$ -- 74
-format.name$ -- 6
-if$ -- 145
+cite$ -- 49
+duplicate$ -- 408
+empty$ -- 812
+format.name$ -- 124
+if$ -- 1864
 int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 3
-newline$ -- 22
-num.names$ -- 4
-pop$ -- 14
+int.to.str$ -- 39
+missing$ -- 38
+newline$ -- 199
+num.names$ -- 39
+pop$ -- 142
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 183
 stack$ -- 0
-substring$ -- 25
-swap$ -- 4
-text.length$ -- 1
+substring$ -- 371
+swap$ -- 86
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 6
-width$ -- 5
-write$ -- 42
+warning$ -- 10
+while$ -- 74
+width$ -- 41
+write$ -- 407
+(There were 14 warnings)

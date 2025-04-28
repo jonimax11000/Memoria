@@ -4,10 +4,12 @@
 
 \section{Introducción}
 
+El avance de la realidad virtual (VR) está creciendo rápido, y con él, la necesidad de que los desarrolladores puedan crear experiencias inmersivas que se adapten a todo tipo de usuarios. No todos interactúan igual con la tecnología, así que hacen falta herramientas flexibles, intuitivas y, sobre todo, que entiendan las diferencias entre las personas. Uno de los grandes inconvenientes de la realidad virtual en la actualidad es que parece estar exclusivamente concebida para el idioma inglés. ¿Has buscado un teclado que te permita redactar en español, francés o árabe en Realidad Virtual? No hay. Visualiza que tu lengua materna, la que te vincula con tus orígenes y tu cultura, sea considerada un fallo de sistema: es la situación en la que millones de personas experimentan cuando la tecnología, concebida desde una burbuja anglocéntrica, les demanda ajustarse o callar. Investigaciones como la de \cite{rojas2024accented} no solo descubren que las voces con acentos o abecedarios no ingleses son interpretadas como "ruido", sino que nos exponen a una realidad dura: la marginación lingüística en la Realidad Virtual y otras tecnologías no es un fallo, sino una herida colonial que arde en la plena era digital. Hablamos de abuelas que no pueden dictar mensajes, de niños que ven su escritura autocorregida hasta volverse irreconocible, de lenguas enteras relegadas al estatus de "exóticas" en algoritmos que, por diseño, las silencian. La solución no está en remiños técnicos, sino en desaprender la idea de que lo universal debe sonar a inglés.
 
-En el contexto actual, el desarrollo de tecnologías de realidad virtual (VR) ha generado una creciente demanda de herramientas y recursos que permitan a los desarrolladores crear experiencias inmersivas y funcionales. Uno de los desafíos más significativos dentro de este ámbito es proporcionar soluciones prácticas y accesibles para la interacción en entornos virtuales, especialmente en lo que respecta a la entrada de texto.
+Es cierto que hay idiomas, como los latinos, que el único problema es la falta de algunos caracteres, que a las muy malas puedes añadir tu fácilmente en tu teclado, pero este problema es mucho mayor en regiones como el Sudeste Asiático o en grupos que utilizan tipos de escritura diferentes al alfabeto latino. Situaciones tales como el Hangul coreano o la escritura árabe, con trazos asociados y orientaciones concretas, demuestran la importancia de rediseñar las interfaces de entrada en entornos virtuales \cite{peng2024exploring}.
 
-Los teclados virtuales son un componente fundamental para muchas aplicaciones de VR, ya que permiten a los usuarios realizar tareas como introducir texto, realizar búsquedas, o interactuar con interfaces complejas sin necesidad de hardware adicional. Sin embargo, las opciones disponibles en el mercado suelen estar limitadas en términos de funcionalidades, idiomas soportados y accesibilidad, lo que deja un vacío importante que podría ser abordado mediante un enfoque más inclusivo y personalizable.
+Como solución a estos retos, varias investigaciones han explorado alternativas como la modificación del comportamiento de los teclados físicos en el espacio virtual. Estas tácticas facilitan la modificación dinámica de la configuración y funcionamiento de las teclas, generando nuevas oportunidades para la introducción de textos multilingües sin la necesidad de modificar el hardware \cite{gonzalez2019reconviguration}. En resumen, estas sugerencias subrayan la necesidad apremiante de crear soluciones de diseño que tomen en cuenta la variedad lingüística y cultural de los usuarios en experiencias envolventes.
+
 
 \section{Motivación}
 La idea de este Asset me surgió durante la realización de las prácticas curriculares en el Instituto de Robótica y Tecnologías de la Información y la Comunicación(IRTIC) donde se me pidió un teclado virtual para uno de los proyectos que se estaban realizando con Unity.
@@ -18,9 +20,27 @@ Tras la realización de este, uno de los tutores de la empresa, que también res
 
 \section{Objetivos}
 
-Este trabajo de fin de grado se centra en el diseño y desarrollo del Asset de un teclado multilingüe para entornos de realidad virtual utilizando la plataforma Unity. La propuesta, no solo busca satisfacer las necesidades específicas detectadas durante las prácticas en el Instituto de Robótica y Tecnologías de la Información y la Comunicación (IRTIC), sino también ofrecer una herramienta competitiva y versátil que pueda ser utilizada por desarrolladores y usuarios en una amplia variedad de contextos.
+Este proyecto se enfoca en el desarrollo y construcción de un Asset de un teclado multilingüe para ambientes de realidad virtual en la plataforma Unity. Se buscan tomar en cuenta tres principios fundamentales:
 
-Entre las funcionalidades más destacadas se incluyen el soporte para múltiples idiomas, con la finalidad de que el usuario no tenga que hacer mucho a la hora de instaurar el que desee.
+\begin{enumerate}
+	\item Para satisfacer necesidades específicas detectadas durante las prácticas en el Instituto de Robótica y Tecnologías de la Información y la Comunicación (IRTIC):
+	\begin{itemize}
+		\item La ausencia de teclados españoles para Realidad Virtual y Realidad Virtual.
+	\end{itemize}
+
+	\item Ofrecer una reacción competitiva mediante:
+	\begin{itemize}
+		\item Supporto intuitivo en 8 idiomas (español, inglés, francés, alemán, griego, ruso, coreano y árabe)
+
+		\item Cambio rápido entre las distribuciones sin reiniciar la escena.
+	\end{itemize}
+	\item Garantizar habilidad para adaptarse a:
+	
+	\begin{itemize}
+		\item cualquier proyecto en Unity que emplee la Realidad Virtual.
+		\item Diversos aparatos de entrada (mandos VR, Hand Tracking)
+	\end{itemize}
+\end{enumerate}
 
 
 \section{Organización de la memoria}
