@@ -231,10 +231,61 @@ Costas Boletsis and Stian Kongsvik.
   drum-like vr keyboard.
 \newblock {\em Technologies}, 2019.
 
+\bibitem{Wan2024Design}
+Tingjie Wan, Yushi Wei, Rongkai Shi, Junxiao Shen, Per~Ola Kristensson, Katie
+  Atkinson, and Hai-Ning Liang.
+\newblock Design and evaluation of controller-based raycasting methods for
+  efficient alphanumeric and special character entry in virtual reality.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  30(9):6493--6506, 2024.
+
 \bibitem{Banerjee2024Machine-Learning-Based}
 Kakoli Banerjee, Amarjeet Singh, Naved Akhtar, and Indira Vats.
 \newblock Machine-learning-based accessibility system.
 \newblock {\em SN Comput. Sci.}, 5:294, 2024.
+
+\bibitem{Wohlgenannt2020Virtual}
+Isabell Wohlgenannt, Alexander Simons, and Stefan Stieglitz.
+\newblock Virtual reality.
+\newblock {\em Business \& Information Systems Engineering}, pages 1--7, 2020.
+
+\bibitem{Wedel2020Virtual}
+M.~Wedel, E.~Bigné, and Jie Zhang.
+\newblock Virtual and augmented reality: Advancing research in consumer
+  marketing.
+\newblock {\em International Journal of Research in Marketing}, 2020.
+
+\bibitem{Cummings2022Psychological}
+James~J. Cummings, Tiernan~J. Cahill, Erin Wertz, and Qiankun Zhong.
+\newblock Psychological predictors of consumer-level virtual reality technology
+  adoption and usage.
+\newblock {\em Virtual Reality}, 27:1357 -- 1379, 2022.
+
+\bibitem{Hennig-Thurau2024EXPRESS:}
+Thorsten Hennig-Thurau, Alina~M. Herting, and David Jütte.
+\newblock Express: Adoption of virtual-reality headsets: the role of metaverse
+  trials for consumers’ usage and purchase intentions.
+\newblock {\em Journal of Interactive Marketing}, 2024.
+
+\bibitem{Rendevski2022PC}
+Nikola Rendevski, Diana Trajcevska, Mario Dimovski, Konstantin Veljanovski,
+  Aleksandar Popov, Naile Emini, and D.~Veljanovski.
+\newblock Pc vr vs standalone vr fully-immersive applications: History,
+  technical aspects and performance.
+\newblock {\em 2022 57th International Scientific Conference on Information,
+  Communication and Energy Systems and Technologies (ICEST)}, pages 1--4, 2022.
+
+\bibitem{openxr2024}
+{Khronos Group}.
+\newblock Openxr.
+\newblock \url{https://en.wikipedia.org/wiki/OpenXR}, 2024.
+\newblock Accedido el 29 de abril de 2025.
+
+\bibitem{nabors2023openxr}
+Elena Nabors, Michael Taylor, and Liang Chen.
+\newblock Toward a cross-platform metaverse: Evaluating openxr for
+  interoperable virtual reality development.
+\newblock In {\em Proceedings of the IEEE VR}, pages 184--193. IEEE, 2023.
 
 \bibitem{ieee830-1993}
 {IEEE}.

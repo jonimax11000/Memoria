@@ -5,10 +5,10 @@ Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: unsrt.bst
 Reallocating 'name_of_file' (item size: 1) to 17 items.
 Database file #1: bib/bibliografia.bib
-Warning--I didn't find a database entry for "Wan2024Design"
-Warning--I didn't find a database entry for "latexcompanion"
-Warning--I didn't find a database entry for "einstein"
-Warning--I didn't find a database entry for "knuthwebsite"
+Repeated entry---line 375 of file bib/bibliografia.bib
+ : @inproceedings{Wan2024Design
+ :                             , author = {Wan, X. and others}, title = {Design and Evaluation of Controller-Based Raycasting Methods for Efficient Alphanumeric and Special Character Entry in Virtual Reality}, year = {2024} }
+I'm skipping whatever remains of this entry
 Warning--empty journal in rojas2024
 Warning--empty journal in adaptiveVR
 Warning--empty journal in vrscience
@@ -19,45 +19,45 @@ Warning--empty journal in mdst
 Warning--empty journal in embracing
 Warning--empty journal in Frazier2018An
 Warning--empty journal in Kim2014Message
-You've used 39 entries,
+You've used 47 entries,
             1791 wiz_defined-function locations,
-            657 strings with 11300 characters,
-and the built_in function-call counts, 8407 in all, are:
-= -- 688
-> -- 437
-< -- 9
-+ -- 163
-- -- 124
-* -- 507
-:= -- 1384
-add.period$ -- 121
-call.type$ -- 39
-change.case$ -- 39
+            695 strings with 13043 characters,
+and the built_in function-call counts, 10438 in all, are:
+= -- 866
+> -- 545
+< -- 12
++ -- 202
+- -- 155
+* -- 638
+:= -- 1706
+add.period$ -- 147
+call.type$ -- 47
+change.case$ -- 47
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 408
-empty$ -- 812
-format.name$ -- 124
-if$ -- 1864
+cite$ -- 57
+duplicate$ -- 496
+empty$ -- 995
+format.name$ -- 155
+if$ -- 2325
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 38
-newline$ -- 199
-num.names$ -- 39
-pop$ -- 142
+int.to.str$ -- 47
+missing$ -- 45
+newline$ -- 240
+num.names$ -- 47
+pop$ -- 167
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 183
+skip$ -- 230
 stack$ -- 0
-substring$ -- 371
-swap$ -- 86
-text.length$ -- 9
+substring$ -- 495
+swap$ -- 114
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 10
-while$ -- 74
-width$ -- 41
-write$ -- 407
-(There were 14 warnings)
+while$ -- 93
+width$ -- 49
+write$ -- 495
+(There was 1 error message)
