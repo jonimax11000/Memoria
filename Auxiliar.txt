@@ -1,0 +1,11 @@
+1. Requisitos Funcionales
+RF 1: Habrá un teclado virtual que simula uno físico y un teclado plano.
+RF 2: Se puede cambiar entre el teclado físico y el plano cuando se requiera.
+RF 3: Los teclados tendrán una versión funcional en 8 idiomas establecidos.
+RF 4: Se puede cambiar de idioma cuando se requiera.
+RF 5: Escritura por voz funcional para todos los idiomas descritos y en los dos tipos de teclado.
+RF 6: Escritura tipo swipe funcional para todos los idiomas descritos en elteclado plano solo.
+
+2. Requisitos No Funcionales
+RNF 1: El sistema debe ser desarrollado usando Unity.
+RNF 2: Lenguaje de desarrollo C#.
