@@ -5,6 +5,8 @@
 %Diagrama de Clases del Dominio:
 %Explicación de las clases principales, atributos y métodos.
 %Relación entre clases (asociaciones, generalizaciones, dependencias).
+
+\subsection{Diagrama de clases}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1\textwidth]{Diagrama_de_Clases.png}
@@ -12,49 +14,214 @@
 	\label{fig:diagrama_clases}
 \end{figure}
 
-Ahora ya con el diagrama de clases ya hecho, se requiere recalcar que se le nombrará teclado al conjunto de todas estas a la hora de la realización de los otros diagramas
-de la memoria para facilitar su visualización.
+\subsection{Descripción del diagrama de clases}
+
+\subsubsection{1. Clases principales}
+
+\paragraph{KeyboardControlator} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Es la clase central del proyecto ya que se encarga de la coordinación entre todos los teclados.
+	\item Maneja el cambio del tipo de teclado y de los idiomas.
+	\item És el único que puede escribir en el \textit{TMP\_ImputField}, esto centraliza esta función para no tenerla desperdigada entre los teclados.
+\end{itemize}
+
+
+\paragraph{Keyboard} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Es el representante de cada uno de los teclados que hay.
+	\item Maneja la lógica compleja necesaria en cada teclado, como por ejemplo ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'' o ``public void ResetKoreanSyllable()''. Centraliza estas funciones en una sola clase para evitar la creación de scripts diferentes para cada uno de los teclados, y que la actualización en caso de error o mejora no tenga que hacerse 14 veces.
+	\item Llama a funciones \textit{KeyboardCoontrolator} para poder escribir.
+	
+\end{itemize}
+
+\paragraph{KeyboardButton} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Representa una tecla individual de cada teclado.
+	\item Maneja la lógica compleja de cada letra y preparado para cada idioma. Como con el \textit{Keyboard}, es para no tener que hacer una clase para cada las teclas de cada teclado distinto y así que las correcciones y mejoras estén centralizadas.
+	\item Asocia a un \textit{TextMeshProGui} para actualizar por software la visualización de las letras y así ahorrar memoria al no tener que crear un botón para cada una de las distintas formas que podría salir una letra(por ejemplo cuando se pulsa para mayúsculas, acentos o ALTGR).
+	
+\end{itemize}
+
+\paragraph{ButtonVR y CanvasButton} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Son los encargados de los eventos de las teclas de los distintos tipos de teclados. El \textit{ButtonVR} se encarga de la interacción de los teclados físicos, mientras que el \textit{CanvasButton} se encarga de la interacción de los teclados planos, que son creados con Canvas.
+	\item Emiten eventos (onPress, onRelease) y controlan audio y colisiones.
+	\item Los dos son usado indistintamente por el \textit{KeyboardButton} para otorgar las funcionalidades necesarias a la llamada de eventos y llaman a funciones del \textit{keyboard}.
+	
+\end{itemize}
+
+\subsubsection{2. Atributos y métodos relevantes}
+
+\paragraph{\qquad Idiomas} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item El \textit{language\_selector} en \textit{KeyboardControlator} incluye: ``English'', ``Spanish'', ``French'', ``German'', ``Russian'', ``Korean'', ``Greece''. Esto es debido a que estos són los únicos idiomas que, por el momento, soporta el Asset.
+	\item La nomenclatura de los idiomas está en inglés para facilitar el entendimiento del código a la mayor parte de los desarrolladores que quieran incluir este teclado. Esto presuponiendo que los desarrolladores saben inglés, al tratarse del idioma más usado por esta comunidad.
+\end{itemize}
+
+
+\paragraph{\qquad Método de cambio de idioma} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item La función que realiza esta tarea es el ``public void ChangeLanguage(int index)'' situado en la clase \textit{KeyboardControlator}, y se encarga de ``activar'' y ``desactivar'' los teclados correspondientes de los dos grandes grupos que hay (los físicos y los planos).
+	\item Una utilidad muy interesante de este teclado es que automáticamente te pone el idioma de tu Sistema Operativo si está en la lista, en caso contrario se sitúa en el estándar, que es el inglés.
+	\item Se ha instaurado un método manual de cambio de idioma mediante el uso de un \textit{TMP\_Dropdown} cuyo cambio de estado dispara un evento que llama a la función.
+	
+\end{itemize}
+
+\paragraph{\qquad Métodos de cambio de tipo de teclado} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Al ser una de las primeros casos de uso desarrollados, esto se ha desarrollado en dos funciones distintas, cuando podría haberse hecho en una.
+	Estas funciones són ``public void ChangeToCanvas()'' y ``public void ChangeToRigid()'' de la clase \textit{KeyboardControlator}. Estas funciones activan o desactivan los objetos raices de los dos tipos de teclados. Entre la desactivación del tipo actual y la activación del nuevo hay 1 segundo de espera, esto es posible gracias al hecho de que las dos funciones desactivan el respectivo objeto y luego llaman a la corrutina ``IEnumerator Change(GameObject g)'', que hace la espera y luego activa el otro objeto.
+	\item El Asset está configurado para que siempre salga con los teclados físicos al encender.
+	
+	\item Se puede cambiar de tipos de teclado manualmente al pulsar los botones correspondientes.
+	
+\end{itemize}
+
+\paragraph{\qquad Soporte para coreano} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Toda la lógica para este apartado se encuentra en \textit{Keyboard}. Por otro lado, es \textit{ButtonVR} quien se encarga de llamar a estas funciones en concreto viendo si el ``public KeyboardType \_Keyboardtype;'' está en ``Korean''.
+	\item Se poseen varias listas y variables encargadas de dar control a la formación de las sílabas usadas en este alfabeto.
+	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe, y el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un caracter).
+	
+\end{itemize}
+
+\subsubsection{3. Relaciones entre clases}
+
+\begin{itemize}
+	\item \textit{KeyboardControlator} tiene asociaciones 1..* con \textit{Keyboard} y sus representaciones visuales (\textit{GameObject}).
+	\item \textit{Keyboard} contiene múltiples \textit{KeyboardButton}.
+	\item \textit{KeyboardButton} usa \textit{TextMeshProUGUI} para mostrar y actualizar los caracteres en las teclas y también és el \textit{String} \textit{text} de esta interficie lo que se pasa en la llamada a los eventos de escritura.
+	\item \textit{ButtonVR} y \textit{CanvasButton} representan diferentes tipos de botones (dependiendo del tipo de teclado) y llaman a métodos en \textit{Keyboard} cuando se activan los eventos. Los eventos específicos de escritura de carácteres son inicializados en \textit{KeyboardButton}.
+	\item Relaciones entre botones y eventos están claramente definidas con dependencias (<calls onRelease>), los otros tipos de acciones han sido creadas a mano.
+	
+\end{itemize}
+
+\subsection{Apéndices y aclaraciones}
+
+Como se puede ver, hay clases en el diagrama en las que solo he escrito el nombre, esto lo he hecho así ya que se tratan de clases propias de Unity  que yo no he desarrollado, pero son necesarias para el correcto funcionamiento de este Asset.
+
+El apéndice de este apartado se encuentra en \ref{sec:Apéndice del capítulo 4.1}, en este se presentan algunas imágenes para ayudar a comprender mejor esta sección.
 
 \section{Análisis de casos de uso}
 %Diagrama de Casos de Uso:
 %Descripción de los casos de uso principales.
 %Interacción entre actores y el sistema.
 %Escenarios de casos de uso con flujos de eventos.
+\subsection{Diagrama de casos de uso}
 En el apartado \ref{sec:3.1}, se han mostrado todos los requisitos del sistema, por lo que a continuación se mostrará un diagrama de casos de uso que contiene todas las funcionalidades que reflejan esos requisitos.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{casos_de_uso_completados.png}
+	\includegraphics[width=0.7\textwidth]{CasosDeUso.png}
 	\caption{Diagrama de casos de uso}
-	\label{fig:diagrama_casos_uso_si}
+	\label{fig:diagrama_casos_uso}
 \end{figure}
 
+\subsection{Descripción}
 
+\subsubsection{Actores}
+
+\begin{itemize}
+	\item \textbf{Usuario}: Es el único actor identificado. Representa a la persona que interactúa con los teclados virtuales.
+\end{itemize}
+
+\subsubsection{Casos de uso identificados}
+
+\begin{enumerate}
+	\item \textbf{Escribir en teclado}:
+		\begin{itemize}
+			\item Es la acción estándar que se espera de cualquier teclado que se precie.
+			\item Existe una interacción directa con el \textit{Usuario}.
+		\end{itemize}
+	\item \textbf{Cambiar tipo de teclado}:
+		\begin{itemize}
+			\item Es la acción de cambiar entre el uso de teclados físicos o los planos.
+			\item Existe una interacción directa con el \textit{Usuario}.
+		\end{itemize}
+	\item \textbf{Cambiar de idioma}:
+		\begin{itemize}
+			\item Es la acción de cambiar el idioma del teclado en uso.
+			\item Existe una interacción directa con el \textit{Usuario}.
+		\end{itemize}
+\end{enumerate}
 
 \section{Modelado de interacción}
 %Diagramas de Secuencia:
 %Ejemplos de secuencias para casos de uso importantes.
 %Descripción de la interacción entre objetos a lo largo del tiempo.
-Como, por un lado, hay casos de uso que no se han podido realizar y, por el otro, los casos de uso puede que si que se han completado se pueden realizar sin un orden específico, a continuación se van a mostrar  distintos diagramas de secuencia de los casos de uso completados, poniendo el de escribir como caso final en todos.
 
+\subsection{Cambiar de idioma}
 
-En este diagrama de secuencia se muestra el cambio entre todos los idiomas en orden. Como se podrá observar, el tipo de dato de entrada en la función de cambio de idioma es un int, representados del cero al cinco, ya que se trata de un vector interno que contiene todos los idiomas. Esto no afecta al usuario ya que el interfaz visual que tiene, son los nombres de los distintos idiomas escritos en su sus grafías correspondientes mostrados en un dropbox.
+En este diagrama de secuencia se muestra el cambio entre dos de los idiomas. Como se podrá observar, el tipo de dato de entrada en la función de cambio de idioma es un int, representados del cero al cinco, ya que se trata de un vector interno que contiene todos los idiomas. Esto no afecta al usuario ya que el interfaz visual que tiene, son los nombres de los distintos idiomas escritos en su sus grafías correspondientes mostrados en un dropbox.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Secuencia Idiomas.png}
-	\caption{Diagrama de secuencia para cambiar de idiomas y escribir una letra}
+	\includegraphics[width=0.74\textwidth]{SecuenciaIdiomas.png}
+	\caption{Diagrama de secuencia para cambiar de idiomas}
 	\label{fig:diagrama_secuencia_idiomas}
 \end{figure}
 
-En el próximo diagrama, se mostrará el cambio al teclado plano seguido de un cambio al teclado físico y finalizando con la escritura de un espacio. El usuario solo debe tocar un botón predefinido para esto.
+\subsection{Cambiar de tipo de teclado}
+
+En el próximo diagrama, se mostrará el cambio al teclado plano seguido de un cambio al teclado físico (el orden es debido a que, como ya he dicho, el teclado por defecto aparece como físico). El usuario solo debe tocar un botón predefinido para esto.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{Secuencia Cambio Teclados.png}
-	\caption{Diagrama de secuencia para cambiar tipo de teclado y añadir un espacio}
+	\includegraphics[width=0.74\textwidth]{SecuenciaCambioTeclados.png}
+	\caption{Diagrama de secuencia para el cambio de tipo de teclado}
 	\label{fig:diagrama_secuencia_tipo_teclado}
 \end{figure}
+
+\subsection{Escribir}
+
+\subsubsection{Modificar letras}
+
+Esta característica se ha añadido aquí dentro ya que el modificar el teclado es un proceso indispensable para la escritura en los distintos idiomas, por lo que originalmente lo he incluido en el caso de uso de \textit{Escribir en el teclado}.
+
+Hay varias formas de modificar las letras, dependiendo del idioma. Todas estas se activan al pulsar el botón correspondiente de cada teclado, que cambia el estado de este, a continuación, todas llaman a ``public void Change()'' de \textit{Keyboard}, que a su vez llama a la función tocaya en todos los \textit{KeyboardButton} del teclado activo, que ya se encarga de cambiar las letras dependiendo del estado del teclado.
+
+Vamos a ver el ejemplo de pulsar mayúsculas (en los idiomas que está disponible).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.74\textwidth]{Modificar.png}
+	\caption{Diagrama de secuencia de la modificación de las letras de un teclado}
+	\label{fig:diagrama_secuencia_tipo_modificación_letras}
+\end{figure}
+
+Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que se le llama a la función ``Change()'' el estado del teclado, por lo que hace que el teclado que se use de igual, lo importante es que exista o no el botón que cambie este estado. En las secuencias de las otras maneras de cambiar el estado del teclado solo se diferencian de esta en cual es la funcion del \textit{Keyboard} que llama el \textit{CanvasButton} o el \textit{ButtonVR} independientemente.
+
+\subsubsection{Añadir, quitar caracteres y espacios}
+
+Estas tres funciones las he añadido aquí porque siguen un proceso típico de escritura en cualquier lengua. Hay que tener en cuenta que en cualquier momento podríamos solicitar una modificación de las letras, contemplado antes, para escribir correctamente una palabra.
+
+
+En la siguiente figura vamos a contemplar la inserción de un carácter (la "h"), un espacio y el borrado de un carácter, en ese orden.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.74\textwidth]{Modificar.png}
+	\caption{Diagrama de secuencia de la modificación de las letras de un teclado}
+	\label{fig:diagrama_secuencia_tipo_modificación_letras}
+\end{figure}
+
+Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que se le llama a la función ``Change'' el estado del teclado, por lo que hace que el teclado que se use de igual, lo importante es que exista o no el botón que cambie este estado. En las secuencias de las otras maneras de cambiar el estado del teclado solo se diferencian de esta en cual es la funcion del \textit{Keyboard} que llama el \textit{CanvasButton} o el \textit{ButtonVR}.
 
 
 \section{Análisis de comportamiento}

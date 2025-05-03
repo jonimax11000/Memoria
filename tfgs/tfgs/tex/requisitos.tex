@@ -12,13 +12,17 @@
 		\item RF 1: Se podrá escribir en el teclado
 		\item RF 2: Habrá un teclado virtual que simula uno físico y un teclado plano. 
 		\item RF 3: Se puede cambiar entre el teclado físico y el plano cuando se requiera. 
-		\item RF 4: Los teclados tendrán una versión funcional en ocho idiomas establecidos.
-		\item RF 5: Se puede cambiar de idioma cuando sea pertinente. 
+		\item RF 4: Los teclados tendrán una versión funcional en siete idiomas establecidos.
+		\item RF 5: Se puede cambiar de idioma cuando sea pertinente.
+		\item RF 6: Se podrá interactuar tanto con mandos como hand tracking. 
 	\end{itemize}
 	\item \textbf{Requisitos No Funcionales}
 	\begin{itemize}
 		\item RNF 1: El sistema debe ser desarrollado usando Unity. 
-		\item RNF 2: Lenguaje de desarrollo C\#. 
+		\item RNF 2: Lenguaje de desarrollo C\#.
+		\item RNF 3: El teclado plano será con UI Canvas.
+		\item RNF 4: El teclado físico estará formado por ``3D Objects''.
+		\item RNF 5: Deberá de ser un Asset.
 	\end{itemize}
 \end{enumerate}
 
@@ -51,22 +55,31 @@ A continuación voy a redactar las especificaciones de los requisitos siguiendo 
 		\item \textbf{Funciones del Producto:} El teclado virtual permitirá:
 		\begin{itemize}
 			\item Cambiar entre teclado físico y plano.
-			\item Seleccionar entre ocho idiomas disponibles.
+			\item Seleccionar entre siete idiomas disponibles.
+			\item Escribir correctamente en cualquiera de los idiomas.
+			\item Funcionar tanto con mando como hand tracking.
 		\end{itemize}
-		\item \textbf{Características del Usuario:} Los usuarios serán principalmente aquellos que utilicen aplicaciones de realidad virtual en las que se requiera la entrada de texto, como aplicaciones educativas y de entretenimiento.
+		\item \textbf{Características del Usuario:} Los usuarios serán principalmente aquellos que desarrollen aplicaciones de realidad virtual en las que se requiera la entrada de texto, como aplicaciones educativas y de entretenimiento.
 	\end{enumerate}
 	\item \textbf{Requisitos Específicos}
 	\begin{enumerate}
 		\item \textbf{Requisitos Funcionales}
 		\begin{enumerate}
-			\item \textbf{RF1: Cambio entre Teclado Físico y Teclado Plano:} El sistema debe permitir al usuario cambiar entre un teclado virtual que simula uno físico y uno plano.
-			\item \textbf{RF2: Selección de Idioma:} El sistema debe permitir al usuario seleccionar entre los ocho idiomas disponibles para el teclado virtual.
+			\item \textbf{RF1: Se podrá escribir en el teclado:} El sistema debe permitir al usuario escribir en cualquiera de las versiones del teclado correctamente.
+			\item \textbf{RF2: Tipos de teclado:} El sistema debe contar con una versión de que simule uno físico y otra que sea uno plano.
+			\item \textbf{RF3: Cambio entre Teclado Físico y Teclado Plano:} El sistema debe permitir al usuario cambiar entre un teclado virtual que simula uno físico y uno plano.
+			\item \textbf{RF4: Multiples idiomas:} El sistema debe ofrecer una versión en siete idiomas para ambos tipos de teclado.
+			\item \textbf{RF5: Selección de Idioma:} El sistema debe permitir al usuario seleccionar entre los siete idiomas disponibles para el teclado virtual.
+			\item \textbf{RF6: Interacción múltiple:} El sistema debe permitir al usuario interactuar con el mediante los mandos y el hand tracking.
 		\end{enumerate}
 		
 		\item \textbf{Requisitos No Funcionales}
 		\begin{enumerate}
 			\item \textbf{RNF1: Plataforma de Desarrollo:} El sistema tiene que ser desarrollado utilizando Unity como plataforma principal.
 			\item \textbf{RNF2: Lenguaje de Desarrollo:} El sistema debe ser desarrollado utilizando el lenguaje de programación C\#.
+			\item \textbf{RNF3: Formación del teclado plano:} El teclado plano se tratará de un UI Canvas.
+			\item \textbf{RNF4: Formación del teclado físico:} El teclado físco deberá estar compuesto de ``3D Objects''.
+			\item \textbf{RNF5: Tipo de proyecto:} El proyecto tiene que ser un Asset.
 		\end{enumerate}
 	\end{enumerate}
 	\item \textbf{Otros Requisitos}
