@@ -69,52 +69,68 @@
 \contentsline {subsection}{\numberline {3.5.3}Viabilidad Temporal}{46}{subsection.3.5.3}%
 \contentsline {subsection}{\numberline {3.5.4}Conclusión sobre la Viabilidad}{46}{subsection.3.5.4}%
 \contentsline {chapter}{\numberline {4}Análisis}{47}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Modelado del dominio}{47}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Diagrama de clases}{47}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Descripción del diagrama de clases}{48}{subsection.4.1.2}%
-\contentsline {subsubsection}{1. Clases principales}{48}{section*.28}%
-\contentsline {paragraph}{KeyboardControlator}{48}{section*.29}%
-\contentsline {paragraph}{Keyboard}{48}{section*.30}%
-\contentsline {paragraph}{KeyboardButton}{48}{section*.31}%
-\contentsline {paragraph}{ButtonVR y CanvasButton}{48}{section*.32}%
-\contentsline {subsubsection}{2. Atributos y métodos relevantes}{49}{section*.33}%
-\contentsline {paragraph}{\hskip 2em\relax Idiomas}{49}{section*.34}%
-\contentsline {paragraph}{\hskip 2em\relax Método de cambio de idioma}{49}{section*.35}%
-\contentsline {paragraph}{\hskip 2em\relax Métodos de cambio de tipo de teclado}{49}{section*.36}%
-\contentsline {paragraph}{\hskip 2em\relax Soporte para coreano}{50}{section*.37}%
-\contentsline {subsubsection}{3. Relaciones entre clases}{50}{section*.38}%
-\contentsline {subsection}{\numberline {4.1.3}Apéndices y aclaraciones}{50}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Análisis de casos de uso}{50}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Diagrama de casos de uso}{50}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Descripción}{51}{subsection.4.2.2}%
-\contentsline {subsubsection}{Actores}{51}{section*.39}%
-\contentsline {subsubsection}{Casos de uso identificados}{51}{section*.40}%
-\contentsline {section}{\numberline {4.3}Modelado de interacción}{52}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Cambiar de idioma}{52}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Cambiar de tipo de teclado}{52}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Escribir}{53}{subsection.4.3.3}%
-\contentsline {subsubsection}{Modificar letras}{53}{section*.41}%
-\contentsline {subsubsection}{Añadir, quitar caracteres y espacios}{54}{section*.42}%
-\contentsline {section}{\numberline {4.4}Análisis de comportamiento}{54}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Diseño}{57}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Arquitectura del sistema}{58}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Diseño de módulos}{58}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Diseño de Interfaz de Usuario}{58}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Diseño de la lógica de negocio}{58}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Diseño de interacciones y flujos}{58}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diseño de Estado del Sistema}{58}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Diseño de Despliegue}{58}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Diseño de Actividad}{58}{section.5.8}%
-\contentsline {chapter}{\numberline {6}Implementación y pruebas}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Implementación}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Pruebas funcionales}{59}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Pruebas de rendimiento}{59}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Pruebas de usabilidad}{59}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{61}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Revisión de costes}{61}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Conclusiones}{61}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Trabajo futuro}{61}{section.7.3}%
-\contentsline {chapter}{\numberline {A}Apéndice}{63}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Apéndice del capítulo 3.2}{63}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Apéndice del capítulo 4.1}{63}{section.Alph1.2}%
-\contentsline {chapter}{Bibliografía}{64}{figure.Alph1.4}%
+\contentsline {section}{\numberline {4.1}Introducción}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Diagrama de casos de uso}{47}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Descripción}{48}{subsection.4.2.1}%
+\contentsline {subsubsection}{Actores}{48}{section*.28}%
+\contentsline {subsubsection}{Casos de uso identificados}{48}{section*.29}%
+\contentsline {section}{\numberline {4.3}Modelo del dominio}{48}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descripción del diagrama}{49}{subsection.4.3.1}%
+\contentsline {subsubsection}{Clases}{49}{section*.30}%
+\contentsline {paragraph}{\hskip 2em\relax InputField}{49}{section*.31}%
+\contentsline {paragraph}{\hskip 2em\relax Controlador}{49}{section*.32}%
+\contentsline {paragraph}{\hskip 2em\relax Teclado}{49}{section*.33}%
+\contentsline {paragraph}{\hskip 2em\relax Tecla}{49}{section*.34}%
+\contentsline {paragraph}{\hskip 2em\relax Botón}{49}{section*.35}%
+\contentsline {paragraph}{\hskip 2em\relax Evento}{50}{section*.36}%
+\contentsline {subsubsection}{Relaciones}{50}{section*.37}%
+\contentsline {subsection}{\numberline {4.3.2}Principios SOLID que se siguen}{50}{subsection.4.3.2}%
+\contentsline {subsubsection}{El Principio de responsabilidad única (Single Responsibility Principle - SRP)}{50}{section*.38}%
+\contentsline {subsubsection}{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}{50}{section*.39}%
+\contentsline {subsubsection}{El Principio de sustitución de Liskov (Liskov Substitution Principle - LSP)}{51}{section*.40}%
+\contentsline {subsubsection}{El Principio de segregación de interfaz (Interface Segregation Principle - ISP)}{51}{section*.41}%
+\contentsline {subsubsection}{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}{51}{section*.42}%
+\contentsline {section}{\numberline {4.4}Análisis de comportamiento}{51}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Diagramas de actividad}{52}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Diseño}{55}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Introducción}{56}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Objetivos}{56}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Relación con el análisis}{56}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Diseño de la Arquitectura}{56}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Arquitectura del sistema}{56}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Diagrama de despliegue}{56}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Diagrama de clases definitivo}{56}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Descripción del diagrama de clases}{57}{subsection.5.3.1}%
+\contentsline {subsubsection}{1. Clases principales}{57}{section*.43}%
+\contentsline {paragraph}{\hskip 2em\relax KeyboardControlator}{57}{section*.44}%
+\contentsline {paragraph}{\hskip 2em\relax Keyboard}{57}{section*.45}%
+\contentsline {paragraph}{\hskip 2em\relax KeyboardButton}{57}{section*.46}%
+\contentsline {paragraph}{\hskip 2em\relax ButtonVR y CanvasButton}{57}{section*.47}%
+\contentsline {subsubsection}{2. Atributos y métodos relevantes}{58}{section*.48}%
+\contentsline {paragraph}{\hskip 2em\relax Idiomas}{58}{section*.49}%
+\contentsline {paragraph}{\hskip 2em\relax Método de cambio de idioma}{58}{section*.50}%
+\contentsline {paragraph}{\hskip 2em\relax Métodos de cambio de tipo de teclado}{58}{section*.51}%
+\contentsline {paragraph}{\hskip 2em\relax Soporte para coreano}{59}{section*.52}%
+\contentsline {subsubsection}{3. Relaciones entre clases}{59}{section*.53}%
+\contentsline {subsection}{\numberline {5.3.2}Apéndices y aclaraciones}{59}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Diagramas de secuencia}{60}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Cambiar de idioma}{60}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Cambiar de tipo de teclado}{60}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Modificar letras}{61}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}Añadir caracter}{62}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Eliminar caracter}{63}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Diseño de Interfaz de Usuario}{64}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diseño de Despliegue}{64}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Implementación y pruebas}{65}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Implementación}{65}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Pruebas funcionales}{65}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Pruebas de rendimiento}{65}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Pruebas de usabilidad}{65}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{67}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Revisión de costes}{67}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Conclusiones}{67}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Trabajo futuro}{67}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Apéndice}{69}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Apéndice del capítulo 3.2}{69}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Apéndice del capítulo 5.3}{69}{section.Alph1.2}%
+\contentsline {chapter}{Bibliografía}{70}{figure.Alph1.4}%

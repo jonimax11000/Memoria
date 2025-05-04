@@ -1,134 +1,17 @@
 % Contenidos del capítulo.
 % Las secciones presentadas son orientativas y no representan
 % necesariamente la organización que debe tener este capítulo.
-\section{Modelado del dominio}
-%Diagrama de Clases del Dominio:
-%Explicación de las clases principales, atributos y métodos.
-%Relación entre clases (asociaciones, generalizaciones, dependencias).
 
-\subsection{Diagrama de clases}
-\begin{figure}[htbp]
-	\centering
-	\includegraphics[width=1\textwidth]{Diagrama_de_Clases.png}
-	\caption{Diagrama de Clases Detallado - Relación entre clases}
-	\label{fig:diagrama_clases}
-\end{figure}
+\section{Introducción}
 
-\subsection{Descripción del diagrama de clases}
+En este apartado, examinaremos a fondo el mecanismo del sistema justo antes de su activación. Tomando como referencia las especificaciones establecidas en la sección \ref{sec:3.1}, distinguiremos a los participantes esenciales, los patrones de uso, las situaciones de manejo y los componentes del ámbito. Este conjunto de datos nos facilitará la edificación de una infraestructura estable para el diseño técnico subsiguiente.
 
-\subsubsection{1. Clases principales}
-
-\paragraph{KeyboardControlator} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Es la clase central del proyecto ya que se encarga de la coordinación entre todos los teclados.
-	\item Maneja el cambio del tipo de teclado y de los idiomas.
-	\item És el único que puede escribir en el \textit{TMP\_ImputField}, esto centraliza esta función para no tenerla desperdigada entre los teclados.
-\end{itemize}
-
-
-\paragraph{Keyboard} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Es el representante de cada uno de los teclados que hay.
-	\item Maneja la lógica compleja necesaria en cada teclado, como por ejemplo ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'' o ``public void ResetKoreanSyllable()''. Centraliza estas funciones en una sola clase para evitar la creación de scripts diferentes para cada uno de los teclados, y que la actualización en caso de error o mejora no tenga que hacerse 14 veces.
-	\item Llama a funciones \textit{KeyboardCoontrolator} para poder escribir.
-	
-\end{itemize}
-
-\paragraph{KeyboardButton} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Representa una tecla individual de cada teclado.
-	\item Maneja la lógica compleja de cada letra y preparado para cada idioma. Como con el \textit{Keyboard}, es para no tener que hacer una clase para cada las teclas de cada teclado distinto y así que las correcciones y mejoras estén centralizadas.
-	\item Asocia a un \textit{TextMeshProGui} para actualizar por software la visualización de las letras y así ahorrar memoria al no tener que crear un botón para cada una de las distintas formas que podría salir una letra(por ejemplo cuando se pulsa para mayúsculas, acentos o ALTGR).
-	
-\end{itemize}
-
-\paragraph{ButtonVR y CanvasButton} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Son los encargados de los eventos de las teclas de los distintos tipos de teclados. El \textit{ButtonVR} se encarga de la interacción de los teclados físicos, mientras que el \textit{CanvasButton} se encarga de la interacción de los teclados planos, que son creados con Canvas.
-	\item Emiten eventos (onPress, onRelease) y controlan audio y colisiones.
-	\item Los dos son usado indistintamente por el \textit{KeyboardButton} para otorgar las funcionalidades necesarias a la llamada de eventos y llaman a funciones del \textit{keyboard}.
-	
-\end{itemize}
-
-\subsubsection{2. Atributos y métodos relevantes}
-
-\paragraph{\qquad Idiomas} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item El \textit{language\_selector} en \textit{KeyboardControlator} incluye: ``English'', ``Spanish'', ``French'', ``German'', ``Russian'', ``Korean'', ``Greece''. Esto es debido a que estos són los únicos idiomas que, por el momento, soporta el Asset.
-	\item La nomenclatura de los idiomas está en inglés para facilitar el entendimiento del código a la mayor parte de los desarrolladores que quieran incluir este teclado. Esto presuponiendo que los desarrolladores saben inglés, al tratarse del idioma más usado por esta comunidad.
-\end{itemize}
-
-
-\paragraph{\qquad Método de cambio de idioma} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item La función que realiza esta tarea es el ``public void ChangeLanguage(int index)'' situado en la clase \textit{KeyboardControlator}, y se encarga de ``activar'' y ``desactivar'' los teclados correspondientes de los dos grandes grupos que hay (los físicos y los planos).
-	\item Una utilidad muy interesante de este teclado es que automáticamente te pone el idioma de tu Sistema Operativo si está en la lista, en caso contrario se sitúa en el estándar, que es el inglés.
-	\item Se ha instaurado un método manual de cambio de idioma mediante el uso de un \textit{TMP\_Dropdown} cuyo cambio de estado dispara un evento que llama a la función.
-	
-\end{itemize}
-
-\paragraph{\qquad Métodos de cambio de tipo de teclado} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Al ser una de las primeros casos de uso desarrollados, esto se ha desarrollado en dos funciones distintas, cuando podría haberse hecho en una.
-	Estas funciones són ``public void ChangeToCanvas()'' y ``public void ChangeToRigid()'' de la clase \textit{KeyboardControlator}. Estas funciones activan o desactivan los objetos raices de los dos tipos de teclados. Entre la desactivación del tipo actual y la activación del nuevo hay 1 segundo de espera, esto es posible gracias al hecho de que las dos funciones desactivan el respectivo objeto y luego llaman a la corrutina ``IEnumerator Change(GameObject g)'', que hace la espera y luego activa el otro objeto.
-	\item El Asset está configurado para que siempre salga con los teclados físicos al encender.
-	
-	\item Se puede cambiar de tipos de teclado manualmente al pulsar los botones correspondientes.
-	
-\end{itemize}
-
-\paragraph{\qquad Soporte para coreano} 
-\hfill \break % Fuerza salto de línea después del título
-
-\begin{itemize}
-	\item Toda la lógica para este apartado se encuentra en \textit{Keyboard}. Por otro lado, es \textit{ButtonVR} quien se encarga de llamar a estas funciones en concreto viendo si el ``public KeyboardType \_Keyboardtype;'' está en ``Korean''.
-	\item Se poseen varias listas y variables encargadas de dar control a la formación de las sílabas usadas en este alfabeto.
-	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe, y el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un caracter).
-	
-\end{itemize}
-
-\subsubsection{3. Relaciones entre clases}
-
-\begin{itemize}
-	\item \textit{KeyboardControlator} tiene asociaciones 1..* con \textit{Keyboard} y sus representaciones visuales (\textit{GameObject}).
-	\item \textit{Keyboard} contiene múltiples \textit{KeyboardButton}.
-	\item \textit{KeyboardButton} usa \textit{TextMeshProUGUI} para mostrar y actualizar los caracteres en las teclas y también és el \textit{String} \textit{text} de esta interficie lo que se pasa en la llamada a los eventos de escritura.
-	\item \textit{ButtonVR} y \textit{CanvasButton} representan diferentes tipos de botones (dependiendo del tipo de teclado) y llaman a métodos en \textit{Keyboard} cuando se activan los eventos. Los eventos específicos de escritura de carácteres son inicializados en \textit{KeyboardButton}.
-	\item Relaciones entre botones y eventos están claramente definidas con dependencias (<calls onRelease>), los otros tipos de acciones han sido creadas a mano.
-	
-\end{itemize}
-
-\subsection{Apéndices y aclaraciones}
-
-Como se puede ver, hay clases en el diagrama en las que solo he escrito el nombre, esto lo he hecho así ya que se tratan de clases propias de Unity  que yo no he desarrollado, pero son necesarias para el correcto funcionamiento de este Asset.
-
-El apéndice de este apartado se encuentra en \ref{sec:Apéndice del capítulo 4.1}, en este se presentan algunas imágenes para ayudar a comprender mejor esta sección.
-
-\section{Análisis de casos de uso}
-%Diagrama de Casos de Uso:
-%Descripción de los casos de uso principales.
-%Interacción entre actores y el sistema.
-%Escenarios de casos de uso con flujos de eventos.
-\subsection{Diagrama de casos de uso}
-En el apartado \ref{sec:3.1}, se han mostrado todos los requisitos del sistema, por lo que a continuación se mostrará un diagrama de casos de uso que contiene todas las funcionalidades que reflejan esos requisitos.
+\section{Diagrama de casos de uso}
+Tal y como se indicó previamente, ya hemos detallado todas las necesidades del sistema, así que ahora les mostraremos un diagrama de casos  de uso que comprende todas las funciones que ilustran dichas necesidades.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{CasosDeUso.png}
+	\includegraphics[width=0.69\textwidth]{CasosDeUso.png}
 	\caption{Diagrama de casos de uso}
 	\label{fig:diagrama_casos_uso}
 \end{figure}
@@ -138,7 +21,8 @@ En el apartado \ref{sec:3.1}, se han mostrado todos los requisitos del sistema, 
 \subsubsection{Actores}
 
 \begin{itemize}
-	\item \textbf{Usuario}: Es el único actor identificado. Representa a la persona que interactúa con los teclados virtuales.
+	\item \textbf{Usuario}: Es el actor principal y más activo. Representa a la persona que interactúa con los teclados virtuales.
+	\item \textbf{Unity}: Es un actor secundario que solo actúa en el arranque del sistema. Representa al motor de desarrollo utilizado.
 \end{itemize}
 
 \subsubsection{Casos de uso identificados}
@@ -153,76 +37,119 @@ En el apartado \ref{sec:3.1}, se han mostrado todos los requisitos del sistema, 
 		\begin{itemize}
 			\item Es la acción de cambiar entre el uso de teclados físicos o los planos.
 			\item Existe una interacción directa con el \textit{Usuario}.
+			\item Existe una interacción directa con \textit{Unity} al arranque del sistema que deja el teclado físico por defecto.
 		\end{itemize}
 	\item \textbf{Cambiar de idioma}:
 		\begin{itemize}
 			\item Es la acción de cambiar el idioma del teclado en uso.
 			\item Existe una interacción directa con el \textit{Usuario}.
+			\item Existe una interacción directa con \textit{Unity} al arranque del sistema para poner el idioma de tu SO o, en su defecto, el inglés
+			.
 		\end{itemize}
+	\item \textbf{Modificar teclas}:
+	\begin{itemize}
+		\item Algunos idiomas necesitan modificar las teclas para poder utilizar acentos, mayúsculas y otras posibles características.
+		\item Es una extensión del caso de uso de \textit{Escribir en teclado} por lo que también requiere la intervención del \textit{Usuario}.
+	\end{itemize}
 \end{enumerate}
 
-\section{Modelado de interacción}
-%Diagramas de Secuencia:
-%Ejemplos de secuencias para casos de uso importantes.
-%Descripción de la interacción entre objetos a lo largo del tiempo.
+\section{Modelo del dominio}
 
-\subsection{Cambiar de idioma}
+Seguidamente, expondremos un prototipo mental del dominio del sistema, en el que se precisarán las entidades fundamentales y sus conexiones, sin adentrarnos aún en los detalles de la ejecución. Este prototipo es valioso para comprender mejor las ideas abstractas que se emplean en el teclado virtual multilingüe.
 
-En este diagrama de secuencia se muestra el cambio entre dos de los idiomas. Como se podrá observar, el tipo de dato de entrada en la función de cambio de idioma es un int, representados del cero al cinco, ya que se trata de un vector interno que contiene todos los idiomas. Esto no afecta al usuario ya que el interfaz visual que tiene, son los nombres de los distintos idiomas escritos en su sus grafías correspondientes mostrados en un dropbox.
+Para ello, haremos uso de un diagrama de clases básico inicial que mostraremos a continuación. Los nombres de las clases muy probablemente se cambien en el futuro.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.74\textwidth]{SecuenciaIdiomas.png}
-	\caption{Diagrama de secuencia para cambiar de idiomas}
-	\label{fig:diagrama_secuencia_idiomas}
+	\includegraphics[width=0.69\textwidth]{Diagrama_de_Clases2.png}
+	\caption{Diagrama de clases inicial}
+	\label{fig:diagrama_casos_uso}
 \end{figure}
 
-\subsection{Cambiar de tipo de teclado}
+Todo esto es solo la idea preeliminar de como debería funcionar el teclado por encima, por supuesto no contempla la implementación final ya que aun no se tienen en cuenta las limitaciones o preferencias del motor usado. No obstante creo que es suficiente para comprobar el proceso que busco que siga el proyecto.
 
-En el próximo diagrama, se mostrará el cambio al teclado plano seguido de un cambio al teclado físico (el orden es debido a que, como ya he dicho, el teclado por defecto aparece como físico). El usuario solo debe tocar un botón predefinido para esto.
+\subsection{Descripción del diagrama}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.74\textwidth]{SecuenciaCambioTeclados.png}
-	\caption{Diagrama de secuencia para el cambio de tipo de teclado}
-	\label{fig:diagrama_secuencia_tipo_teclado}
-\end{figure}
+\subsubsection{Clases}
 
-\subsection{Escribir}
+\paragraph{\qquad InputField} 
+\hfill \break % Fuerza salto de línea después del título
 
-\subsubsection{Modificar letras}
+Es el sitio donde se escribe todo lo del teclado.
 
-Esta característica se ha añadido aquí dentro ya que el modificar el teclado es un proceso indispensable para la escritura en los distintos idiomas, por lo que originalmente lo he incluido en el caso de uso de \textit{Escribir en el teclado}.
+\paragraph{\qquad Controlador} 
+\hfill \break % Fuerza salto de línea después del título
 
-Hay varias formas de modificar las letras, dependiendo del idioma. Todas estas se activan al pulsar el botón correspondiente de cada teclado, que cambia el estado de este, a continuación, todas llaman a ``public void Change()'' de \textit{Keyboard}, que a su vez llama a la función tocaya en todos los \textit{KeyboardButton} del teclado activo, que ya se encarga de cambiar las letras dependiendo del estado del teclado.
+Es la clase que controla a todos los teclado, también es la encargada de escribir directamente en el \textit{InputField}.
 
-Vamos a ver el ejemplo de pulsar mayúsculas (en los idiomas que está disponible).
+\paragraph{\qquad Teclado} 
+\hfill \break % Fuerza salto de línea después del título
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.74\textwidth]{Modificar.png}
-	\caption{Diagrama de secuencia de la modificación de las letras de un teclado}
-	\label{fig:diagrama_secuencia_tipo_modificación_letras}
-\end{figure}
+Esta clase se encarga de controlar la lógica interna de cada teclado.
 
-Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que se le llama a la función ``Change()'' el estado del teclado, por lo que hace que el teclado que se use de igual, lo importante es que exista o no el botón que cambie este estado. En las secuencias de las otras maneras de cambiar el estado del teclado solo se diferencian de esta en cual es la funcion del \textit{Keyboard} que llama el \textit{CanvasButton} o el \textit{ButtonVR} independientemente.
+\paragraph{\qquad Tecla} 
+\hfill \break % Fuerza salto de línea después del título
 
-\subsubsection{Añadir, quitar caracteres y espacios}
+Clase encargada de las funciones lógicas de las teclas de una tecla, así como guardar y cambiar el carácter que se escribe al pulsarla.
 
-Estas tres funciones las he añadido aquí porque siguen un proceso típico de escritura en cualquier lengua. Hay que tener en cuenta que en cualquier momento podríamos solicitar una modificación de las letras, contemplado antes, para escribir correctamente una palabra.
+\paragraph{\qquad Botón} 
+\hfill \break % Fuerza salto de línea después del título
 
+Encargado de las funciones físicas de las teclas, como hacer sonido cuando se pulsa, así como de escuchar eventos.
 
-En la siguiente figura vamos a contemplar la inserción de un carácter (la "h"), un espacio y el borrado de un carácter, en ese orden.
+\paragraph{\qquad Evento} 
+\hfill \break % Fuerza salto de línea después del título
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.74\textwidth]{Modificar.png}
-	\caption{Diagrama de secuencia de la modificación de las letras de un teclado}
-	\label{fig:diagrama_secuencia_tipo_modificación_letras}
-\end{figure}
+Clase básica de eventos que ejecuta funciones cuando se realizan.
 
-Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que se le llama a la función ``Change'' el estado del teclado, por lo que hace que el teclado que se use de igual, lo importante es que exista o no el botón que cambie este estado. En las secuencias de las otras maneras de cambiar el estado del teclado solo se diferencian de esta en cual es la funcion del \textit{Keyboard} que llama el \textit{CanvasButton} o el \textit{ButtonVR}.
+\subsubsection{Relaciones}
 
+\begin{itemize}
+	\item El \textit{Controlador} hace uso del \textit{InputField} para poder mostrar lo que se escribe.
+	\item El \textit{Controlador} tiene diversos objetos de la clase \textit{Teclado} para controlar.
+	\item El \textit{Teclado} está formado por varios objetos de la clase \textit{Tecla}.
+	\item La \textit{Tecla} usa al \textit{Boton} para escuchar eventos.
+	\item El \textit{Botón}, como ya hemos dicho, escucha eventos concretos de la clase \textit{Evento}.
+	\item El \textit{Evento} llama a funciones del \textit{Teclado}.
+\end{itemize}
+
+\subsection{Principios SOLID que se siguen}
+
+\subsubsection{El Principio de responsabilidad única (Single Responsibility Principle - SRP)}
+
+Este principio dice que una clase debe tener solo una responsabilidad un motivo para cambiar, o sea, tener una única tarea.
+
+Hasta cierto punto esto se cumple con las separaciones de la lógica del teclado en \textit{Teclado}, la lógica de una tecla en \textit{Tecla}, la parte física de una tecla en \textit{Boton} y el control general en el \textit{Control}.
+
+Es cierto que se podrían separar más las funciones que tiene \textit{Control} ya que une escritura y control, pero personalmente no me gusta tener tantos scripts y, probablemente, hayan cambios que me obliguen a cambiar cosas de todas maneras, ya que esto es solo la teoría.
+
+\subsubsection{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}
+
+Este principio nos indica que el código tiene que permitir añadir funcionalidades nuevas (abierto a la extensión) sin tener que modificar las clases existentes (cerradas a la modificación), reduciendo el riesgo de introducir errores en el sistema.
+
+El uso de la clase \textit{Evento} permite la extensión de comportamientos sin tener que modificar el código de \textit{Boton}.
+
+En \textit{Tecla}, con el uso de la variable ``formas'', permitiría la incorporación de varios idiomas sin necesidad de modificarse internamente. Por otro lado i siguiendo la idea de los idiomas, el \textit{Teclado} está abierto a recibir extensiones, necesarias para la correcta implementación de varios idiomas, pero sin modificar lo anterior.
+
+En cuanto al \textit{Controlador}, en este si que se tendrían que hacer cambios en el código para la implementación de nuevos idiomas, por lo que en este no se cumple.
+
+\subsubsection{El Principio de sustitución de Liskov (Liskov Substitution Principle - LSP)}
+
+Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+
+En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
+
+\subsubsection{El Principio de segregación de interfaz (Interface Segregation Principle - ISP)}
+
+Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+
+En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
+
+\subsubsection{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}
+
+Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+
+En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
 
 \section{Análisis de comportamiento}
 %Escenarios de Uso:
@@ -278,7 +205,28 @@ Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que
 	\end{itemize}
 \end{itemize}
 
+\subsection{Diagramas de actividad}
 
+A continuación voy a mostrar dos diagramas de actividad que resumen todas las acciones ocurren en el sistema. Cabe recalcar, para la comprensión de los siguientes diagramas, que he englobado todas las clases en una superentidad llamada \textit{Teclado}, tal y como ocurre en el diagrama de casos de uso \ref{fig:diagrama_casos_uso}
+
+El primer diagrama representa el flujo de trabajo que puede realizar el actor \textit{Usuario} al interactuar con el teclado, incluyendo los hechos de escribir y cambiar los idiomas o el tipo de teclado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Diagrama_actividad1.png}
+	\caption{Diagrama de casos de uso}
+	\label{fig:diagrama_actividad_estandar}
+\end{figure}
+
+El segundo diagrama detalla las acciones del actor \textit{Unity}, que se trata del propio motor usado para el desarrollo del Asset. Como se verá en la imagen, este solo se dedica a poner el teclado en un estado inicial estándar.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Diagrama_actividad2.png}
+	\caption{Diagrama de casos de uso}
+	\label{fig:diagrama_actividad_unity}
+\end{figure}
 
 
 
