@@ -117,6 +117,8 @@ Clase básica de eventos que ejecuta funciones cuando se realizan.
 
 \subsubsection{El Principio de responsabilidad única (Single Responsibility Principle - SRP)}
 
+``Cada clase tiene que tener una única responsabilidad y una sola razón para cambiar.''
+
 Este principio dice que una clase debe tener solo una responsabilidad un motivo para cambiar, o sea, tener una única tarea.
 
 Hasta cierto punto esto se cumple con las separaciones de la lógica del teclado en \textit{Teclado}, la lógica de una tecla en \textit{Tecla}, la parte física de una tecla en \textit{Boton} y el control general en el \textit{Control}.
@@ -124,6 +126,8 @@ Hasta cierto punto esto se cumple con las separaciones de la lógica del teclado
 Es cierto que se podrían separar más las funciones que tiene \textit{Control} ya que une escritura y control, pero personalmente no me gusta tener tantos scripts y, probablemente, hayan cambios que me obliguen a cambiar cosas de todas maneras, ya que esto es solo la teoría.
 
 \subsubsection{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}
+
+``Las clases tienen que estar abiertas a la extensión pero cerradas a la modificación.''
 
 Este principio nos indica que el código tiene que permitir añadir funcionalidades nuevas (abierto a la extensión) sin tener que modificar las clases existentes (cerradas a la modificación), reduciendo el riesgo de introducir errores en el sistema.
 
@@ -135,21 +139,23 @@ En cuanto al \textit{Controlador}, en este si que se tendrían que hacer cambios
 
 \subsubsection{El Principio de sustitución de Liskov (Liskov Substitution Principle - LSP)}
 
-Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+``Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa.''
 
-En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
+Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+
+En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama de clases, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base que pueda o no respetar este. Por esto, este principio es como el gato de schrodinger, se cumple y no al mismo tiempo.
 
 \subsubsection{El Principio de segregación de interfaz (Interface Segregation Principle - ISP)}
 
-Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
+``Es mejor tener interfaces pequeñas y específicas que una única interfaz grande.'' 
 
-En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
+Esta definición del principio explica que si una interfaz obliga una clase a implementar métodos que no necesita, significa que está mal diseñada. Es preferible dividirla en interfaces más pequeñas y enfocadas.
+
+Aquí ocurre como en el anterior principio, no puedo decir si he diseñado bien o no las interfaces, ya que no se ha diseñado ninguna. Las dos interfaces que se han utilizado, son propias del motor utilizado.
 
 \subsubsection{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}
 
-Las clases derivadas tienen que poder sustituir sus clases bases sin romper el comportamiento del programa. Esto explica que, si una clase derivada altera el comportamiento esperado de la clase base, puede provocar errores inesperados en otras partes del sistema. Es decir, si una clase A es la base de una clase B, cualquier instancia de B tiene que comportarse como una instancia de A sin romper el código.
 
-En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diagrama, no hay herencia de ningún tipo, por lo que no hay clases derivas de otras base.
 
 \section{Análisis de comportamiento}
 %Escenarios de Uso:
