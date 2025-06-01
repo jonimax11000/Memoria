@@ -9,6 +9,7 @@
 
 \subsection{Objetivos}
 %"Transformar los modelos de análisis en una solución técnica implementable, especificando tecnologías, patrones y detalles de bajo nivel."
+En este apartado se busca implementar una solución técnica basándonos en el análisis previamente hecho y documentado.  
 
 \subsection{Relación con el análisis}
 %"Se parte del diagrama de dominio (Sección X.Y) y los casos de uso (Sección X.Z) para derivar el diseño detallado."
@@ -117,7 +118,7 @@
 \begin{itemize}
 	\item Toda la lógica para este apartado se encuentra en \textit{Keyboard}. Por otro lado, es \textit{ButtonVR} quien se encarga de llamar a estas funciones en concreto viendo si el ``public KeyboardType \_Keyboardtype;'' está en ``Korean''.
 	\item Se poseen varias listas y variables encargadas de dar control a la formación de las sílabas usadas en este alfabeto.
-	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe, y el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un caracter).
+	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe, y el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un carácter).
 	
 \end{itemize}
 
@@ -189,7 +190,7 @@ Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que
 
 el ``text'' del \textit{TextMeshProUGUI} es lo que las teclas muestran para saber que letra representan y lo que se cambia en esta acción.
 
-\subsection{Añadir caracter}
+\subsection{Añadir carácter}
 
 Una de las funcione básicas para el proceso típico de escritura en cualquier lengua. Hay que tener en cuenta que en cualquier momento podríamos solicitar una modificación de las letras, contemplado antes, para escribir correctamente una palabra.
 
@@ -204,7 +205,7 @@ Una de las funcione básicas para el proceso típico de escritura en cualquier l
 No hemos incluido el proceso interno de la función ``Korean\_Syllable\_Formation(caracter, not\_vowel, not\_Syllable\_letter\_for\_Korean)'' ya que es muy extenso por si solo y hace todo el proceso internamente.
 
 
-\subsection{Eliminar caracter}
+\subsection{Eliminar carácter}
 
 Otra de funcione básicas para el proceso típico de escritura en cualquier lengua. Es algo más corto que el anterior.
 

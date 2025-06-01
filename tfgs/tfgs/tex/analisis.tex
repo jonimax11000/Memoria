@@ -61,7 +61,7 @@ Para ello, haremos uso de un diagrama de clases básico inicial que mostraremos 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.69\textwidth]{Diagrama_de_Clases2.png}
+	\includegraphics[width=0.60\textwidth]{Diagrama_de_Clases2.png}
 	\caption{Diagrama de clases inicial}
 	\label{fig:diagrama_casos_uso}
 \end{figure}
@@ -80,7 +80,12 @@ Es el sitio donde se escribe todo lo del teclado.
 \paragraph{\qquad Controlador} 
 \hfill \break % Fuerza salto de línea después del título
 
-Es la clase que controla a todos los teclado, también es la encargada de escribir directamente en el \textit{InputField}.
+Es la clase que controla a todos los teclado.  es la encargada de escribir directamente en el \textit{InputField}
+
+\paragraph{\qquad Escritor} 
+\hfill \break % Fuerza salto de línea después del título
+
+Es la única que se encarga de escribir directamente en el \textit{InputField}
 
 \paragraph{\qquad Teclado} 
 \hfill \break % Fuerza salto de línea después del título
@@ -105,12 +110,13 @@ Clase básica de eventos que ejecuta funciones cuando se realizan.
 \subsubsection{Relaciones}
 
 \begin{itemize}
-	\item El \textit{Controlador} hace uso del \textit{InputField} para poder mostrar lo que se escribe.
+	\item El \textit{Escritor} hace uso del \textit{InputField} para poder mostrar lo que se escribe.
 	\item El \textit{Controlador} tiene diversos objetos de la clase \textit{Teclado} para controlar.
 	\item El \textit{Teclado} está formado por varios objetos de la clase \textit{Tecla}.
 	\item La \textit{Tecla} usa al \textit{Boton} para escuchar eventos.
 	\item El \textit{Botón}, como ya hemos dicho, escucha eventos concretos de la clase \textit{Evento}.
 	\item El \textit{Evento} llama a funciones del \textit{Teclado}.
+	\item El \textit{Teclado} hace uso del \textit{Escritor} para realmente escribir.
 \end{itemize}
 
 \subsection{Principios SOLID que se siguen}
@@ -121,9 +127,8 @@ Clase básica de eventos que ejecuta funciones cuando se realizan.
 
 Este principio dice que una clase debe tener solo una responsabilidad un motivo para cambiar, o sea, tener una única tarea.
 
-Hasta cierto punto esto se cumple con las separaciones de la lógica del teclado en \textit{Teclado}, la lógica de una tecla en \textit{Tecla}, la parte física de una tecla en \textit{Boton} y el control general en el \textit{Control}.
+Hasta cierto punto esto se cumple con las separaciones de la lógica del teclado en \textit{Teclado}, la lógica de una tecla en \textit{Tecla}, la parte física de una tecla en \textit{Boton}, el control general en el \textit{Controlador} y la escritura en el \textit{escritor}.
 
-Es cierto que se podrían separar más las funciones que tiene \textit{Control} ya que une escritura y control, pero personalmente no me gusta tener tantos scripts y, probablemente, hayan cambios que me obliguen a cambiar cosas de todas maneras, ya que esto es solo la teoría.
 
 \subsubsection{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}
 
@@ -133,7 +138,7 @@ Este principio nos indica que el código tiene que permitir añadir funcionalida
 
 El uso de la clase \textit{Evento} permite la extensión de comportamientos sin tener que modificar el código de \textit{Boton}.
 
-En \textit{Tecla}, con el uso de la variable ``formas'', permitiría la incorporación de varios idiomas sin necesidad de modificarse internamente. Por otro lado i siguiendo la idea de los idiomas, el \textit{Teclado} está abierto a recibir extensiones, necesarias para la correcta implementación de varios idiomas, pero sin modificar lo anterior.
+En \textit{Tecla}, con el uso de la variable ``formas'', permitiría la incorporación de varios idiomas sin necesidad de modificarse internamente. Por otro lado, y siguiendo la idea de los idiomas, el \textit{Teclado} está abierto a recibir extensiones necesarias para la correcta implementación de nuevos idiomas, pero sin modificar lo anterior.
 
 En cuanto al \textit{Controlador}, en este si que se tendrían que hacer cambios en el código para la implementación de nuevos idiomas, por lo que en este no se cumple.
 
@@ -151,10 +156,13 @@ En cuanto a este principio no puedo comentar nada, ya que, como se ve en el diag
 
 Esta definición del principio explica que si una interfaz obliga una clase a implementar métodos que no necesita, significa que está mal diseñada. Es preferible dividirla en interfaces más pequeñas y enfocadas.
 
-Aquí ocurre como en el anterior principio, no puedo decir si he diseñado bien o no las interfaces, ya que no se ha diseñado ninguna. Las dos interfaces que se han utilizado, son propias del motor utilizado.
-
 \subsubsection{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}
 
+``Las dependencias tienen que estar en abstracciones, no en clases concretas.''
+
+Este principio significa que las clases de alto nivel no tienen que depender de las de bajo nivel. En cambio, todas tienen que depender de abstracciones (interfaces o clase abstractas) para hacer el código más flexible y fácil de adaptar.
+
+La clase \textit{Botón} usa objetos de tipo \textit{Evento} para encapsular conductas. Esto constituye una modalidad fundamental de inversión de dependencias, dado que la lógica del botón se asigna a los objetos que llevan a cabo dichas acciones y no en unas concretas. Así, la clase \textit{Botón} puede ser reutilizada y ampliada con facilidad sin tener que conocer los pormenores específicos de cada evento.
 
 
 \section{Análisis de comportamiento}
@@ -219,7 +227,7 @@ El primer diagrama representa el flujo de trabajo que puede realizar el actor \t
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Diagrama_actividad1.png}
+	\includegraphics[width=0.45\textwidth]{Diagrama_actividad1.png}
 	\caption{Diagrama de casos de uso}
 	\label{fig:diagrama_actividad_estandar}
 \end{figure}
@@ -229,10 +237,7 @@ El segundo diagrama detalla las acciones del actor \textit{Unity}, que se trata 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.5\textwidth]{Diagrama_actividad2.png}
+	\includegraphics[width=0.45\textwidth]{Diagrama_actividad2.png}
 	\caption{Diagrama de casos de uso}
 	\label{fig:diagrama_actividad_unity}
 \end{figure}
-
-
-

@@ -7,54 +7,56 @@
 \contentsline {chapter}{\numberline {2}Estado del arte}{23}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Análisis de aplicaciones similares}{23}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Tecnologías}{23}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Tecnologías de Desarrollo}{23}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Sistemas de Despliegue}{24}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Evolución de los teclados en realidad virtual}{24}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Orígenes}{24}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Las dificultades identificadas en estos primeros modelos}{25}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Nuevas sugerencias para incorporar texto en Realidad Virtual}{25}{subsection.2.3.3}%
-\contentsline {subsubsection}{Teclados virtuales flotantes}{25}{section*.4}%
-\contentsline {subsubsection}{Predicción de texto y autocorrección}{25}{section*.5}%
-\contentsline {subsubsection}{Combinación con comandos de voz}{26}{section*.6}%
-\contentsline {subsubsection}{Resultados de estudios recientes}{26}{section*.7}%
+\contentsline {subsubsection}{Teclados virtuales flotantes}{25}{section*.2}%
+\contentsline {subsubsection}{Predicción de texto y autocorrección}{26}{section*.3}%
+\contentsline {subsubsection}{Combinación con comandos de voz}{26}{section*.4}%
+\contentsline {subsubsection}{Resultados de estudios recientes}{26}{section*.5}%
 \contentsline {section}{\numberline {2.4}Necesidad de soporte multilingüe en VR}{26}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Accesibilidad lingüística en entornos digitales}{26}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Dificultades de representar escrituras no latinas en VR}{27}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Cómo otros campos han incorporado el multilenguaje y el rezago de la VR}{27}{subsection.2.4.3}%
-\contentsline {subsection}{\numberline {2.4.4}Globalización de usuarios de VR y potencial mercado perdido}{28}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.2}Dificultad para representar escrituras no latinas en VR}{27}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Cómo otros campos han incorporado el multilenguaje y el rezago de la VR en este aspecto}{27}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Globalización de usuarios de VR y pérdidad de un mercado potencial}{28}{subsection.2.4.4}%
 \contentsline {section}{\numberline {2.5}Interfaces naturales de usuario (NUI) en VR}{28}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}definición y contexto de las NUIs}{28}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.1}Definición y contexto de las NUIs}{28}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Tecnologías principales en las NUIs para VR}{29}{subsection.2.5.2}%
-\contentsline {subsubsection}{Hand Tracking}{29}{section*.8}%
-\contentsline {subsubsection}{Voice Recognition}{29}{section*.9}%
-\contentsline {subsubsection}{Eye Tracking}{30}{section*.10}%
-\contentsline {subsubsection}{Body Tracking}{30}{section*.11}%
+\contentsline {subsubsection}{Hand Tracking}{29}{section*.6}%
+\contentsline {subsubsection}{Voice Recognition}{29}{section*.7}%
+\contentsline {subsubsection}{Eye Tracking}{30}{section*.8}%
+\contentsline {subsubsection}{Body Tracking}{30}{section*.9}%
 \contentsline {subsection}{\numberline {2.5.3}Implementación de NUI en este proyecto}{30}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Beneficios de usar NUI en teclados virtuales}{30}{subsection.2.5.4}%
-\contentsline {subsubsection}{Mayor inmersión en entornos VR}{30}{section*.12}%
-\contentsline {subsubsection}{Mayor accesibilidad}{31}{section*.13}%
-\contentsline {subsubsection}{Simulación más realista}{31}{section*.14}%
-\contentsline {subsubsection}{Conclusión}{31}{section*.15}%
+\contentsline {subsubsection}{Mayor inmersión en entornos VR}{31}{section*.10}%
+\contentsline {subsubsection}{Mayor accesibilidad}{31}{section*.11}%
+\contentsline {subsubsection}{Simulación más realista}{31}{section*.12}%
+\contentsline {subsubsection}{Conclusión}{31}{section*.13}%
 \contentsline {section}{\numberline {2.6}Retos de accesibilidad en realidad virtual}{31}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Barreras actuales en VR para usuarios diversos}{31}{subsection.2.6.1}%
-\contentsline {subsubsection}{Dificultades físicas}{31}{section*.16}%
-\contentsline {subsubsection}{Dificultades sensoriales}{32}{section*.17}%
-\contentsline {subsubsection}{Recomendaciones y oportunidades}{32}{section*.18}%
+\contentsline {subsubsection}{Dificultades físicas}{31}{section*.14}%
+\contentsline {subsubsection}{Dificultades sensoriales}{32}{section*.15}%
+\contentsline {subsubsection}{Recomendaciones y oportunidades}{32}{section*.16}%
 \contentsline {subsection}{\numberline {2.6.2}Necesidad de accesibilidad en teclados VR}{32}{subsection.2.6.2}%
-\contentsline {subsubsection}{La escritura requiere precisión y buena respuesta visual/háptica}{32}{section*.19}%
-\contentsline {subsubsection}{El problema de los idiomas no soportados: exclusión de grandes segmentos de población}{33}{section*.20}%
-\contentsline {subsubsection}{Conclusión}{33}{section*.21}%
+\contentsline {subsubsection}{La escritura requiere precisión y buena respuesta visual/háptica}{32}{section*.17}%
+\contentsline {subsubsection}{El problema de los idiomas no soportados: exclusión de grandes segmentos de población}{33}{section*.18}%
+\contentsline {subsubsection}{Conclusión}{33}{section*.19}%
 \contentsline {subsection}{\numberline {2.6.3}Cómo este proyecto aborda la accesibilidad}{33}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}Limitaciones actuales y posibles mejoras}{34}{subsection.2.6.4}%
 \contentsline {section}{\numberline {2.7}Estándares y tendencias de mercado en VR}{34}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Estado actual del mercado de VR}{34}{subsection.2.7.1}%
-\contentsline {subsubsection}{Crecimiento del mercado de VR}{34}{section*.22}%
-\contentsline {subsubsection}{Aumento de dispositivos standalone}{34}{section*.23}%
-\contentsline {subsubsection}{Factores adicionales y tendencias}{35}{section*.24}%
+\contentsline {subsubsection}{Crecimiento del mercado de VR}{34}{section*.20}%
+\contentsline {subsubsection}{Aumento de dispositivos standalone}{34}{section*.21}%
+\contentsline {subsubsection}{Factores adicionales y tendencias}{35}{section*.22}%
 \contentsline {subsection}{\numberline {2.7.2}Estándares emergentes en VR}{35}{subsection.2.7.2}%
-\contentsline {subsubsection}{OpenXR}{35}{section*.25}%
-\contentsline {subsubsection}{Tendencia hacia experiencias sin controladores (``controller-free'')}{35}{section*.26}%
+\contentsline {subsubsection}{OpenXR}{35}{section*.23}%
+\contentsline {subsubsection}{Tendencia hacia experiencias sin controladores (``controller-free'')}{35}{section*.24}%
 \contentsline {section}{\numberline {2.8}Selección y justificación de idiomas implementados}{36}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Criterios de selección}{36}{subsection.2.8.1}%
-\contentsline {subsubsection}{Aclaraciones especiales}{36}{section*.27}%
+\contentsline {subsubsection}{Aclaraciones especiales}{36}{section*.25}%
 \contentsline {subsection}{\numberline {2.8.2}Idiomas implementados}{36}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}Idiomas descartados y motivos}{37}{subsection.2.8.3}%
 \contentsline {subsection}{\numberline {2.8.4}Retos técnicos en la implementación}{38}{subsection.2.8.4}%
@@ -64,63 +66,64 @@
 \contentsline {section}{\numberline {3.3}Costes}{41}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Riesgos}{42}{section.3.4}%
 \contentsline {section}{\numberline {3.5}Viabilidad}{44}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Viabilidad Técnica}{44}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Viabilidad Económica}{45}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Viabilidad Temporal}{46}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Conclusión sobre la Viabilidad}{46}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.1}Viabilidad técnica}{44}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Viabilidad económica}{45}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Viabilidad temporal}{46}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Conclusión sobre la viabilidad}{46}{subsection.3.5.4}%
 \contentsline {chapter}{\numberline {4}Análisis}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introducción}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Diagrama de casos de uso}{47}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Descripción}{48}{subsection.4.2.1}%
-\contentsline {subsubsection}{Actores}{48}{section*.28}%
-\contentsline {subsubsection}{Casos de uso identificados}{48}{section*.29}%
+\contentsline {subsubsection}{Actores}{48}{section*.26}%
+\contentsline {subsubsection}{Casos de uso identificados}{48}{section*.27}%
 \contentsline {section}{\numberline {4.3}Modelo del dominio}{48}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Descripción del diagrama}{49}{subsection.4.3.1}%
-\contentsline {subsubsection}{Clases}{49}{section*.30}%
-\contentsline {paragraph}{\hskip 2em\relax InputField}{49}{section*.31}%
-\contentsline {paragraph}{\hskip 2em\relax Controlador}{49}{section*.32}%
-\contentsline {paragraph}{\hskip 2em\relax Teclado}{49}{section*.33}%
-\contentsline {paragraph}{\hskip 2em\relax Tecla}{49}{section*.34}%
-\contentsline {paragraph}{\hskip 2em\relax Botón}{49}{section*.35}%
-\contentsline {paragraph}{\hskip 2em\relax Evento}{50}{section*.36}%
-\contentsline {subsubsection}{Relaciones}{50}{section*.37}%
+\contentsline {subsubsection}{Clases}{49}{section*.28}%
+\contentsline {paragraph}{\hskip 2em\relax InputField}{49}{section*.29}%
+\contentsline {paragraph}{\hskip 2em\relax Controlador}{49}{section*.30}%
+\contentsline {paragraph}{\hskip 2em\relax Escritor}{49}{section*.31}%
+\contentsline {paragraph}{\hskip 2em\relax Teclado}{49}{section*.32}%
+\contentsline {paragraph}{\hskip 2em\relax Tecla}{49}{section*.33}%
+\contentsline {paragraph}{\hskip 2em\relax Botón}{50}{section*.34}%
+\contentsline {paragraph}{\hskip 2em\relax Evento}{50}{section*.35}%
+\contentsline {subsubsection}{Relaciones}{50}{section*.36}%
 \contentsline {subsection}{\numberline {4.3.2}Principios SOLID que se siguen}{50}{subsection.4.3.2}%
-\contentsline {subsubsection}{El Principio de responsabilidad única (Single Responsibility Principle - SRP)}{50}{section*.38}%
-\contentsline {subsubsection}{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}{50}{section*.39}%
-\contentsline {subsubsection}{El Principio de sustitución de Liskov (Liskov Substitution Principle - LSP)}{51}{section*.40}%
-\contentsline {subsubsection}{El Principio de segregación de interfaz (Interface Segregation Principle - ISP)}{51}{section*.41}%
-\contentsline {subsubsection}{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}{51}{section*.42}%
+\contentsline {subsubsection}{El Principio de responsabilidad única (Single Responsibility Principle - SRP)}{50}{section*.37}%
+\contentsline {subsubsection}{El Principio Abierto-Cerrado (Open/Closed Principle - OCP)}{50}{section*.38}%
+\contentsline {subsubsection}{El Principio de sustitución de Liskov (Liskov Substitution Principle - LSP)}{51}{section*.39}%
+\contentsline {subsubsection}{El Principio de segregación de interfaz (Interface Segregation Principle - ISP)}{51}{section*.40}%
+\contentsline {subsubsection}{El Principio de inversión de dependencia (Dependency Inversion Principle - DIP)}{51}{section*.41}%
 \contentsline {section}{\numberline {4.4}Análisis de comportamiento}{51}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Diagramas de actividad}{52}{subsection.4.4.1}%
 \contentsline {chapter}{\numberline {5}Diseño}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Introducción}{56}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Objetivos}{56}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.1}Introducción}{55}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Objetivos}{55}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Relación con el análisis}{56}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}Diseño de la Arquitectura}{56}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Arquitectura del sistema}{56}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Diagrama de despliegue}{56}{subsection.5.2.2}%
 \contentsline {section}{\numberline {5.3}Diagrama de clases definitivo}{56}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Descripción del diagrama de clases}{57}{subsection.5.3.1}%
-\contentsline {subsubsection}{1. Clases principales}{57}{section*.43}%
-\contentsline {paragraph}{\hskip 2em\relax KeyboardControlator}{57}{section*.44}%
-\contentsline {paragraph}{\hskip 2em\relax Keyboard}{57}{section*.45}%
-\contentsline {paragraph}{\hskip 2em\relax KeyboardButton}{57}{section*.46}%
-\contentsline {paragraph}{\hskip 2em\relax ButtonVR y CanvasButton}{57}{section*.47}%
-\contentsline {subsubsection}{2. Atributos y métodos relevantes}{58}{section*.48}%
-\contentsline {paragraph}{\hskip 2em\relax Idiomas}{58}{section*.49}%
-\contentsline {paragraph}{\hskip 2em\relax Método de cambio de idioma}{58}{section*.50}%
-\contentsline {paragraph}{\hskip 2em\relax Métodos de cambio de tipo de teclado}{58}{section*.51}%
-\contentsline {paragraph}{\hskip 2em\relax Soporte para coreano}{59}{section*.52}%
-\contentsline {subsubsection}{3. Relaciones entre clases}{59}{section*.53}%
+\contentsline {subsection}{\numberline {5.3.1}Descripción del diagrama de clases}{56}{subsection.5.3.1}%
+\contentsline {subsubsection}{1. Clases principales}{56}{section*.42}%
+\contentsline {paragraph}{\hskip 2em\relax KeyboardControlator}{56}{section*.43}%
+\contentsline {paragraph}{\hskip 2em\relax Keyboard}{56}{section*.44}%
+\contentsline {paragraph}{\hskip 2em\relax KeyboardButton}{57}{section*.45}%
+\contentsline {paragraph}{\hskip 2em\relax ButtonVR y CanvasButton}{57}{section*.46}%
+\contentsline {subsubsection}{2. Atributos y métodos relevantes}{57}{section*.47}%
+\contentsline {paragraph}{\hskip 2em\relax Idiomas}{57}{section*.48}%
+\contentsline {paragraph}{\hskip 2em\relax Método de cambio de idioma}{58}{section*.49}%
+\contentsline {paragraph}{\hskip 2em\relax Métodos de cambio de tipo de teclado}{58}{section*.50}%
+\contentsline {paragraph}{\hskip 2em\relax Soporte para coreano}{58}{section*.51}%
+\contentsline {subsubsection}{3. Relaciones entre clases}{59}{section*.52}%
 \contentsline {subsection}{\numberline {5.3.2}Apéndices y aclaraciones}{59}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Diagramas de secuencia}{60}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Cambiar de idioma}{60}{subsection.5.4.1}%
+\contentsline {section}{\numberline {5.4}Diagramas de secuencia}{59}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Cambiar de idioma}{59}{subsection.5.4.1}%
 \contentsline {subsection}{\numberline {5.4.2}Cambiar de tipo de teclado}{60}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Modificar letras}{61}{subsection.5.4.3}%
-\contentsline {subsection}{\numberline {5.4.4}Añadir caracter}{62}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Eliminar caracter}{63}{subsection.5.4.5}%
-\contentsline {section}{\numberline {5.5}Diseño de Interfaz de Usuario}{64}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diseño de Despliegue}{64}{section.5.6}%
+\contentsline {subsection}{\numberline {5.4.4}Añadir carácter}{62}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}Eliminar carácter}{62}{subsection.5.4.5}%
+\contentsline {section}{\numberline {5.5}Diseño de Interfaz de Usuario}{63}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diseño de Despliegue}{63}{section.5.6}%
 \contentsline {chapter}{\numberline {6}Implementación y pruebas}{65}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Implementación}{65}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Pruebas funcionales}{65}{section.6.2}%
