@@ -2,7 +2,57 @@
 % Las secciones presentadas son orientativas y no representan
 % necesariamente la organización que debe tener este capítulo.
 \section{Implementación}
+\subsection{Tecnologías y herramientas}
 
+Primeramente, el motor, como ya se ha mencionado, es Unity, pero para el desarrollo de este se empleó más concretamente la versión 2021.3.9f1. En cuanto a los sistemas de interacción, destacamos dos, el XR Interaction Toolkit 2.3.0 para manejo de mandos VR y el XR Hands Package para soporte de hand tracking. Para la gestión de texto, se ha empleado el TextMesh Pro 3.0.6 con soporte Unicode extendido, que ya posee Unity, y fonts adecuadas. El pluguin OpenXR 1.7.0, nos ha servido de backend multiplataforma. Finalmente, y como ya se ha explicado, se a mantenido un control de versiones con  GitHub.
+
+
+\subsection{Desafíos técnicos específicos}
+
+\subsubsection{Soporte de carácteres complejos}
+Uno de los mayores desafíos radicaba en el correcto renderizado de caracteres poco comunes como los del alfabeto cirílico, el griego y el coreano.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{Idioma} & \textbf{Caracteres especiales} & \textbf{Soporte} \\ \hline
+		Coreano         & 11,172 sílabas                 & 100\%           \\ \hline
+		Griego          & 24 letras + 5 acentos          & 100\%           \\ \hline
+		Ruso            & 33 letras                      & 100\%           \\ \hline
+	\end{tabular}
+	\caption{Validación de caracteres especiales}
+	\label{tab:caracteres}
+\end{table}
+
+Para ello se necesitó crear un Font Asset personalizado, que tardó 1 día y medio en procesarse, con una font que admitiera todos estos caracteres. En este caso en concreto se optó por utilizar la font NotoSansCJK-Regular, que también cuenta con el soporte de otras grafias asiáticas para posibles ampliaciones futuras.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{FontAsset.png}
+	\caption{Font Asset personalizado}
+	\label{fig:font_asset}
+\end{figure}
+
+\subsubsection{silabas del Hangul}
+
+El otro gran desafió se trato de desarrollar un código que admitiera la formación automática de las silabas del alfabeto hangul. Estas sílabas se forman juntando una consonante inicial(hay 19), una vocal intermedia(hay 21) y una posible consonante final(28). La gran ventaja que se encontró es que las sílabas en las tablas unicode se encontraban repartidas en bloques equitativos de combinaciones, por lo que se pudo desarrollar un algoritmo matemático que saca el índice correcto a partir del índice relativo de las letras que lo forman(se empieza por 0). Este algoritmo trata en coger el índice de la consonante inicial, multiplicarlo por 21, debido a las posibles combinaciones con las vocales, a esto sumarle el índice relativo de la vocal; al resultado se le multiplica por 28 por las combinaciones que tienen todas las sílabas anteriores con las consonantes finales; a este resultado hay que sumarle la consonante final y da el índice relativo de la sílaba; a esto solo queda posicionarlo en la tabla unicode añadiéndole el índice real de la primera sílaba,  que es el OxAC00, en exadecimal, o el 44032, en decimal.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Algoritmo.png}
+	\caption{Fragmento del código con el algoritmo de la formación de sílabas hangul}
+	\label{fig:font_asset}
+\end{figure}
+
+Para ayudarme a sacar los índices correctos, me creé unas listas que consulto antes de aplicar el algoritmo.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{ListasHangul.png}
+	\caption{Fragmento del código con las listas}
+	\label{fig:font_asset}
+\end{figure}
 
 \section{Pruebas funcionales}
 
@@ -11,3 +61,156 @@
 
 
 \section{Pruebas de usabilidad}
+
+\subsection{Metodología SUS}
+
+Aprovechando el hecho de este año estar estudiando también el Grado Superior en Desarrollo de Aplicaciones Multiplataforma, pedí permiso a profesores y alumnos para realizar esta prueba entre mis compañeros de clase. Al final 11 de los estudiantes, de entre 18 y 28 años, probaron el teclado y rellenaron el cuestionario dado. De entre los estudiantes, quitando a dos, ninguno tenia experiencia previa con el VR, pero si conocimientos de informática y experiencia con teclados estándar.
+
+Es imprescindible recalcar que para este estudio, todos los participantes han firmado un consentimiento informado \ref{fig:Consentimiento Informado}.
+
+El procedimiento conllevó en sesiones individuales de 15 min de prueba y cumplimentación del cuetionario SUS \ref{fig:Custionario SUS}, que esta formado de 10 preguntas con escalas del 1 al 5, donde las pares son puntuaciones invertidas.
+
+La tabla de puntuaciones es la siguiente, y en ella podemos observar puntuaciones muy positivas:
+
+\begin{table}[h]
+	\centering
+	\caption{Puntuaciones SUS del teclado VR por alumno}
+	\label{tab:sus_scores}
+	\begin{tabular}{ccccccccccccc}
+		\toprule
+		\textbf{Alumno} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P4} & \textbf{P5} & \textbf{P6} & \textbf{P7} & \textbf{P8} & \textbf{P9} & \textbf{P10} & \textbf{SUS} \\
+		\midrule
+		1  & 5 & 1 & 5 & 1 & 3 & 2 & 5 & 2 & 4 & 1 & 87.5 \\
+		2  & 4 & 2 & 4 & 1 & 5 & 3 & 4 & 1 & 5 & 1 & 85.0 \\
+		3  & 3 & 1 & 4 & 1 & 4 & 2 & 5 & 1 & 5 & 1 & 87.5 \\
+		4  & 5 & 1 & 4 & 1 & 5 & 2 & 4 & 1 & 5 & 1 & 92.5 \\
+		5  & 4 & 1 & 5 & 1 & 5 & 1 & 5 & 1 & 3 & 1 & 92.5 \\
+		6  & 4 & 1 & 3 & 1 & 4 & 1 & 5 & 2 & 4 & 1 & 85.0 \\
+		7  & 4 & 3 & 4 & 2 & 5 & 2 & 4 & 2 & 5 & 2 & 77.5 \\
+		8  & 4 & 1 & 5 & 1 & 4 & 1 & 5 & 1 & 5 & 1 & 95.0 \\
+		9  & 5 & 1 & 4 & 2 & 5 & 1 & 4 & 1 & 3 & 1 & 87.5 \\
+		10 & 3 & 3 & 5 & 4 & 4 & 2 & 4 & 2 & 4 & 1 & 70.0 \\
+		11 & 4 & 1 & 5 & 1 & 4 & 1 & 5 & 1 & 4 & 1 & 92.5 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar,
+			title={Puntuaciones SUS por Alumno},
+			xlabel={Alumno},
+			ylabel={Puntuación SUS},
+			ymin=60,
+			ymax=100,
+			xtick=data,
+			xticklabels={1,2,3,4,5,6,7,8,9,10,11},
+			width=0.6\textwidth,
+			bar width=0.4cm,
+			nodes near coords,
+			nodes near coords align={vertical},
+			every node near coord/.append style={font=\tiny, yshift=5pt}
+			]
+			\addplot[fill=blue!30] coordinates {
+				(1,87.5) (2,85.0) (3,87.5) (4,92.5) (5,92.5)
+				(6,85.0) (7,77.5) (8,95.0) (9,87.5) (10,70.0) (11,92.5)
+			};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Distribución individual de usabilidad percibida.}
+	\label{fig:barras}
+\end{figure}
+
+\subsubsection{NPS}
+
+El NPS se calcula mediante la siguiente fórmula:
+
+\begin{equation}
+	\text{NPS} = \left( \frac{\text{Número de Promotores} - \text{Número de Detractores}}{\text{Número total de encuestados}} \right) \times 100
+\end{equation}
+
+Donde:
+\begin{itemize}
+	\item \textbf{Promotores}: Respuestas 9-10 (\textit{"Muy probable que recomiende"})
+	\item \textbf{Neutros}: Respuestas 7-8 (\textit{No se consideran en el cálculo})
+	\item \textbf{Detractores}: Respuestas 0-6 (\textit{"Poco probable que recomiende"})
+\end{itemize}
+
+\subsection*{Ejemplo con tus datos}
+
+\begin{align*}
+	\text{Promotores} &= 5 \quad (\text{Alumnos con 9-10 puntos}) \\
+	\text{Detractores} &= 0 \quad (\text{Ningún alumno con 0-6 puntos}) \\
+	\text{Total encuestados} &= 11 \\
+	\text{NPS} &= \left( \frac{5 - 0}{11} \right) \times 100 = \boxed{\num{45.5}}
+\end{align*}
+
+Tu puntuación (45.5): Considerada "Buena" (típicamente >50 es excelente en tecnología).
+
+\begin{table}[h]
+	\centering
+	\caption{Puntuaciones NPS por Alumno}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Alumno} & \textbf{Puntuación (0-10)} \\ \hline
+		1 & 8 \\ \hline
+		2 & 8 \\ \hline
+		3 & 7 \\ \hline
+		4 & 9 \\ \hline
+		5 & 9 \\ \hline
+		6 & 8 \\ \hline
+		7 & 8 \\ \hline
+		8 & 9 \\ \hline
+		9 & 9 \\ \hline
+		10 & 7 \\ \hline
+		11 & 8 \\ \hline
+	\end{tabular}
+\end{table}
+
+	
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis}[
+			ybar,
+			title={Distribución de Puntuaciones NPS},
+			xlabel={Puntuación (0-10)},
+			ylabel={Número de Alumnos},
+			ymin=0,
+			ymax=11,
+			xtick=data,
+			symbolic x coords={0,1,2,3,4,5,6,7,8,9,10},
+			bar width=0.5cm,
+			nodes near coords,
+			enlarge x limits=0.05,
+			]
+			\addplot[fill=teal!40] coordinates {
+				(0,0) (1,0) (2,0) (3,0) (4,0) (5,0) (6,0)
+				(7,2) (8,5) (9,4) (10,0)
+			};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Distribución completa usando symbolic x coords.}
+	\label{fig:nps_symbolic}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\pie[
+		text=legend,
+		explode={0.1,0,0},
+		color={green!30,blue!30,red!30},
+		sum=auto
+		]{45.5/Promotores, 54.5/Neutros, 0/Detractores}
+	\end{tikzpicture}
+	\caption{Proporción NPS (Promotores: 45.5\%, Neutros: 54.5\%).}
+	\label{fig:nps_torta}
+\end{figure}
+
+
+
+
+

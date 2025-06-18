@@ -6,37 +6,79 @@
 % pantallas, etc
 
 \section{Introducción}
-
 \subsection{Objetivos}
-%"Transformar los modelos de análisis en una solución técnica implementable, especificando tecnologías, patrones y detalles de bajo nivel."
-En este apartado se busca implementar una solución técnica basándonos en el análisis previamente hecho y documentado.  
+En esta sección trataremos de describir los objetivos principales del diseño del teclado virtual multilingüe para VR lo más detalladamente posible.
+
+El primer objetivo se trata de garantizar la correcta escritura de los siete idiomas seleccionados y en los dos tipos de teclado, con soporte para cambios entre lenguas y tipos, por supuesto.
+
+El segundo objetivo conlleva diseñar una interfaz intuitiva que facilite la interacción tanto con mandos como con hand tracking.
+
+Como último objetivo, pero no por ello menos importante, es imprescindible conseguir que el software creado se integre en cualquier proyecto de Unity que utilice VR, ya que se trata de un Asset. 
 
 \subsection{Relación con el análisis}
 %"Se parte del diagrama de dominio (Sección X.Y) y los casos de uso (Sección X.Z) para derivar el diseño detallado."
+El diseño va a proceder y extender el análisis previo (Capítulo 4), donde se identificaron casos de uso, se creó una base de modelo de dominio y se establecieron los requisitos técnicos.
+
+En cuanto a los casos de uso, se consideró clave el cambio de idioma, la alternancia entre teclados físicos/planos y el soporte para caracteres especiales.
+
+Por el lado del modelo de dominio, se van a extender las clases propuestas para la correcta integración con Unity y el seguimiento de los principios SOLID. También cambiarán el nombre de las clases para que, si alguien que no hable español lo quiere usar, sepa un poco de qué se trata. Más adelante se detallará todo esete cambio.
+
+Los requisitos técnicos ya se evaluaron y explicaron en la sección de viabilidad (Capítulo 3).
 
 \section{Diseño de la Arquitectura}
 \subsection{Arquitectura del sistema}
 \subsubsection{Estilo arquitectónico}
 
+El sistema pone en marcha una arquitectura de capas optimizada con patrones enfocados en eventos, creada específicamente para las exigencias singulares de la realidad virtual multilingüe. Incorpora tres perspectivas complementarias:
+
+\begin{enumerate}
+	\item \textbf{Arquitectura en capas:}
+	\begin{itemize}
+		\item Capa de Presentación: Componentes Unity (UI Canvas, 3D Objects)
+		\item Capa de Dominio: Lógica de negocio (gestión de idiomas, formación de caracteres)
+		\item Capa de Infraestructura: XR Interaction Toolkit, OpenXR
+	\end{itemize}
+	\item \textbf{Patrón MVC Adaptado:}
+	\begin{itemize}
+		\item Modelo: Clases \textit{Keyboard} y \textit{KeyboardButton} (almacenan estado y reglas de idiomas)
+		\item Vista: Prefabs de teclados físicos/planos y \textit{TMP\_InputField}.
+		\item \textit{KeyboardControlator} (orquesta la interacción).
+	\end{itemize}
+	\item \textbf{Event-Driven:}
+	\begin{itemize}
+		\item Eventos Unity (onPress, onRelease) para interacciones
+		\item Delegados C\# para comunicación entre componentes
+	\end{itemize}
+\end{enumerate}
+
 \subsubsection{Diagrama de Componentes}
 %Estilo final elegido (ej: MVC, microservicios, evento-driven).
 %Diagrama de Componentes o Paquetes: Mostrar módulos principales y sus dependencias.
 %Justificación de tecnologías (lenguajes, frameworks, BBDD).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{DiagramaComponentes.png}
+	\caption{Diagrama de Clases Detallado - Relación entre clases}
+	\label{fig:diagrama_componentes}
+\end{figure}
 
-
-\subsubsection{Justificación tecnológica}
 
 \subsection{Diagrama de despliegue}
 %Cómo se distribuye físicamente el sistema (servidores, contenedores, clientes).
 %Ejemplo: "Frontend en React (cliente), Backend en Spring Boot (servidor AWS), BBDD PostgreSQL (RDS)."
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{DiagramaDespliegue.png}
+	\caption{Diagrama de Clases Detallado - Relación entre clases}
+	\label{fig:diagrama_despliegue}
+\end{figure}
 
 \section{Diagrama de clases definitivo}
 %Clases con atributos, métodos, relaciones (herencia, composición).
 %Diferencias respecto al diagrama de análisis (ej: "Se añaden interfaces para cumplir con el principio SOLID de inversión de dependencias").\section{Diseño de Actividad}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.65\textwidth]{Diagrama_de_Clases.png}
+	\includegraphics[width=1\textwidth]{Diagrama_de_Clases.png}
 	\caption{Diagrama de Clases Detallado - Relación entre clases}
 	\label{fig:diagrama_clases}
 \end{figure}
@@ -49,11 +91,18 @@ En este apartado se busca implementar una solución técnica basándonos en el a
 \hfill \break % Fuerza salto de línea después del título
 
 \begin{itemize}
-	\item Es la clase central del proyecto ya que se encarga de la coordinación entre todos los teclados.
+	\item Es una de las clases centrales del proyecto ya que se encarga de la coordinación entre todos los teclados.
 	\item Maneja el cambio del tipo de teclado y de los idiomas.
-	\item És el único que puede escribir en el \textit{TMP\_ImputField}, esto centraliza esta función para no tenerla desperdigada entre los teclados.
 \end{itemize}
 
+\paragraph{\qquad KeyboardWritter} 
+\hfill \break % Fuerza salto de línea después del título
+
+\begin{itemize}
+	\item Es la otra clase central del proyecto ya que es la encargada de escribir en el \textit{TMP\_ImputField}, función principal de cualquier teclado.
+	\item Maneja también la visualización del texto dentro del \textit{TMP\_ImputField}.
+	\item Centraliza la escritura al no estar esta capacidad desperdigada entre los teclados.
+\end{itemize}
 
 \paragraph{\qquad Keyboard} 
 \hfill \break % Fuerza salto de línea después del título
@@ -61,7 +110,7 @@ En este apartado se busca implementar una solución técnica basándonos en el a
 \begin{itemize}
 	\item Es el representante de cada uno de los teclados que hay.
 	\item Maneja la lógica compleja necesaria en cada teclado, como por ejemplo ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'' o ``public void ResetKoreanSyllable()''. Centraliza estas funciones en una sola clase para evitar la creación de scripts diferentes para cada uno de los teclados, y que la actualización en caso de error o mejora no tenga que hacerse 14 veces.
-	\item Llama a funciones \textit{KeyboardCoontrolator} para poder escribir.
+	\item Llama a funciones \textit{KeyboardWritter} para poder escribir.
 	
 \end{itemize}
 
@@ -124,14 +173,15 @@ En este apartado se busca implementar una solución técnica basándonos en el a
 \begin{itemize}
 	\item Toda la lógica para este apartado se encuentra en \textit{Keyboard}. Por otro lado, es \textit{ButtonVR} quien se encarga de llamar a estas funciones en concreto viendo si el ``public KeyboardType \_Keyboardtype;'' está en ``Korean''.
 	\item Se poseen varias listas y variables encargadas de dar control a la formación de las sílabas usadas en este alfabeto.
-	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe, y el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un carácter).
+	\item Las funciones específicas que se encargan de este idioma son el ``public void Korean\_Syllable\_Formation(string letter, bool isConsonant, bool notSyllable)'', que se encarga de formar las sílabas del hangul mientras se escribe; el ``public void ResetKoreanSyllable()'', que devuelve al estado base a las variables usadas para controlar la formación de las sílabas (cuando se da a espacio o se borra un carácter); ``private void FormKoreanSyllable(string finalConsonant = "")'', que convierte los componentes individuales en un carácter Hangul completo utilizando cálculos Unicode (código base 0xAC00); y ``private void HandleInitialInput(string letter, bool isConsonant)'', ``private void HandleVowelInput(string letter, bool isConsonant)'', ``private void HandleFinalInput(string letter, bool isConsonant)'' que son funciones para manejar la introducción de vocales o consonantes.
+	\item El sistema sigue el proceso estándar de composición Hangul: consonante inicial + vocal + (opcional) consonante final, traduciendo esta combinación a su correspondiente carácter Unicode.
 	
 \end{itemize}
 
 \subsubsection{3. Relaciones entre clases}
 
 \begin{itemize}
-	\item \textit{KeyboardControlator} tiene asociaciones 1..* con \textit{Keyboard} y sus representaciones visuales (\textit{GameObject}).
+	\item Tanto \textit{KeyboardControlator} como \textit{KeyboardWritter} tienen asociaciones 1..* con \textit{Keyboard} y sus representaciones visuales (\textit{GameObject}).
 	\item \textit{Keyboard} contiene múltiples \textit{KeyboardButton}.
 	\item \textit{KeyboardButton} usa \textit{TextMeshProUGUI} para mostrar y actualizar los caracteres en las teclas y también és el \textit{String} \textit{text} de esta interficie lo que se pasa en la llamada a los eventos de escritura.
 	\item \textit{ButtonVR} y \textit{CanvasButton} representan diferentes tipos de botones (dependiendo del tipo de teclado) y llaman a métodos en \textit{Keyboard} cuando se activan los eventos. Los eventos específicos de escritura de carácteres son inicializados en \textit{KeyboardButton}.
@@ -148,6 +198,24 @@ El apéndice de este apartado se encuentra en \ref{sec:Apéndice del capítulo 5
 
 
 \section{Diagramas de secuencia}
+
+\subsection{Pulsado de tecla}
+
+En el próximo diagrama se mostrará el proceso que siempre se sigue cuando se pulsa una tecla cualquiera del teclado. Este quiero mostrarlo para evitar definirlo en los próximos diagramas, que ya de por si son largos.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{SecuenciaPulsarBotón.png}
+	\caption{Diagrama de secuencia para cambiar de idiomas}
+	\label{fig:diagrama_secuencia_pulsado_boton}
+\end{figure}
+
+Como podemos ver, he puesto \textit{Evento} como señal perdida, se llama así para hacer referencia a cualquiera de las funciones que se pueden llamar al pulsar una tecla, y lo de la señal perdida es debido a que el ``invoke()'' del \textit{UnityEvent} puede llamar a funciones de varias clases distintas, por lo que no podia poner un agente, al no poder definir aun que hago.
+
+Hay muchos actores involucrados en este proceso, desde un \textit{AudioSource} para dar el sonido de pulsar teclas cuando estas se se accionan, hasta un ``GameObject button'' que movemos para ofrecer una experiencia simular el comportamiento de un teclado real.
+
+Estos comportamientos se repiten en cualquier acción que involucre pulsar las teclas, por lo que en los siguientes diagramas resumiremos este proceso uniendo los dos botones (\textit{CanvasButton} i \textit{ButtonVR}) y el Usuario llamará a ``OnTriggerExit(collider) / OnPointerUp(pointerEvent)'' que usará el ``invoke()'' del \textit{UnityEvent}, sin todo lo del sonido ni movimientos, etc.
+
 
 \subsection{Cambiar de idioma}
 
@@ -171,9 +239,7 @@ En el próximo diagrama, se mostrará el cambio al teclado plano seguido de un c
 	\label{fig:diagrama_secuencia_tipo_teclado}
 \end{figure}
 
-Como podemos ver, hay muchos actores involucrados en este proceso, desde un \textit{AudioSource} para dar el sonido de pulsar teclas cuando estas se se accionan, hasta un ``GameObject button'' que movemos para ofrecer una experiencia simular el comportamiento de un teclado real.
-
-Estos comportamientos se repiten en cualquier acción que involucre pulsar las teclas, por lo que en los siguientes diagramas resumiremos este proceso uniendo los dos botones (\textit{CanvasButton} i \textit{ButtonVR}) y el Usuario llamará a ``OnTriggerExit(collider) / OnPointerUp(pointerEvent)'' que usará el ``invoke()'' del \textit{UnityEvent}, sin todo lo del sonido ni movimientos, etc.
+Como se observa, hay dos señales de entrada sueltas, estas hacen referencia a ese ``Envento'' del ``invoke()'' del \textit{UnityEvent} explicado anteriormente, por lo que refiero a que todo el proceso del pulsado del boton también se realiza, sea cual sea el tipo de teclado.
 
 La corrutina ``Change()'' es de dentro del \textit{KeyboardControlator}, pero lo he separado para ayudar visualmente a entender este proceso.
 
@@ -187,7 +253,7 @@ Vamos a ver el ejemplo de pulsar mayúsculas (en los idiomas que está disponibl
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Modificar.png}
+	\includegraphics[width=1\textwidth]{Modificar.png}
 	\caption{Diagrama de secuencia de la modificación de las letras de un teclado}
 	\label{fig:diagrama_secuencia_modificación_letra}
 \end{figure}
@@ -196,57 +262,135 @@ Como podemos ver en la figura, el \textit{KeyboardButton} comprueba cada vez que
 
 el ``text'' del \textit{TextMeshProUGUI} es lo que las teclas muestran para saber que letra representan y lo que se cambia en esta acción.
 
-\subsection{Añadir carácter}
+Finalemente, la entrada de señal, como en el resto, representa que antes se realiza todo el proceso del pulsado de una tecla, aquí da igual de que tipo de teclado se trate, ya que tanto en los físicos como en los planos, el proceso del cambio de letra es el mismo.
 
-Una de las funcione básicas para el proceso típico de escritura en cualquier lengua. Hay que tener en cuenta que en cualquier momento podríamos solicitar una modificación de las letras, contemplado antes, para escribir correctamente una palabra.
+\subsection{KeyboardWritter}
+
+Esta clase tiene varias funciones como ``Insert(text)'' o ``DeleteChar''; todas relacionadas a la escritura, como ya he explicado.
+
+Estos procesos tienen varios subprocesos, conllevan muchísimos componentes y da pie a un diagrama demasiado grande para poder verlo bien en la memoria, por lo que voy a desglosarlo en varios fragmentos. El diagrama total se verá dividido en las distintas funciones que tiene la clase, pero los fragmentos pueden mostrar más de una de estas divisiones.
+
+\subsubsection{Primer fragmento}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{DiagramaWritter1.png}
+	\caption{Primer fragmento del diagrama de secuencia de la clase \textit{KeyboardWritter}}
+	\label{fig:diagrama_writter_1}
+\end{figure}
+
+En este primer fragmento del diagrama mostramos el proceso de las funciones ``Insert(text)'', ``MoveLeft()'', ``MoveRight()'' y ``DeleteChar''. Como se llega a observar, estas funciones hacen uso de otras que tiene la clase y que mostraremos en los siguientes fragmentos.
+
+\subsubsection{Segundo fragmento}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{DiagramaWritter2.png}
+	\caption{Segundo fragmento del diagrama de secuencia de la clase \textit{KeyboardWritter}}
+	\label{fig:diagrama_writter_1}
+\end{figure}
+
+En este segundo, y último fragmento del diagrama, mostramos el proceso de las funciones ``AdjustTextPosition()'' y ``GetCaretScreenPosition()''. Estas funciones se encargan de tanto el correcto emplazamiento del texto y el elemento visual (el ``[SerializeField] private RectTransform caretVisual;'') para marcar la posicion de escritura en el \textit{TMP\_InputField}.
+
+\subsubsection{Corrutina}
+
+Llegados a este punto, se me ha olvidado explicar el funcionamiento de la corrutina ``BlinkCaret()'', que se encarga de hacer parpadear el elemento visual anteriormente nombrado, para simular típico cursor.
+
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{AñadirCaracter.png}
-	\caption{Diagrama de secuencia que muestra el proceso para añadir un carácter}
-	\label{fig:diagrama_añadir_caracter}
+	\includegraphics[width=0.5\textwidth]{SecuenciaBlinkCaret.png}
+	\caption{Diagrama de secuencia que muestra el proceso que sigue la corrutina BlinkCaret()}
+	\label{fig:diagrama_blinkCaret_Coroutine}
 \end{figure}
 
-No hemos incluido el proceso interno de la función ``Korean\_Syllable\_Formation(caracter, not\_vowel, not\_Syllable\_letter\_for\_Korean)'' ya que es muy extenso por si solo y hace todo el proceso internamente.
+
+\subsection{Insertar carácter}
+
+En este punto trataremos del proceso hasta la llamada a \textit{KeyboardWritter}, que se ha destripado en el punto anterior.
+
+Aquí se contemplará todo el proceso que sigue cualquier carácter, incluidos los coreanos y sus transformaciones.
+
+Como al hacer el proceso genérico queda un diagrama muy grande, como el diagrama anterior, voy a dividirlo en trozos también.
+
+\subsubsection{Primer fragmento}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{AñadirCaracter1.png}
+	\caption{Primer fragmento del diagrama de secuencia que muestra el proceso para añadir un carácter}
+	\label{fig:diagrama_añadir_caracter_1}
+\end{figure}
 
 
-\subsection{Eliminar carácter}
+\subsubsection{Segundo fragmento}
 
-Otra de funcione básicas para el proceso típico de escritura en cualquier lengua. Es algo más corto que el anterior.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{AñadirCaracter2.png}
+	\caption{Primer fragmento del diagrama de secuencia que muestra el proceso para añadir un carácter}
+	\label{fig:diagrama_añadir_caracter_2}
+\end{figure}
+
+Esta es la parte que resta del diagrama de arriba, se incluyen las otras funciones relacionadas a la formación de las sílabas con las que se escribe en Hangul.
+
+Hay dos aclaraciones importantes que hacer respecto a esta parte del diagrama, la primera es la imagen que hay, que ya se que contrasta mucho, pero es debido a que la aplicación usada en la creación de los diagramas no soporta el alfabeto coreano, por lo que he hecho una captura de ese carácter de mi propio código; la segunda es que la función ``deleteChar()'' que se muestra, y que no está descrita, se expondrá en el siguiente punto.
+
+\subsection{Otras funciones del keyboard}
+
+En esta sección desglosaremos las funciones ``LeftPressed()'', ``RightPressed()'', ``deleteChar()'' y ``insertSpace()'' desde el pulsado de los botones correspondientes y hasta la llamada al \textit{KeyboardWritter}.
+
+En un principio iba a separar estas funciones restantes en diversos apartados, pero al ya haber cubierto la mayor parte de su contenido en el apartado del \textit{KeyboardWritter}, he decidido juntarlos, ya que en el \textit{Keyboard} cada una ocupa entre una y dos lineas de código.
 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{AñadirCaracter.png}
+	\includegraphics[width=0.5\textwidth]{Resto.png}
 	\caption{Diagrama de secuencia que muestra el proceso para añadir un carácter}
-	\label{fig:diagrama_añadir_caracter}
+	\label{fig:diagrama_secuencia_resto}
 \end{figure}
 
-No hemos incluido el proceso interno de la función ``Korean\_Syllable\_Formation(caracter, not\_vowel, not\_Syllable\_letter\_for\_Korean)'' ya que es muy extenso por si solo y hace todo el proceso internamente.
+Como ya se ha visto anteriormente, esos ``mensajes encontrados'' hacen referencia al ``Evento'' que enviaba el ``invoke()'' del \textit{UnityEvent} cuando se pulsaba un botón. En cuanto al ``ResetKoreanSyllable()'', se ha visto en el diagrama anterior.
+
+\subsection{Inicio del programa}
+
+Hasta ahora se ha visto todo lo que puede hacer el usuario, pero hay acciones que ocurren de manera automática cuando se inicia el programa para que todo realmente funcione. En esta sección detallaremos este proceso, del cual el usuario no tiene control y se encarga de realizar el propio motor Unity.
+
+Hay bastantes elementos a incluir, por lo que optado en realizar varios diagramas, uno que incluya las clases cuya inicialización pueda plasmarse en un solo diagrama legible, y otros que muestren las clases restantes una a una, ya que necesitan su propio diagrama por tamaño.
+
+\subsubsection{Conjunto}
+
+Este primer diagrama combinará el proceso de incialización que siguen las clases \textit{Keyboard}, \textit{KeyboardWritter}, \textit{CanvasButton} y \textit{ButtonVR}; que, como ya hemos dicho, son lo suficientemente cortos para poder juntarlos. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{SecuenciaInicio1.png}
+	\caption{Diagrama de secuencia del inicio de los \textit{Keyboard}, el \textit{KeyboardWritter}, los \textit{CanvasButton} y los \textit{ButtonVR}}
+	\label{fig:diagrama_inicio_1}
+\end{figure}
 
 
+\subsubsection{KeyboardControlator}
 
-\section{Diseño de Interfaz de Usuario}
-%Wireframes y Mockups
-%Bocetos de la interfaz de usuario.
-%Descripción de la interacción usuario-sistema.
+Aquí describiremos el proceso de configuración inicial de la clase \textit{KeyboardControlator}. 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{SecuenciaInicio2.png}
+	\caption{Diagrama de secuencia del inicio del \textit{KeyboardControlator}}
+	\label{fig:diagrama_inicio_2}
+\end{figure}
 
+\subsubsection{KeyboardButton}
 
+Aquí describiremos el proceso de configuración inicial de la clase \textit{KeyboardButton}. Es, desde luego, el más largo de esta lista, e involucra muchas otras clases.  
 
-\section{Diseño de Despliegue}
-%Diagrama de Despliegue:
-%Configuración de hardware.
-%Distribución de componentes de software en nodos de hardware.
-%Redes y conexiones entre nodos.
-%Justificación de la configuración de despliegue.
-
-
-
-
-
-
-
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{SecuenciaInicio3.png}
+	\caption{Diagrama de secuencia del inicio del \textit{KeyboardButton}}
+	\label{fig:diagrama_inicio_2}
+\end{figure}
 
 
