@@ -9,12 +9,12 @@
 \begin{enumerate}
 	\item \textbf{Requisitos Funcionales}
 	\begin{itemize}
-		\item RF 1: Se podrá escribir en el teclado
-		\item RF 2: Habrá un teclado virtual que simula uno físico y un teclado plano. 
-		\item RF 3: Se puede cambiar entre el teclado físico y el plano cuando se requiera. 
+		\item RF 1: Se podrá escribir en el teclado.
+		\item RF 2: Habrá un teclado virtual que simule uno físico y un teclado plano. 
+		\item RF 3: Se podrá cambiar entre el teclado físico y el plano cuando se requiera. 
 		\item RF 4: Los teclados tendrán una versión funcional en siete idiomas establecidos.
-		\item RF 5: Se puede cambiar de idioma cuando sea pertinente.
-		\item RF 6: Se podrá interactuar tanto con mandos como hand tracking. 
+		\item RF 5: Se podrá cambiar de idioma cuando sea pertinente.
+		\item RF 6: Se podrá interactuar tanto con mandos como con hand tracking. 
 	\end{itemize}
 	\item \textbf{Requisitos No Funcionales}
 	\begin{itemize}
@@ -32,63 +32,124 @@
 
 \section{Especificaciones}
 % Especificación del sistema a partir de lo recogido en los requisitos
-A continuación voy a redactar las especificaciones de los requisitos siguiendo el estándar IEEE \cite{ieee830-1993}
+A continuación voy a redactar las especificaciones de los requisitos siguiendo el estándar IEEE \cite{ieee830-1993}.
 
+
+\section{Especificaciones}
+
+% Especificación del sistema a partir de lo recogido en los requisitos
+
+A continuación voy a redactar las especificaciones de los requisitos siguiendo el estándar IEEE \cite{ieee830-1993}.
 
 \begin{enumerate}
+	
 	\item \textbf{Introducción}
+	
 	\begin{enumerate}
+		
 		\item \textbf{Propósito:} El propósito de esta especificación es definir los requisitos del sistema para el desarrollo del teclado virtual multilingüe en Unity, proporcionando una guía clara y detallada para los desarrolladores y las partes interesadas.
+		
 		\item \textbf{Alcance:} Esta especificación cubre los requisitos funcionales y no funcionales del sistema, así como las interfaces de usuario, limitaciones conocidas y futuras extensiones posibles.
+		
 		\item \textbf{Definiciones, Acrónimos y Abreviaturas:}
+		
 		\begin{itemize}
+			
 			\item \textbf{RF}: Requisito Funcional
+			
 			\item \textbf{RNF}: Requisito No Funcional
+			
 			\item \textbf{VR}: Realidad Virtual
+			
 			\item \textbf{SDK}: Kit de Desarrollo de Software
+			
 			\item \textbf{TFG}: Trabajo de Final de Grado
+			
 		\end{itemize}
+		
 	\end{enumerate}
+	
 	\item \textbf{Descripción General}
+	
 	\begin{enumerate}
-		\item \textbf{Perspectiva del Producto:} El sistema consistirá en un teclado virtual que simula uno físico y uno plano en un entorno de realidad virtual (VR). Los usuarios podrán cambiar estos teclados y seleccionar el idioma deseado para la entrada de texto.
+		
+		\item \textbf{Perspectiva del Producto:} El sistema consistirá en un teclado virtual que simule uno físico y uno plano en un entorno de realidad virtual (VR). Los usuarios podrán cambiar estos teclados y seleccionar el idioma deseado para la entrada de texto.
+		
 		\item \textbf{Funciones del Producto:} El teclado virtual permitirá:
+		
 		\begin{itemize}
+			
 			\item Cambiar entre teclado físico y plano.
+			
 			\item Seleccionar entre siete idiomas disponibles.
+			
 			\item Escribir correctamente en cualquiera de los idiomas.
-			\item Funcionar tanto con mando como hand tracking.
+			
+			\item Funcionar tanto con mando como con hand tracking.
+			
 		\end{itemize}
+		
 		\item \textbf{Características del Usuario:} Los usuarios serán principalmente aquellos que desarrollen aplicaciones de realidad virtual en las que se requiera la entrada de texto, como aplicaciones educativas y de entretenimiento.
+		
 	\end{enumerate}
+	
 	\item \textbf{Requisitos Específicos}
+	
 	\begin{enumerate}
+		
 		\item \textbf{Requisitos Funcionales}
+		
 		\begin{enumerate}
+			
 			\item \textbf{RF1: Se podrá escribir en el teclado:} El sistema debe permitir al usuario escribir en cualquiera de las versiones del teclado correctamente.
-			\item \textbf{RF2: Tipos de teclado:} El sistema debe contar con una versión de que simule uno físico y otra que sea uno plano.
+			
+			\item \textbf{RF2: Tipos de teclado:} El sistema debe contar con una versión que simule uno físico y otra que sea plano.
+			
 			\item \textbf{RF3: Cambio entre Teclado Físico y Teclado Plano:} El sistema debe permitir al usuario cambiar entre un teclado virtual que simula uno físico y uno plano.
-			\item \textbf{RF4: Multiples idiomas:} El sistema debe ofrecer una versión en siete idiomas para ambos tipos de teclado.
+			
+			\item \textbf{RF4: Múltiples idiomas:} El sistema debe posibilitar la escritura en siete idiomas para ambos tipos de teclado.
+			
 			\item \textbf{RF5: Selección de Idioma:} El sistema debe permitir al usuario seleccionar entre los siete idiomas disponibles para el teclado virtual.
-			\item \textbf{RF6: Interacción múltiple:} El sistema debe permitir al usuario interactuar con el mediante los mandos y el hand tracking.
+			
+			\item \textbf{RF6: Interacción múltiple:} El sistema debe permitir al usuario interactuar con él mediante los mandos y el hand tracking.
+			
 		\end{enumerate}
 		
+		
+		
 		\item \textbf{Requisitos No Funcionales}
+		
 		\begin{enumerate}
+			
 			\item \textbf{RNF1: Plataforma de Desarrollo:} El sistema tiene que ser desarrollado utilizando Unity como plataforma principal.
+			
 			\item \textbf{RNF2: Lenguaje de Desarrollo:} El sistema debe ser desarrollado utilizando el lenguaje de programación C\#.
+			
 			\item \textbf{RNF3: Formación del teclado plano:} El teclado plano se tratará de un UI Canvas.
-			\item \textbf{RNF4: Formación del teclado físico:} El teclado físco deberá estar compuesto de ``3D Objects''.
+			
+			\item \textbf{RNF4: Formación del teclado físico:} El teclado físico deberá estar compuesto de ``3D Objects''.
+			
 			\item \textbf{RNF5: Tipo de proyecto:} El proyecto tiene que ser un Asset.
+			
 		\end{enumerate}
+		
 	\end{enumerate}
+	
 	\item \textbf{Otros Requisitos}
+	
 	\begin{enumerate}
-		\item \textbf{Interfaces de Usuario:} El sistema ha de incluir interfaces de usuario intuitivas y fáciles de usar para la selección de teclado, idioma y entrada de texto.
+		
+		\item \textbf{Interfaces de Usuario:} El sistema debe incluir interfaces de usuario intuitivas y fáciles de usar para la selección de teclado, idioma y entrada de texto.
+		
 	\end{enumerate}
+	
 	\item \textbf{Apéndices}
 	
+	
+	
 	Apéndice \ref{sec:Apéndice del capítulo 3.2}
+	
+	
 	
 \end{enumerate}
 
@@ -115,67 +176,108 @@ En la figura~\ref{fig:costes} se presenta una plantilla que muestra la planifica
 
 \section{Riesgos}
 % Riesgos que pueden incurrir en el desarrollo del sistema
-En este punto, se analizarán posibles riesgos que puedan suceder en el proceso de desarrollo del proyecto. El estudio de estos se llevará a cabo para prevenir complicaciones que puedan retrasar o finalizar el trabajo de manera abrupta, a nadie le gustaría perder meses de trabajo (que es lo que dura el proyecto), por cualquier cosa que pueda ocurrir en este periodo.
-En primer lugar, vamos a establecer unos términos concretos para la clasificación de las situaciones. Se van a establecer dos tablas, una en función de la probabilidad  y otra en función de la gravedad. Se puede ver en la siguiente tabla.
+En este punto, se analizarán posibles riesgos que puedan suceder en el proceso de desarrollo del proyecto. El estudio de estos se llevará a cabo para prevenir complicaciones que puedan retrasar o finalizar el trabajo de manera abrupta; a nadie le gustaría perder meses de trabajo (que es lo que dura el proyecto) por cualquier cosa que pueda ocurrir en este periodo.
+
+En primer lugar, se van a disponer unos términos concretos para la clasificación de las situaciones. Se van a establecer dos tablas, una en función de la probabilidad y otra en función de la gravedad. Véase la tabla siguiente.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{Tabla_clasificaión_riegos.png}
+	\includegraphics[width=0.6\textwidth]{Tabla_clasificaión_riegos.png}
 	\caption{Tabla de clasificación de los tipos de riesgos relacionados con el TFG.}
 	\label{fig:Tabla_clasificaión_riegos}
 \end{figure}
 
 
-A continuación, y ya dada la clasificación de riesgos, se van a mostrar los posibles que yo he encontrado o experimentado durante la realización del proyecto.
+A continuación, y ya dada la clasificación de riesgos, se van a mostrar los que yo he encontrado o experimentado durante la realización del proyecto.
 
 \begin{longtable}{|>{\centering\arraybackslash}m{5cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{2cm}|>{\centering\arraybackslash}m{7cm}|}
+	
 	\hline
+	
 	\rowcolor{black}
+	
 	\textcolor{white}{Riesgo} & \textcolor{white}{Probabilidad} & \textcolor{white}{Gravedad} & \textcolor{white}{Plan}\\
+	
 	\hline
+	
 	\endfirsthead
+	
 	\rowcolor{lightgray}
+	
 	\multicolumn{4}{|c|}{Tecnologías} \\
-	\hline
-	Avería del ordenador & Baja & Alta & Plan de previsión: No hacer un uso excesivo de este equipo ya sea con un exceso de programas o demasiadas horas de uso.
 	
-	Plan de contingencia: como el peligro de este riesgo es perder el progreso, se ha decidido tener todo guardado en un github personal, por lo que, en caso de avería, se podría usar otro equipo. Por otro lado, puedo, reservar unos ahorros destinados a la reparación o adquisición de un nuevo equipo en caso de ser irreparable.
-	\\
 	\hline
-	Avería de las gafas de realidad virtual & Baja & Alta & Plan de previsión: Como con el ordenador, tener ahorros reservados a la adquisición de unas nuevas.
 	
-	Plan de contingencia: tener reservados unos ahorros destinados a la reparación o adquisición de un nuevo equipo en caso de ser irreparable.
+	Avería del ordenador & Baja & Alta & Plan de previsión: No hacer un uso excesivo de este equipo, ya sea con un empleo abusivo de programas o por demasiadas horas de uso.
+	
+	
+	
+	Plan de contingencia: como el peligro de este riesgo es perder el progreso, he decidido tenerlo todo guardado en un GitHub personal, por lo que, en caso de avería, podría usar otro equipo. Por otro lado, puedo reservar unos ahorros destinados a la reparación o adquisición de un nuevo equipo en caso de ser irreparable.
 	\\
+	
 	\hline
-	Fallo de conexión con la red & Media & Baja & Plan de contingencia: no estresarme y concentrarme en lo que puedo realizar sin la necesidad de estar conectado a internet.
+	
+	Avería de las gafas de realidad virtual & Baja & Alta & Plan de previsión: como con el ordenador, quiero tener ahorros reservados a la adquisición de unas nuevas.
+	
+	
+	
+	Plan de contingencia: reservar unos ahorros destinados a la reparación o adquisición de unas nuevas gafas en caso de que la avería fuese irreparable.
 	\\
+	
 	\hline
+	
+	Fallo de conexión con la red & Media & Baja & Plan de contingencia: no estresarme y concentrarme en lo que puedo hacer sin tener que estar conectado a internet.
+	\\
+	
+	\hline
+	
 	\rowcolor{lightgray}
+	
 	\multicolumn{4}{|c|}{Personas} \\
+	
 	\hline
+	
 	Falta de motivación & Media & Alta & Plan de previsión: recurrir a métodos motivadores externos que potencien la sensación de validez al conseguir el propósito del proyecto.
+	
+	
 	
 	Plan de contingencia: buscar ayuda profesional para ayudarme a determinar cuál es la fuente de este problema y cómo intentar paliarlo.
 	\\
+	
 	\hline
+	
 	Depresión & Media & Alta & Plan de previsión: realizar actividades que me hagan sentir bien e intentar no agobiarme, si no disfrutar del desarrollo del trabajo.
+	
+	
 	
 	Plan de contingencia: recurrir a ayuda profesional, si fuese necesario.
 	\\
+	
 	\hline
+	
 	Enfermar & Alta & Baja & Plan de previsión: Cuidarme, llevar una alimentación adecuada y hacer deporte regularmente.
+	
+	
 	
 	Plan de contingencia: Ir al médico en caso de necesidad, reorganizar las horas de trabajo según mi capacidad en ese momento.
 	\\
+	
 	\hline
-	Empezar a trabajar & Alta & Alta & Plan de contingencia: Tener todo el programa hecho y que solamente falte redactar la memoria, cosa que puedo hacer en mi tiempo libre de trabajo.
+	
+	Empezar a trabajar & Alta & Alta & Plan de contingencia: Tener todo el programa hecho y que solamente falte redactar la memoria, cosa que puedo hacer en mi tiempo libre.
 	\\
+	
 	\hline
+	
 	Continuar otros estudios reglados & Alta & Alta & Plan de contingencia: Tener una organización semanal muy estricta para poder abarcar todo.
 	\\
+	
 	\hline
+	
 	\caption{Tabla de los riesgos relacionados con el TFG.}
+	
 	\label{tabla de riesgos}
+	
 \end{longtable}
 
 
@@ -185,90 +287,85 @@ A continuación, y ya dada la clasificación de riesgos, se van a mostrar los po
 % Viabilidad del proyecto presentado
 
 \subsection{Viabilidad técnica}
-\begin{itemize}
 
+\begin{itemize}
 	\item Plataforma de Desarrollo:
 	\begin{itemize}
-		\item El uso de Unity como plataforma desarroladora, ofrece una gran robustez a la hora de desarollar aplicaciones y Assets de realidad virtual, ya que es una plataforma bien establecida en este ámbito.
+		\item El uso de Unity como plataforma desarrolladora ofrece una gran robustez a la hora de desarrollar aplicaciones y Assets de realidad virtual, ya que es una plataforma bien establecida en este ámbito.
 		\item Al ofrecer Unity un soporte multiplataforma, este permite el desarrollo para distintos dispositivos de realidad virtual.
-		\item Disfruto de una considerable experiencia en el uso de esta plataforma.
-		
+		\item Disfrute de una considerable experiencia en el uso de esta plataforma.
 	\end{itemize}
 	\item Lenguaje de Programación:
 	\begin{itemize}
-		\item Se utilizará C\# como lenguaje de desarrollo tanto por ser el lenguaje principal de Unity, como por contar con una gran cantidad de recursos y comunidades de soporte, así como lo necesario que ha sido su uso durante el transcurso del grado universitario.
+		\item Se utilizará C\# como lenguaje de desarrollo, tanto por ser el lenguaje principal de Unity como por contar con una gran cantidad de recursos y comunidades de soporte, así como lo necesario que ha sido su uso durante el transcurso del grado universitario.
 	\end{itemize}
-	
 	\item Bibliotecas y Herramientas Adicionales:
 	\begin{itemize}
 		\item XR Interaction Toolkit: para la implementación de las funcionalidades en VR del proyecto.
 		\item OpenXR Pluguin: pluguin usado para la compatibilidad con múltiples dispositivos VR.
 		\item XR Hands: para permitir el funcionamiento del hand tracking en dispositivos habilitados para ello.
-		\item TextMesh Pro: utilizado para formatear el texto y permitir el uso de caracteres UNICODE en el interfaz de usuario.
+		\item TextMesh Pro: utilizado para formatear el texto y permitir el uso de caracteres UNICODE en la interfaz de usuario.
 	\end{itemize}
-	
 	\item Pruebas y Depuración:
 	\begin{itemize}
 		\item Al proporcionar Unity un entorno integrado para pruebas y depuración, facilita la identificación y resolución de errores durante el desarrollo.
-		\item Tengo permiso de probar el Asset en una clase del \textit{Ciclo Formativo Superior de Técnico en Desarrollo de Aplicaciones Multiplataforma(DAM)} en el instituto IES Jaume II el Just de Tavernes de la Valldigna.
-	\end{itemize}
+		\item Tengo permiso para probar el Asset en una clase del \textit{Ciclo Formativo Superior de Técnico en Desarrollo de Aplicaciones Multiplataforma (DAM)} en el instituto IES Jaume II el Just de Tavernes de la Valldigna.
+	\end{itemize}	
 \end{itemize}
 
 
 \subsection{Viabilidad económica}
+
 \begin{itemize}
-	\item Costes de Desarrollo:
+	\item Costes del Desarrollo:
 	\begin{itemize}
 		\item Licencias de Software:
 		\begin{itemize}
 			\item Se hace uso de la versión gratuita del software Unity.
-			\item No se ha utilizado ningún pluguin de pago del Asset Store.
+			\item No se ha utilizado ningún plugin de pago del Asset Store.
 		\end{itemize}
 		\item Equipo de Desarrollo:
 		\begin{itemize}
-			\item Todos los recursos humanos necesarios para el desarrollo, incluyendo programadores y diseñadores se encuentran englobados en mi persona por lo que no es una carga económica.
+			\item Todos los recursos humanos necesarios para el desarrollo, incluyendo programadores y diseñadores, se encuentran englobados en mi persona, por lo que no es una carga económica.
 			\item Estimación de horas de trabajo necesarias para cada fase del proyecto (diseño, implementación, pruebas).
 		\end{itemize}
 	\end{itemize}
-	
 	\item Costes de Infraestructura:
 	\begin{itemize}
 		\item Hardware:
 		\begin{itemize}
-			\item Ordenadores: Se ha necesitado comprar un ordenador nuevo, por un precio de 2296,00€, porque se había roto en el que estaba trabajando. Fuera de eso no han habido más gastos.
-			\item Dispositivos de realidad virtual para pruebas y demostraciones: se ha adquirido las Oculus Quest 2 por un precio de 360,00€.
+			\item Ordenadores: he necesitado comprar un ordenador nuevo, por el precio de 2296,00€, puesto que se había roto el que estaba trabajando. Aparte de eso, no ha habido más gastos.
+			\item Dispositivos de realidad virtual para pruebas y demostraciones: he adquirido las Oculus Quest 2 por el precio de 360,00 €.
 		\end{itemize}
-		
 		\item Servicios en la Nube:
 		\begin{itemize}
 			\item Uso de GitHub como repositorio del proyecto.
 		\end{itemize}
 	\end{itemize}
-	
-	\item Análisis de Coste-Beneficio:
+	\item Análisis de coste-beneficio:
 	\begin{itemize}
-		\item Beneficios Potenciales:
+		\item Beneficios potenciales:
 		\begin{itemize}
 			\item Acceso a un mercado creciente de aplicaciones de realidad virtual.
 			\item Alto atractivo para la comunidad no anglosajona incluida en los idiomas descritos.
 			\item Monetización del teclado a través de la venta directa en Asset Store.
 		\end{itemize}
-		
 		\item Retorno de Inversión (ROI):
 		\begin{itemize}
-			\item No puedo poner un tiempo para que la inversión salga rentable debido a que no puedo saber exactamente cuanto triunfará en el Asset Store, pero teniendo en cuenta el plan de vender el Asset a 20€, que es un precio muy competitivo, los gastos directos e indirectos mostrados en la figura~\ref{fig:costes}, me haría falta vender unos 181 teclados.
+			\item No puedo poner un tiempo para que la inversión salga rentable debido a que no me es posible saber exactamente cuánto triunfará en el Asset Store, pero teniendo en cuenta el plan de vender el Asset a 20€, que es un precio muy competitivo, los gastos directos e indirectos mostrados en la figura~\ref{fig:costes}, necesitaría vender unos 181 teclados.
 		\end{itemize}
 	\end{itemize}
 \end{itemize}
 
 \subsection{Viabilidad temporal}
-\begin{itemize}
-	\item La planificación temporal se ha descrito anteriormente en el imagen~\ref{fig:tiempos}, esto muestra el uso de un diagrama de Gantt para el monitoreo.
-	\item La planificación ha sido realizada con gran margen respecto a la fecha límite de la entrega del TFG en caso de cualquier problema que pueda surgir.
 
+\begin{itemize}
+	\item La planificación temporal se ha descrito anteriormente en la imagen~\ref{fig:tiempos}; esto muestra el uso de un diagrama de Gantt para el monitoreo.
+	\item La planificación ha sido realizada con gran margen respecto a la fecha límite de la entrega del TFG en caso de que surgiese algún problema.	
 \end{itemize}
 
 \subsection{Conclusión sobre la viabilidad}
+
 \begin{itemize}
 	\item Tras el análisis realizado, se puede concluir que el proyecto es viable.
 	\item La plataforma de desarrollo, el equipo, los recursos necesarios y la planificación están alineados para asegurar el éxito del proyecto.

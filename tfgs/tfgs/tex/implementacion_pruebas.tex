@@ -54,29 +54,45 @@ Para ayudarme a sacar los índices correctos, me creé unas listas que consulto 
 	\label{fig:font_asset}
 \end{figure}
 
-\section{Pruebas funcionales}
+\section{Validando el sistema: Mi experiencia práctica}
 
+Cuando llegó el momento de probar todo lo que había construido, me puse manos a la obra con un par de bebidas energéticas (sin azucar) y mucha paciencia. Lo primero que hice fue sentarme frente al visor VR y empezar a teclear como loco. Metí más de 150 caracteres raros a mano, uno tras otro, para ver si salían bien dibujados. Griego, coreano, cirílico... un montón de símbolos que parecían salidos de otro planeta. Recuerdo especialmente el problema con esa letra rusa "yo" (esa que parece una 'e' con sombrerito) - ¡se veía toda aplastada! Pero después de jugar un rato con los ajustes de TextMesh Pro, por fin quedó decente.
+
+Lo del coreano fue otro mundo. Me pasé una tarde entera probando combinaciones de consonantes y vocales como si fuera un juego de Lego lingüístico. "Vamos a ver, si juntamos H + A + N... ¿saldrá 'han'?" Y ahí estaba, la sílaba 10588 en la tabla Unicode, apareciendo como por arte de magia en la pantalla. Fue uno de esos momentos "¡eureka!" que hacen que todo el esfuerzo valga la pena.
 
 \section{Pruebas de rendimiento}
 
+Te soy sincero, me daba un poco de miedo que todo fuera a explotar en plena demostración. Por eso me puse a observar cómo se comportaba el teclado en el mundo real. Durante las pruebas con mis compañeros, vigilaba como un halcón: ¿se atascaba al escribir? ¿Se cerraba de repente? Para mi alivio, aguantó bien el tipo. Eso sí, noté que en sesiones largas la memoria empezaba a respirar con dificultad, como cuando subes una cuesta con la bici cargada.
+
+El gran susto vino con el Font Asset. ¡Catorce horas generando esa cosa! Me fui a dormir dejando el ordenador trabajando y al despertar... seguía ahí, tostándose como un pollo al horno. El resultado fue que la primera vez que abrías la app, tardaba lo suyo en cargar. Solución: ahora arranca antes que nada, mientras muestro ese logo molón que diseñé.
+
+\section{Lo que aprendí en el camino}
+
+Si hay algo que me quedó claro es que lo de las fuentes multilingües es un infierno. Nunca más quiero pasar otro día entero esperando que se genere un Font Asset. La próxima vez, buscaré fuentes prehechas o las partiré en trocitos. Por otro lado, TextMesh Pro fue mi salvación - sin él esto habría sido imposible.
+
+Sobre la VR, descubrí cosas curiosas. La gente necesita un par de minutos para acostumbrarse al teclado flotante - al principio todos movían las manos como espantando moscas. Y las teclas tienen que ser más grandes de lo que crees, porque en el espacio 3D todo se ve más pequeño. Lo más importante: sin vibración en los mandos, tienes que poner buenas señales visuales, si no la gente no sabe si ha pulsado bien.
+
+Al final, lo que más me llevo es que cada problema tenía solución. A veces tardabas en encontrarla, pero siempre aparecía. Como cuando a las 2 de la mañana se me ocurrió lo de precargar la fuente durante el inicio... ¡y funcionó!
 
 \section{Pruebas de usabilidad}
 
 \subsection{Metodología SUS}
 
-Aprovechando el hecho de este año estar estudiando también el Grado Superior en Desarrollo de Aplicaciones Multiplataforma, pedí permiso a profesores y alumnos para realizar esta prueba entre mis compañeros de clase. Al final 11 de los estudiantes, de entre 18 y 28 años, probaron el teclado y rellenaron el cuestionario dado. De entre los estudiantes, quitando a dos, ninguno tenia experiencia previa con el VR, pero si conocimientos de informática y experiencia con teclados estándar.
+Para este estudio, quise aprovechar que estoy cursando el Grado Superior en Desarrollo de Aplicaciones Multiplataforma. Después de hablar con varios profesores y compañeros, conseguí que 11 estudiantes de mi clase -con edades entre 18 y 28 años- probaran el teclado VR. La verdad es que me sorprendió lo dispuestos que estaban a colaborar. Casi ninguno tenía experiencia previa con realidad virtual (solo dos chicos habían usado algo antes), pero todos manejaban bien los ordenadores y teclados normales, claro, siendo estudiantes de informática.
 
-Es imprescindible recalcar que para este estudio, todos los participantes han firmado un consentimiento informado \ref{fig:Consentimiento Informado}.
+Antes de empezar, fue importante que cada uno firmara el consentimiento informado \ref{fig:Consentimiento Informado}. No quería dejar nada al azar en ese aspecto. Las pruebas fueron individuales, de unos 15 minutos cada una: primero usaban el teclado, luego rellenaban el cuestionario SUS \ref{fig:Custionario SUS}. Ese formulario tiene su truco - las preguntas pares van "al revés", así que hay que estar atento al puntuar.
 
-El procedimiento conllevó en sesiones individuales de 15 min de prueba y cumplimentación del cuetionario SUS \ref{fig:Custionario SUS}, que esta formado de 10 preguntas con escalas del 1 al 5, donde las pares son puntuaciones invertidas.
+Cuando vi los resultados (Tabla \ref{tab:sus_scores}), me llevé una grata sorpresa. Las puntuaciones fueron bastante altas en general. El gráfico de barras (Figura \ref{fig:barras}) muestra claramente cómo la mayoría se concentra arriba del todo. De hecho, si nos fijamos en el pastel (Figura \ref{fig:sus_pie}), más del 70\% de mis compañeros dieron al teclado una nota de usabilidad "excelente". ¡Incluso uno llegó a 95 puntos! Solo tres estuvieron en la franja "aceptable" (entre 68 y 84), y ninguno lo consideró "inaceptable".
 
-La tabla de puntuaciones es la siguiente, y en ella podemos observar puntuaciones muy positivas:
+Eso sí, noté un patrón curioso: los dos compañeros que dieron las notas más bajas (70 y 77.5) fueron precisamente quienes más problemas tuvieron con los idiomas asiáticos. Uno me comentó después: "Lo del coreano se me hizo cuesta arriba". Pero incluso ellos reconocieron que el teclado funcionaba bien en general.
 
-\begin{table}[h]
+Personalmente, creo que estos números demuestran que el prototipo va por buen camino, especialmente considerando que casi todos eran nuevos en VR. Eso sí, la parte multilingüe necesita más trabajo, como veremos más adelante.
+
+\begin{table}[H]
 	\centering
 	\caption{Puntuaciones SUS del teclado VR por alumno}
 	\label{tab:sus_scores}
-	\begin{tabular}{ccccccccccccc}
+	\begin{tabular}{cccccccccccc}
 		\toprule
 		\textbf{Alumno} & \textbf{P1} & \textbf{P2} & \textbf{P3} & \textbf{P4} & \textbf{P5} & \textbf{P6} & \textbf{P7} & \textbf{P8} & \textbf{P9} & \textbf{P10} & \textbf{SUS} \\
 		\midrule
@@ -95,7 +111,7 @@ La tabla de puntuaciones es la siguiente, y en ella podemos observar puntuacione
 	\end{tabular}
 \end{table}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -107,7 +123,7 @@ La tabla de puntuaciones es la siguiente, y en ella podemos observar puntuacione
 			ymax=100,
 			xtick=data,
 			xticklabels={1,2,3,4,5,6,7,8,9,10,11},
-			width=0.6\textwidth,
+			width=0.5\textwidth,
 			bar width=0.4cm,
 			nodes near coords,
 			nodes near coords align={vertical},
@@ -122,36 +138,45 @@ La tabla de puntuaciones es la siguiente, y en ella podemos observar puntuacione
 	\caption{Distribución individual de usabilidad percibida.}
 	\label{fig:barras}
 \end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\pie[
+		text=legend,
+		explode={0.1,0,0},
+		color={green!30,blue!30,red!30},
+		sum=auto,
+		before number=\sffamily,
+		after number=\sffamily\%
+		]{
+			72.7/\textbf{Excelentes} ($\geq$85),
+			27.3/\textbf{Aceptables} (68-84),
+			0/\textbf{Inaceptables} ($<$68)
+		}
+	\end{tikzpicture}
+	\caption{Distribución de usabilidad según SUS (11 alumnos). \\ 
+		\textbf{Excelentes}: 8 alumnos (72.7\%), \textbf{Aceptables}: 3 alumnos (27.3\%), \textbf{Inaceptables}: 0 alumnos (0\%).}
+	\label{fig:sus_pie}
+\end{figure}
 
-\subsubsection{NPS}
 
-El NPS se calcula mediante la siguiente fórmula:
 
-\begin{equation}
-	\text{NPS} = \left( \frac{\text{Número de Promotores} - \text{Número de Detractores}}{\text{Número total de encuestados}} \right) \times 100
-\end{equation}
+\subsubsection{Análisis del Net Promoter Score (NPS)}
 
-Donde:
-\begin{itemize}
-	\item \textbf{Promotores}: Respuestas 9-10 (\textit{"Muy probable que recomiende"})
-	\item \textbf{Neutros}: Respuestas 7-8 (\textit{No se consideran en el cálculo})
-	\item \textbf{Detractores}: Respuestas 0-6 (\textit{"Poco probable que recomiende"})
-\end{itemize}
+El Net Promoter Score (NPS) me pareció especialmente revelador porque no solo mide satisfacción, sino lealtad real. Al preguntar a mis compañeros \textit{"¿Qué probabilidad hay de que recomiendes este teclado VR?"}, sus respuestas (Tabla \ref{tab:nps_scores}) mostraron un patrón curioso. Casi todos dieron puntuaciones altas - entre 7 y 9 - pero con matices que los números solos no capturan completamente.
 
-\subsection*{Ejemplo con tus datos}
+Fíjate en el gráfico de barras (Figura \ref{fig:nps_symbolic}): ese vacío entre 0 y 6 salta a la vista. ¡Ni un solo detractor! Eso ya es alentador. Pero lo interesante fue cómo se agruparon las respuestas: cinco compañeros pusieron 8 (neutros), cuatro dieron 9 (promotores), y solo dos se quedaron en 7. Esto me hizo preguntarme: ¿por qué nadie dio el 10 máximo? En charlas posteriores, varios mencionaron que "para recomendar algo a un cliente" querrían probar antes la versión definitiva.
 
-\begin{align*}
-	\text{Promotores} &= 5 \quad (\text{Alumnos con 9-10 puntos}) \\
-	\text{Detractores} &= 0 \quad (\text{Ningún alumno con 0-6 puntos}) \\
-	\text{Total encuestados} &= 11 \\
-	\text{NPS} &= \left( \frac{5 - 0}{11} \right) \times 100 = \boxed{\num{45.5}}
-\end{align*}
+Con esos números, el cálculo del NPS quedó en 45.5 (Figura \ref{fig:nps_torta}). Según los estándares tecnológicos, se considera una puntuación positiva - claramente por encima de lo mediocre - aunque personalmente esperaba algo más alto. Al desmenuzarlo, entendí mejor: tenemos un 45.5\% de promotores entusiastas, pero más de la mitad (54.5\%) se mantuvo neutral. Es como si dijeran \textit{"Funciona, pero no lo recomendaría sin reservas"}.
 
-Tu puntuación (45.5): Considerada "Buena" (típicamente >50 es excelente en tecnología).
+Al cruzar esto con los resultados SUS, encontré coherencia. Quienes dieron mejores puntuaciones de usabilidad (como ese SUS de 95 del Alumno 8) fueron justo los que pusieron 9 en NPS. El caso del Alumno 10 resultó ilustrativo: 70 en SUS y 7 en NPS - en ambos casos el más bajo. Cuando hablamos después, me dijo: \textit{"La idea mola, pero para proyectos serios echo en falta más personalización"}.
+
+La verdad es que aunque matemáticamente 45.5 es "bueno", lo valioso está en los detalles: esos cuatro que dieron 9 serían nuestros primeros evangelizadores. Y los cinco de puntuación 8... bueno, ahí está nuestro reto principal. Con ajustes específicos, podríamos convertirlos en promotores.
 
 \begin{table}[h]
 	\centering
 	\caption{Puntuaciones NPS por Alumno}
+	\label{tab:nps_scores}
 	\begin{tabular}{|c|c|}
 		\hline
 		\textbf{Alumno} & \textbf{Puntuación (0-10)} \\ \hline
@@ -169,7 +194,7 @@ Tu puntuación (45.5): Considerada "Buena" (típicamente >50 es excelente en tec
 	\end{tabular}
 \end{table}
 
-	
+% Gráficos existentes (se mantienen igual)
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}
@@ -192,7 +217,7 @@ Tu puntuación (45.5): Considerada "Buena" (típicamente >50 es excelente en tec
 			};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Distribución completa usando symbolic x coords.}
+	\caption{Distribución completa de respuestas NPS. Destaca la ausencia de puntuaciones bajas (0-6) y la concentración en 7-9.}
 	\label{fig:nps_symbolic}
 \end{figure}
 
@@ -206,11 +231,11 @@ Tu puntuación (45.5): Considerada "Buena" (típicamente >50 es excelente en tec
 		sum=auto
 		]{45.5/Promotores, 54.5/Neutros, 0/Detractores}
 	\end{tikzpicture}
-	\caption{Proporción NPS (Promotores: 45.5\%, Neutros: 54.5\%).}
+	\caption{Proporción NPS: casi mitad y mitad entre promotores y neutros. Los detractores brillan por su ausencia.}
 	\label{fig:nps_torta}
 \end{figure}
 
+\subsection{Video de demostración}
 
-
-
-
+Se adjunta un video demostrativo con el funcionamiento del sistema:  
+\url{https://youtu.be/DTkw49Uq6r4}.

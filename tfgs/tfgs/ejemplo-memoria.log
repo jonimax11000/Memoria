@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.2)  18 JUN 2025 07:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.6.2)  23 JUN 2025 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -858,7 +858,26 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count336
 \@thisrulewidth=\dimen304
 )
-(C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.sty
+(C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+\csq@reset=\count337
+\csq@gtype=\count338
+\csq@glevel=\count339
+\csq@qlevel=\count340
+\csq@maxlvl=\count341
+\csq@tshold=\count342
+\csq@ltx@everypar=\toks51
+
+(C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)) (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/pgfplots\pgfplots.st
+y
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplots.rev
 ision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
@@ -867,12 +886,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 e.tex
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgfplotscore
 .code.tex
-\t@pgfplots@toka=\toks51
-\t@pgfplots@tokb=\toks52
-\t@pgfplots@tokc=\toks53
+\t@pgfplots@toka=\toks52
+\t@pgfplots@tokb=\toks53
+\t@pgfplots@tokc=\toks54
 \pgfplots@tmpa=\dimen305
-\c@pgfplots@coordindex=\count337
-\c@pgfplots@scanlineindex=\count338
+\c@pgfplots@coordindex=\count343
+\c@pgfplots@scanlineindex=\count344
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgfplots
 sysgeneric.code.tex))
@@ -883,9 +902,9 @@ ib\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks54
-\t@pgf@tokb=\toks55
-\t@pgf@tokc=\toks56
+\t@pgf@toka=\toks55
+\t@pgf@tokb=\toks56
+\t@pgf@tokc=\toks57
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/oldpgfcompat
 ib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -897,14 +916,14 @@ e\pgfplotsliststructure.code.tex)
 e\pgfplotsliststructureext.code.tex)
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count339
+\c@pgfplotsarray@tmp=\count345
 )
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsmatrix.code.tex)
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/numtable\pgf
 plotstableshared.code.tex
-\c@pgfplotstable@counta=\count340
-\t@pgfplotstable@a=\toks57
+\c@pgfplotstable@counta=\count346
+\t@pgfplotstable@a=\toks58
 )
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/liststructur
 e\pgfplotsdeque.code.tex)
@@ -916,7 +935,7 @@ sbinary.data.code.tex))
 sutil.verb.code.tex)
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\pgflibr
 arypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count341
+\c@pgfplotslibrarysurf@no=\count347
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys\pgflibra
 rypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -953,7 +972,7 @@ decorations.code.tex
 \pgfdecoratedinputsegmentcompleteddistance=\dimen308
 \pgfdecoratedinputsegmentremainingdistance=\dimen309
 \pgf@decorate@distancetomove=\dimen310
-\pgf@decorate@repeatstate=\count342
+\pgf@decorate@repeatstate=\count348
 \pgfdecorationsegmentamplitude=\dimen311
 \pgfdecorationsegmentlength=\dimen312
 )
@@ -969,7 +988,7 @@ z/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 ions\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/libs\tikzlib
 rarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count343
+\pgfplots@numplots=\count349
 \pgfplots@xmin@reg=\dimen313
 \pgfplots@xmax@reg=\dimen314
 \pgfplots@ymin@reg=\dimen315
@@ -993,25 +1012,25 @@ ikz package.
 code.tex
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/carlisle\scalefnt.sty)
 \pgfpie@angleEnd=\dimen319
-\pgfpie@explodeLength=\count344
-\pgfpie@colorLength=\count345
-\pgfpie@sliceLength=\count346
+\pgfpie@explodeLength=\count350
+\pgfpie@colorLength=\count351
+\pgfpie@sliceLength=\count352
 )) (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
 Package: siunitx 2025-05-22 v3.4.12 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count347
-\l__siunitx_number_exponent_fixed_int=\count348
-\l__siunitx_number_min_decimal_int=\count349
-\l__siunitx_number_min_integer_int=\count350
-\l__siunitx_number_round_precision_int=\count351
-\l__siunitx_number_lower_threshold_int=\count352
-\l__siunitx_number_upper_threshold_int=\count353
-\l__siunitx_number_group_first_int=\count354
-\l__siunitx_number_group_size_int=\count355
-\l__siunitx_number_group_minimum_int=\count356
+\l__siunitx_number_uncert_offset_int=\count353
+\l__siunitx_number_exponent_fixed_int=\count354
+\l__siunitx_number_min_decimal_int=\count355
+\l__siunitx_number_min_integer_int=\count356
+\l__siunitx_number_round_precision_int=\count357
+\l__siunitx_number_lower_threshold_int=\count358
+\l__siunitx_number_upper_threshold_int=\count359
+\l__siunitx_number_group_first_int=\count360
+\l__siunitx_number_group_size_int=\count361
+\l__siunitx_number_group_minimum_int=\count362
 \l__siunitx_angle_tmp_dim=\dimen320
 \l__siunitx_angle_marker_box=\box76
 \l__siunitx_angle_unit_box=\box77
-\l__siunitx_compound_count_int=\count357
+\l__siunitx_compound_count_int=\count363
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
 ns.sty
@@ -1028,9 +1047,9 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 \l__siunitx_table_after_box=\box83
 \l__siunitx_table_before_dim=\dimen323
 \l__siunitx_table_carry_dim=\dimen324
-\l__siunitx_unit_tmp_int=\count358
-\l__siunitx_unit_position_int=\count359
-\l__siunitx_unit_total_int=\count360
+\l__siunitx_unit_tmp_int=\count364
+\l__siunitx_unit_position_int=\count365
+\l__siunitx_unit_total_int=\count366
 )
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
 aryarrows.meta.code.tex
@@ -1052,10 +1071,15 @@ File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
 z/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count361
+\l__color_backend_stack_int=\count367
 \l__pdf_internal_box=\box84
 ) (ejemplo-memoria.aux
 LaTeX Info: Redefining \. on input line 12.
@@ -1063,12 +1087,6 @@ LaTeX Info: Redefining \% on input line 12.
 
 
 LaTeX Warning: Label `fig:diagrama_casos_uso' multiply defined.
-
-
-LaTeX Warning: Label `fig:diagrama_writter_1' multiply defined.
-
-
-LaTeX Warning: Label `fig:diagrama_inicio_2' multiply defined.
 
 
 LaTeX Warning: Label `fig:font_asset' multiply defined.
@@ -1085,28 +1103,28 @@ LaTeX Warning: Label `fig:CanvasToRigid' multiply defined.
 )
 \openout1 = `ejemplo-memoria.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
-\c@lstlisting=\count362
-Package hyperref Info: Link coloring ON on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Info: Redefining \. on input line 43.
+LaTeX Info: Redefining \% on input line 43.
+\c@lstlisting=\count368
+Package hyperref Info: Link coloring ON on input line 43.
  (ejemplo-memoria.out) (ejemplo-memoria.out)
 \@outlinefile=\write4
 \openout4 = `ejemplo-memoria.out'.
@@ -1115,17 +1133,17 @@ Package hyperref Info: Link coloring ON on input line 42.
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count363
+\scratchcounter=\count369
 \scratchdimen=\dimen329
 \scratchbox=\box85
-\nofMPsegments=\count364
-\nofMParguments=\count365
-\everyMPshowfont=\toks58
-\MPscratchCnt=\count366
+\nofMPsegments=\count370
+\nofMParguments=\count371
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count372
 \MPscratchDim=\dimen330
-\MPnumerator=\count367
-\makeMPintoPDFobject=\count368
-\everyMPtoPDFconversion=\toks59
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
+\everyMPtoPDFconversion=\toks60
 )
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1175,7 +1193,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
 your preamble.
- on input line 42.
+ on input line 43.
 
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
@@ -1184,28 +1202,28 @@ File: translations-basic-dictionary-spanish.trsl (spanish translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `spanish'. on input line 42.
-<figs/ETSE.jpg, id=374, 669.50125pt x 139.52126pt>
+or `spanish'. on input line 43.
+<figs/ETSE.jpg, id=410, 669.50125pt x 139.52126pt>
 File: figs/ETSE.jpg Graphic file (type jpg)
 <use figs/ETSE.jpg>
-Package pdftex.def Info: figs/ETSE.jpg  used on input line 45.
+Package pdftex.def Info: figs/ETSE.jpg  used on input line 46.
 (pdftex.def)             Requested size: 318.66946pt x 66.41165pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<figs/escudo_logo_UV.jpg, id=375, 512.91624pt x 397.485pt>
+<figs/escudo_logo_UV.jpg, id=411, 512.91624pt x 397.485pt>
 File: figs/escudo_logo_UV.jpg Graphic file (type jpg)
 <use figs/escudo_logo_UV.jpg>
-Package pdftex.def Info: figs/escudo_logo_UV.jpg  used on input line 45.
+Package pdftex.def Info: figs/escudo_logo_UV.jpg  used on input line 46.
 (pdftex.def)             Requested size: 182.09485pt x 141.11119pt.
 
 [1
@@ -1214,10 +1232,10 @@ Package pdftex.def Info: figs/escudo_logo_UV.jpg  used on input line 45.
 jpg> <./figs/escudo_logo_UV.jpg>] [2
 
 ]
-<figs/logo-contraportada.png, id=387, 722.7pt x 100.375pt>
+<figs/logo-contraportada.png, id=423, 722.7pt x 100.375pt>
 File: figs/logo-contraportada.png Graphic file (type png)
 <use figs/logo-contraportada.png>
-Package pdftex.def Info: figs/logo-contraportada.png  used on input line 47.
+Package pdftex.def Info: figs/logo-contraportada.png  used on input line 48.
 (pdftex.def)             Requested size: 455.24408pt x 63.22891pt.
  [3 <./figs/logo-contraportada.png>]
 [4
@@ -1241,7 +1259,7 @@ Underfull \vbox (badness 1087) has occurred while \output is active []
  [15
 
 ]
-[16])
+[16] [17])
 \tf@toc=\write5
 \openout5 = `ejemplo-memoria.toc'.
 
@@ -1254,23 +1272,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18
-
-]
+[18]
 Cap\'{\i }tulo 1.
 (tex/introduccion.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [19
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1347,6 +1356,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [28]
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1392,6 +1404,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [33]
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1450,19 +1465,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [40]
-<figs/tiempos.png, id=846, 1076.52188pt x 668.4975pt>
+<figs/tiempos.png, id=889, 1076.52188pt x 668.4975pt>
 File: figs/tiempos.png Graphic file (type png)
 <use figs/tiempos.png>
-Package pdftex.def Info: figs/tiempos.png  used on input line 105.
+Package pdftex.def Info: figs/tiempos.png  used on input line 166.
 (pdftex.def)             Requested size: 455.24411pt x 282.69492pt.
-<figs/costes.png, id=848, 766.36313pt x 351.56343pt>
+<figs/costes.png, id=891, 766.36313pt x 351.56343pt>
 File: figs/costes.png Graphic file (type png)
 <use figs/costes.png>
-Package pdftex.def Info: figs/costes.png  used on input line 111.
+Package pdftex.def Info: figs/costes.png  used on input line 172.
 (pdftex.def)             Requested size: 455.24411pt x 208.8422pt.
-
-Underfull \vbox (badness 1406) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1477,14 +1489,28 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.115 
+l.176 
        <./figs/tiempos.png>]
-<figs/Tabla_clasificaión_riegos.png, id=862, 457.71pt x 324.46219pt>
+<figs/Tabla_clasificaión_riegos.png, id=908, 457.71pt x 324.46219pt>
 File: figs/Tabla_clasificaión_riegos.png Graphic file (type png)
 <use figs/Tabla_clasificaión_riegos.png>
 Package pdftex.def Info: figs/Tabla_clasificaión_riegos.png  used on input lin
-e 123.
-(pdftex.def)             Requested size: 364.19667pt x 258.18384pt.
+e 185.
+(pdftex.def)             Requested size: 273.14923pt x 193.63911pt.
+
+Overfull \hbox (9.16998pt too wide) in paragraph at lines 199--199
+ []|[]\T1/cmr/m/n/12 Probabilidad[]| 
+ []
+
+
+Overfull \hbox (49.99992pt too wide) in alignment at lines 193--203
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (49.99992pt too wide) in alignment at lines 203--281
+ [] [] [] [] 
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1499,28 +1525,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.130 
-      
+l.281 \end{longtable}
+                     
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.130 
-       <./figs/costes.png> <./figs/Tabla_clasificaión_riegos.png>]
-Overfull \hbox (9.16998pt too wide) in paragraph at lines 134--134
- []|[]\T1/cmr/m/n/12 Probabilidad[]| 
- []
-
-
-Overfull \hbox (49.99992pt too wide) in alignment at lines 131--136
- [] [] [] [] 
- []
-
-
-Overfull \hbox (49.99992pt too wide) in alignment at lines 136--179
- [] [] [] [] 
- []
-
+l.281 \end{longtable}
+                      <./figs/costes.png> <./figs/Tabla_clasificaión_riegos.pn
+g>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1559,7 +1572,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [46]
 Cap\'{\i }tulo 4.
 (tex/analisis.tex
-<figs/CasosDeUso.png, id=893, 370.38374pt x 307.90031pt>
+<figs/CasosDeUso.png, id=939, 370.38374pt x 307.90031pt>
 File: figs/CasosDeUso.png Graphic file (type png)
 <use figs/CasosDeUso.png>
 Package pdftex.def Info: figs/CasosDeUso.png  used on input line 14.
@@ -1574,7 +1587,7 @@ has been already used, duplicate ignored
 l.25 	\item \textbf
                    {Unity}: Es un actor secundario que solo actúa en el arr...
  <./figs/CasosDeUso.png>]
-<figs/Diagrama_de_Clases2.png, id=900, 511.9125pt x 336.50719pt>
+<figs/Diagrama_de_Clases2.png, id=946, 511.9125pt x 336.50719pt>
 File: figs/Diagrama_de_Clases2.png Graphic file (type png)
 <use figs/Diagrama_de_Clases2.png>
 Package pdftex.def Info: figs/Diagrama_de_Clases2.png  used on input line 64.
@@ -1656,7 +1669,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [51]
-<figs/Diagrama_actividad1.png, id=941, 503.63156pt x 692.5875pt>
+<figs/Diagrama_actividad1.png, id=987, 503.63156pt x 692.5875pt>
 File: figs/Diagrama_actividad1.png Graphic file (type png)
 <use figs/Diagrama_actividad1.png>
 Package pdftex.def Info: figs/Diagrama_actividad1.png  used on input line 230.
@@ -1671,7 +1684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [52]
-<figs/Diagrama_actividad2.png, id=946, 411.03563pt x 301.125pt>
+<figs/Diagrama_actividad2.png, id=992, 411.03563pt x 301.125pt>
 File: figs/Diagrama_actividad2.png Graphic file (type png)
 <use figs/Diagrama_actividad2.png>
 Package pdftex.def Info: figs/Diagrama_actividad2.png  used on input line 240.
@@ -1690,13 +1703,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.110 	\chapter
+l.111 	\chapter
                {Diseño}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.110 	\chapter
+l.111 	\chapter
                {Diseño} <./figs/Diagrama_actividad1.png> <./figs/Diagrama_acti
 vidad2.png>]
 
@@ -1715,12 +1728,12 @@ Cap\'{\i }tulo 5.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [55]
-<figs/DiagramaComponentes.png, id=964, 1601.985pt x 740.0147pt>
+<figs/DiagramaComponentes.png, id=1010, 1601.985pt x 740.0147pt>
 File: figs/DiagramaComponentes.png Graphic file (type png)
 <use figs/DiagramaComponentes.png>
 Package pdftex.def Info: figs/DiagramaComponentes.png  used on input line 60.
 (pdftex.def)             Requested size: 455.24411pt x 210.28534pt.
-<figs/DiagramaDespliegue.png, id=965, 1429.59094pt x 487.8225pt>
+<figs/DiagramaDespliegue.png, id=1011, 1429.59094pt x 487.8225pt>
 File: figs/DiagramaDespliegue.png Graphic file (type png)
 <use figs/DiagramaDespliegue.png>
 Package pdftex.def Info: figs/DiagramaDespliegue.png  used on input line 71.
@@ -1741,11 +1754,11 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.75 
       <./figs/DiagramaComponentes.png>]
-<figs/Diagrama_de_Clases.png, id=977, 1263.97218pt x 837.1275pt>
+<figs/Diagrama_de_Clases.png, id=1023, 1255.69125pt x 821.31844pt>
 File: figs/Diagrama_de_Clases.png Graphic file (type png)
 <use figs/Diagrama_de_Clases.png>
 Package pdftex.def Info: figs/Diagrama_de_Clases.png  used on input line 81.
-(pdftex.def)             Requested size: 455.24411pt x 301.50618pt.
+(pdftex.def)             Requested size: 455.24411pt x 297.75476pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
@@ -1848,7 +1861,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [60]
-<figs/SecuenciaPulsarBotón.png, id=1011, 944.02687pt x 656.4525pt>
+<figs/SecuenciaPulsarBotón.png, id=1057, 944.02687pt x 656.4525pt>
 File: figs/SecuenciaPulsarBotón.png Graphic file (type png)
 <use figs/SecuenciaPulsarBotón.png>
 Package pdftex.def Info: figs/SecuenciaPulsarBotón.png  used on input line 208
@@ -1870,12 +1883,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.214 
        <./figs/SecuenciaPulsarBotón.png>]
-<figs/SecuenciaIdiomas.png, id=1019, 637.63219pt x 493.0922pt>
+<figs/SecuenciaIdiomas.png, id=1065, 637.63219pt x 493.0922pt>
 File: figs/SecuenciaIdiomas.png Graphic file (type png)
 <use figs/SecuenciaIdiomas.png>
 Package pdftex.def Info: figs/SecuenciaIdiomas.png  used on input line 226.
 (pdftex.def)             Requested size: 364.19667pt x 281.63728pt.
-<figs/SecuenciaCambioTeclados.png, id=1020, 612.78937pt x 390.70969pt>
+<figs/SecuenciaCambioTeclados.png, id=1066, 612.78937pt x 390.70969pt>
 File: figs/SecuenciaCambioTeclados.png Graphic file (type png)
 <use figs/SecuenciaCambioTeclados.png>
 Package pdftex.def Info: figs/SecuenciaCambioTeclados.png  used on input line 2
@@ -1897,7 +1910,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.241 
        <./figs/SecuenciaIdiomas.png>]
-<figs/Modificar.png, id=1027, 784.43062pt x 858.95906pt>
+<figs/Modificar.png, id=1073, 784.43062pt x 858.95906pt>
 File: figs/Modificar.png Graphic file (type png)
 <use figs/Modificar.png>
 Package pdftex.def Info: figs/Modificar.png  used on input line 256.
@@ -1936,12 +1949,12 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.266 
        <./figs/Modificar.png>]
-<figs/DiagramaWritter1.png, id=1040, 1014.79124pt x 725.71124pt>
+<figs/DiagramaWritter1.png, id=1086, 1014.79124pt x 725.71124pt>
 File: figs/DiagramaWritter1.png Graphic file (type png)
 <use figs/DiagramaWritter1.png>
 Package pdftex.def Info: figs/DiagramaWritter1.png  used on input line 277.
 (pdftex.def)             Requested size: 455.24411pt x 325.55936pt.
-<figs/DiagramaWritter2.png, id=1041, 1163.0953pt x 752.0597pt>
+<figs/DiagramaWritter2.png, id=1087, 1163.0953pt x 752.0597pt>
 File: figs/DiagramaWritter2.png Graphic file (type png)
 <use figs/DiagramaWritter2.png>
 Package pdftex.def Info: figs/DiagramaWritter2.png  used on input line 288.
@@ -1962,7 +1975,7 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.292 
        <./figs/DiagramaWritter1.png>]
-<figs/SecuenciaBlinkCaret.png, id=1049, 401.24907pt x 196.48407pt>
+<figs/SecuenciaBlinkCaret.png, id=1095, 401.24907pt x 196.48407pt>
 File: figs/SecuenciaBlinkCaret.png Graphic file (type png)
 <use figs/SecuenciaBlinkCaret.png>
 Package pdftex.def Info: figs/SecuenciaBlinkCaret.png  used on input line 303.
@@ -1991,19 +2004,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.10})
 l.313 A
        quí se contemplará todo el proceso que sigue cualquier carácter, i...
  <./figs/DiagramaWritter2.png> <./figs/SecuenciaBlinkCaret.png>]
-<figs/AñadirCaracter1.png, id=1060, 1209.01688pt x 827.34094pt>
+<figs/AñadirCaracter1.png, id=1106, 998.9822pt x 831.85782pt>
 File: figs/AñadirCaracter1.png Graphic file (type png)
 <use figs/AñadirCaracter1.png>
 Package pdftex.def Info: figs/AñadirCaracter1.png  used on input line 321.
-(pdftex.def)             Requested size: 455.24411pt x 311.52713pt.
-<figs/AñadirCaracter2.png, id=1061, 543.53062pt x 876.27374pt>
-File: figs/AñadirCaracter2.png Graphic file (type png)
-<use figs/AñadirCaracter2.png>
-Package pdftex.def Info: figs/AñadirCaracter2.png  used on input line 331.
-(pdftex.def)             Requested size: 318.66948pt x 513.77464pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(pdftex.def)             Requested size: 409.71692pt x 341.16545pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2018,8 +2023,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.11})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.335 
+l.329 
        <./figs/AñadirCaracter1.png>]
+<figs/AñadirCaracter2.png, id=1115, 496.85625pt x 840.89156pt>
+File: figs/AñadirCaracter2.png Graphic file (type png)
+<use figs/AñadirCaracter2.png>
+Package pdftex.def Info: figs/AñadirCaracter2.png  used on input line 336.
+(pdftex.def)             Requested size: 273.14923pt x 462.28648pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2033,18 +2044,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.5.12})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.343 
-       <./figs/AñadirCaracter2.png>]
-<figs/Resto.png, id=1077, 371.13657pt x 328.97906pt>
+l.343 E
+       n el segundo paso de la formación de las sílabas, la función encar...
+ <./figs/AñadirCaracter2.png>]
+<figs/Resto.png, id=1123, 371.13657pt x 328.97906pt>
 File: figs/Resto.png Graphic file (type png)
 <use figs/Resto.png>
-Package pdftex.def Info: figs/Resto.png  used on input line 349.
+Package pdftex.def Info: figs/Resto.png  used on input line 360.
 (pdftex.def)             Requested size: 227.62206pt x 201.77126pt.
-<figs/SecuenciaInicio1.png, id=1078, 1407.75937pt x 577.40718pt>
-File: figs/SecuenciaInicio1.png Graphic file (type png)
-<use figs/SecuenciaInicio1.png>
-Package pdftex.def Info: figs/SecuenciaInicio1.png  used on input line 368.
-(pdftex.def)             Requested size: 455.24411pt x 186.72119pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2054,23 +2064,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[69
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.13})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.372 
-       <./figs/Resto.png>]
-<figs/SecuenciaInicio2.png, id=1086, 1182.66844pt x 724.95844pt>
-File: figs/SecuenciaInicio2.png Graphic file (type png)
-<use figs/SecuenciaInicio2.png>
-Package pdftex.def Info: figs/SecuenciaInicio2.png  used on input line 380.
-(pdftex.def)             Requested size: 455.24411pt x 279.06007pt.
-<figs/SecuenciaInicio3.png, id=1087, 1173.63469pt x 858.20625pt>
-File: figs/SecuenciaInicio3.png Graphic file (type png)
-<use figs/SecuenciaInicio3.png>
-Package pdftex.def Info: figs/SecuenciaInicio3.png  used on input line 391.
-(pdftex.def)             Requested size: 455.24411pt x 332.89197pt.
+[69]
+<figs/SecuenciaInicio1.png, id=1128, 1407.75937pt x 577.40718pt>
+File: figs/SecuenciaInicio1.png Graphic file (type png)
+<use figs/SecuenciaInicio1.png>
+Package pdftex.def Info: figs/SecuenciaInicio1.png  used on input line 379.
+(pdftex.def)             Requested size: 455.24411pt x 186.72119pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2081,18 +2083,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [70
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.14})
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.13})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.395 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.15})
- has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.395 
-       <./figs/SecuenciaInicio1.png> <./figs/SecuenciaInicio2.png>])
+l.383 
+       <./figs/Resto.png>]
+<figs/SecuenciaInicio2.png, id=1136, 1182.66844pt x 724.95844pt>
+File: figs/SecuenciaInicio2.png Graphic file (type png)
+<use figs/SecuenciaInicio2.png>
+Package pdftex.def Info: figs/SecuenciaInicio2.png  used on input line 391.
+(pdftex.def)             Requested size: 455.24411pt x 279.06007pt.
+<figs/SecuenciaInicio3.png, id=1137, 1173.63469pt x 858.20625pt>
+File: figs/SecuenciaInicio3.png Graphic file (type png)
+<use figs/SecuenciaInicio3.png>
+Package pdftex.def Info: figs/SecuenciaInicio3.png  used on input line 402.
+(pdftex.def)             Requested size: 455.24411pt x 332.89197pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2102,12 +2109,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [71
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.16})
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.14})
  has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.113 	\chapter
-               {Implementación y pruebas} <./figs/SecuenciaInicio3.png>]
+l.406 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.15})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.406 
+       <./figs/SecuenciaInicio1.png> <./figs/SecuenciaInicio2.png>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2117,11 +2130,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [72
-
-]
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.16})
+ has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.114 	\chapter
+               {Implementación y pruebas} <./figs/SecuenciaInicio3.png>]
 Cap\'{\i }tulo 6.
 (tex/implementacion_pruebas.tex
-<figs/FontAsset.png, id=1108, 633.11531pt x 683.55376pt>
+<figs/FontAsset.png, id=1154, 633.11531pt x 683.55376pt>
 File: figs/FontAsset.png Graphic file (type png)
 <use figs/FontAsset.png>
 Package pdftex.def Info: figs/FontAsset.png  used on input line 32.
@@ -2130,18 +2147,20 @@ Package pdftex.def Info: figs/FontAsset.png  used on input line 32.
 Underfull \vbox (badness 7344) has occurred while \output is active []
 
  [73
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{table.6.1}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.36 
      ]
-<figs/Algoritmo.png, id=1116, 578.91281pt x 70.76437pt>
+<figs/Algoritmo.png, id=1162, 578.91281pt x 70.76437pt>
 File: figs/Algoritmo.png Graphic file (type png)
 <use figs/Algoritmo.png>
 Package pdftex.def Info: figs/Algoritmo.png  used on input line 43.
 (pdftex.def)             Requested size: 455.24411pt x 55.64732pt.
-<figs/ListasHangul.png, id=1117, 584.1825pt x 444.15938pt>
+<figs/ListasHangul.png, id=1163, 584.1825pt x 444.15938pt>
 File: figs/ListasHangul.png Graphic file (type png)
 <use figs/ListasHangul.png>
 Package pdftex.def Info: figs/ListasHangul.png  used on input line 52.
@@ -2168,6 +2187,9 @@ has been already used, duplicate ignored
                                                   \__shipout_drop_firstpage_...
 l.56 
       <./figs/FontAsset.png> <./figs/Algoritmo.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2181,9 +2203,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.3})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.73 L
-      a tabla de puntuaciones es la siguiente, y en ella podemos observar pu...
- <./figs/ListasHangul.png>]
+l.66 
+      <./figs/ListasHangul.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2192,28 +2213,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[76
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.2}) h
-as been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.138 	\item \textbf
-                    {Detractores}: Respuestas 0-6 (\textit{"Poco probable qu...
-
-pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4}) 
-has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.138 	\item \textbf
-                    {Detractores}: Respuestas 0-6 (\textit{"Poco probable qu...
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[76]
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
+55.
+ (C:\Users\jonim\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmss.fd
+File: t1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2223,12 +2231,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [77
-pdfTeX warning (ext4): destination with the same identifier (name{table.6.3}) h
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.2}) h
 as been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.116 	\chapter
-               {Conclusiones}]
+l.161 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.161 
+      ]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2242,16 +2269,46 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5})
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.116 	\chapter
+l.117 	\chapter
+               {Conclusiones}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[79
+pdfTeX warning (ext4): destination with the same identifier (name{table.6.3}) h
+as been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.117 	\chapter
                {Conclusiones}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6.6}) 
 has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.116 	\chapter
+l.117 	\chapter
+               {Conclusiones}]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[80
+pdfTeX warning (ext4): destination with the same identifier (name{figure.6.7}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.117 	\chapter
                {Conclusiones}]
 Cap\'{\i }tulo 7.
-(tex/conclusiones.tex) [79
+(tex/conclusiones.tex [81
 
 ]
 
@@ -2262,39 +2319,57 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[80
+[82])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[83]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[84
 
 ]
 Ap\'{e}ndice A.
 (tex/apendice.tex
-<figs/Languajes.png, id=1173, 162.6075pt x 222.8325pt>
+<figs/Languajes.png, id=1243, 162.6075pt x 222.8325pt>
 File: figs/Languajes.png Graphic file (type png)
 <use figs/Languajes.png>
 Package pdftex.def Info: figs/Languajes.png  used on input line 19.
 (pdftex.def)             Requested size: 182.09486pt x 249.5571pt.
-<figs/Dropdown.png, id=1174, 816.80156pt x 205.5178pt>
+<figs/Dropdown.png, id=1244, 816.80156pt x 205.5178pt>
 File: figs/Dropdown.png Graphic file (type png)
 <use figs/Dropdown.png>
 Package pdftex.def Info: figs/Dropdown.png  used on input line 26.
 (pdftex.def)             Requested size: 364.19667pt x 91.63858pt.
- [81
+ [85
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.30 	\item B
              otones del cambio del tipo de teclado <./figs/Languajes.png>]
-<figs/CanvasToRigid.png, id=1182, 454.69875pt x 462.22687pt>
+<figs/CanvasToRigid.png, id=1252, 454.69875pt x 462.22687pt>
 File: figs/CanvasToRigid.png Graphic file (type png)
 <use figs/CanvasToRigid.png>
 Package pdftex.def Info: figs/CanvasToRigid.png  used on input line 33.
 (pdftex.def)             Requested size: 136.57462pt x 138.8384pt.
-<figs/RigidToCanvas.png, id=1183, 520.19344pt x 447.92343pt>
+<figs/RigidToCanvas.png, id=1253, 520.19344pt x 447.92343pt>
 File: figs/RigidToCanvas.png Graphic file (type png)
 <use figs/RigidToCanvas.png>
 Package pdftex.def Info: figs/RigidToCanvas.png  used on input line 39.
 (pdftex.def)             Requested size: 136.57462pt x 117.59874pt.
-<figs/consentimiento.png, id=1184, 502.87875pt x 645.16031pt>
+<figs/consentimiento.png, id=1254, 502.87875pt x 645.16031pt>
 File: figs/consentimiento.png Graphic file (type png)
 <use figs/consentimiento.png>
 Package pdftex.def Info: figs/consentimiento.png  used on input line 50.
@@ -2311,7 +2386,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[82
+[86
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
@@ -2331,12 +2406,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 l.54 
       <./figs/Dropdown.png> <./figs/CanvasToRigid.png> <./figs/RigidToCanvas.pn
 g>]
-<figs/SUS.png, id=1195, 519.44063pt x 526.21594pt>
+<figs/SUS.png, id=1265, 519.44063pt x 526.21594pt>
 File: figs/SUS.png Graphic file (type png)
 <use figs/SUS.png>
 Package pdftex.def Info: figs/SUS.png  used on input line 57.
 (pdftex.def)             Requested size: 227.62206pt x 230.58826pt.
-<figs/NPS.png, id=1196, 496.85625pt x 213.79875pt>
+<figs/NPS.png, id=1266, 496.85625pt x 213.79875pt>
 File: figs/NPS.png Graphic file (type png)
 <use figs/NPS.png>
 Package pdftex.def Info: figs/NPS.png  used on input line 64.
@@ -2353,18 +2428,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[83
+[87
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.126 	
+l.127 	
        
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.126 	
+l.127 	
         <./figs/consentimiento.png> <./figs/SUS.png>] (ejemplo-memoria.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2374,13 +2449,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[84
+[88
 pdfTeX warning (ext4): destination with the same identifier (name{figure.Alph1.
 7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.1 \begin{thebibliography}{10}
-                                <./figs/NPS.png>] [85
+                                <./figs/NPS.png>] [89
 
 ]
 
@@ -2391,7 +2466,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[86]
+[90]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2400,7 +2475,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[87])
+[91])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2409,7 +2484,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[88] (ejemplo-memoria.aux
+[92] (ejemplo-memoria.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -2422,38 +2497,38 @@ L3 programming layer <2024-01-04>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `ejemplo-memoria.out' has not changed.
-(rerunfilecheck)             Checksum: 53432038E8F84BD12AEF69FF90A7BD88;20598.
+(rerunfilecheck)             Checksum: 531AF6951DDD18CAAA1FB82EE1AD2F23;22709.
  ) 
 Here is how much of TeX's memory you used:
- 41268 strings out of 474486
- 974248 string characters out of 5743756
- 1957542 words of memory out of 5000000
- 62537 multiletter control sequences out of 15000+600000
- 575552 words of font info for 75 fonts, out of 8000000 for 9000
+ 41939 strings out of 474486
+ 985944 string characters out of 5743756
+ 1960542 words of memory out of 5000000
+ 63184 multiletter control sequences out of 15000+600000
+ 576322 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,107p,1655b,2278s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm
-0800.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\tcrm1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\ecti1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
-pen/ec/dpi600\ecbx1440.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/
-ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\jonim\AppData\Local\MiKT
-eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\jonim\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\jonim\AppDat
-a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1440.pk> <C:\Users\jonim\
-AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/j
-onim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi6.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmr12.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr6.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on ejemplo-memoria.pdf (88 pages, 2664873 bytes).
+ 99i,12n,107p,1655b,2281s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss
+1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecrm0800.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
+/dpi600\tcrm1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecti1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/ljfour
+/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fonts/pk/
+ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\jonim\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\jonim\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\jonim\AppData\Loca
+l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\jonim\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\jonim\
+AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1440.pk> <C:\Users\
+jonim\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/U
+sers/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.
+pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi6.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr12.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb><C:/Users/jonim/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on ejemplo-memoria.pdf (92 pages, 2667990 bytes).
 PDF statistics:
- 1872 PDF objects out of 2073 (max. 8388607)
- 373 named destinations out of 1000 (max. 500000)
- 929 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1966 PDF objects out of 2073 (max. 8388607)
+ 385 named destinations out of 1000 (max. 500000)
+ 1001 words of extra memory for PDF output out of 10000 (max. 10000000)
 

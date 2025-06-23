@@ -287,7 +287,7 @@ En este primer fragmento del diagrama mostramos el proceso de las funciones ``In
 	\centering
 	\includegraphics[width=1\textwidth]{DiagramaWritter2.png}
 	\caption{Segundo fragmento del diagrama de secuencia de la clase \textit{KeyboardWritter}}
-	\label{fig:diagrama_writter_1}
+	\label{fig:diagrama_writter_2}
 \end{figure}
 
 En este segundo, y último fragmento del diagrama, mostramos el proceso de las funciones ``AdjustTextPosition()'' y ``GetCaretScreenPosition()''. Estas funciones se encargan de tanto el correcto emplazamiento del texto y el elemento visual (el ``[SerializeField] private RectTransform caretVisual;'') para marcar la posicion de escritura en el \textit{TMP\_InputField}.
@@ -318,24 +318,35 @@ Como al hacer el proceso genérico queda un diagrama muy grande, como el diagram
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{AñadirCaracter1.png}
+	\includegraphics[width=0.9\textwidth]{AñadirCaracter1.png}
 	\caption{Primer fragmento del diagrama de secuencia que muestra el proceso para añadir un carácter}
 	\label{fig:diagrama_añadir_caracter_1}
 \end{figure}
 
+En este fragmento, lo primero que se puede ver como al pulsar el botón de un carácter, dependiendo que tipo de teclado sea, se llama a una función, con unas variables concretas, o otra. En un teclado normal añadimos el carácter y ya está, pero en el caso del coreano se tiene que empezar un proceso por el cual se tienen que formar sílabas en el caso de que se pueda.
+
+En la función \textit{Korean\_Syllable\_Formation}, que se componen de una consonante inicial, una vocal intermedia y de otra posible consonante final. Primero mira si el carácter es ``silabable'', es decir, que es apto para la formación de sílabas, si no lo es simplemente lo añadimos y devolvemos el estado al inicial, ya que es posible que ya hubiéramos empezado el proceso de formar las sílabas. Por otro lado si es apto, comprobamos el paso en la formación de las sílabas en el que nos encontramos, y llamamos a la función encargada de procesar cada paso.
+
+En el primer paso de la formación de sílabas, la función encargada comprueba si la letra es consonante o no, es decir, si es vocal o consonante. En caso de ser vocal, una sílaba no puede empezar por una, así que simplemente añado la letra y ya, no toco el estado porque ya estoy al inicio. En el otro caso, es decir, cuando es una consonante, miro si es una consonante válida y, solo si lo es, avanzo de estado guardando esta letra como componente inicial de la posible sílaba, finalmente escribo este carácter.
 
 \subsubsection{Segundo fragmento}
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{AñadirCaracter2.png}
-	\caption{Primer fragmento del diagrama de secuencia que muestra el proceso para añadir un carácter}
+	\includegraphics[width=0.6\textwidth]{AñadirCaracter2.png}
+	\caption{Segundo fragmento del diagrama de secuencia que muestra el proceso para añadir un carácter}
 	\label{fig:diagrama_añadir_caracter_2}
 \end{figure}
 
 Esta es la parte que resta del diagrama de arriba, se incluyen las otras funciones relacionadas a la formación de las sílabas con las que se escribe en Hangul.
 
-Hay dos aclaraciones importantes que hacer respecto a esta parte del diagrama, la primera es la imagen que hay, que ya se que contrasta mucho, pero es debido a que la aplicación usada en la creación de los diagramas no soporta el alfabeto coreano, por lo que he hecho una captura de ese carácter de mi propio código; la segunda es que la función ``deleteChar()'' que se muestra, y que no está descrita, se expondrá en el siguiente punto.
+En el segundo paso de la formación de las sílabas, la función encargada, como en la primera parte, mira que tipo de letra es, vocal o consonante, ya que se necesita otra vocal en este momento para formar una sílaba. Si es consonante, pos nada, reseteamos el estado y lo tratamos como si fuera del primer paso llamando a la función encargada de este. En las vocales se actúa como en se hacia con las consonantes del primer paso, es decir, comprobar si es una vocal válida para la formación; si es válida, pasamos de paso, guardamos el carácter como segundo componente de la sílaba y la formamos; en caso de no ser apto, reseteamos el estado y rellamamos la función \textit{Korean\_Syllable\_Formation}.
+
+En el paso final, comprobamos que sea tanto consonante, como que esta sea válida en esta fase. Si las dos comprobaciones salen positivas, guardamos esta letra como componente final de la sílaba, la formamos y reseteamos el estado, debido a que ya no se pueden añadir caracteres nuevos a la formación. En caso de que alguno de negativo, reseteamos el estado y rellamamos la función \textit{Korean\_Syllable\_Formation}.
+
+La función encargada de formar en si las sílabas, se le pasa una variable booleana, para saber si tiene o no consonante final que contemplar. Se sacan todos los indices de los carácteres que forman la sílaba, teniendo en cuenta que si no hay consonante final, se le da valor 0 por defecto a este índice, para no entorpecer en la creación de las sílabas. Si no hay errores en ninguno de los índices, se hace un pequeño cálculo matemático para sacar el código unicode de la sílaba a usar; luego se borra el último caracter, ya que se trata del estado anterior que queremos sustituir; y escribimos la sílaba.
+
+El reseteo del estado de las sílabas lo lleva a cabo la función \textit{ResetKoreanSyllable}, que simplemente crea un nuevo \textit{KoreanComposition}, para sustituir el anterior.
 
 \subsection{Otras funciones del keyboard}
 
@@ -390,7 +401,7 @@ Aquí describiremos el proceso de configuración inicial de la clase \textit{Key
 	\centering
 	\includegraphics[width=1\textwidth]{SecuenciaInicio3.png}
 	\caption{Diagrama de secuencia del inicio del \textit{KeyboardButton}}
-	\label{fig:diagrama_inicio_2}
+	\label{fig:diagrama_inicio_3}
 \end{figure}
 
 

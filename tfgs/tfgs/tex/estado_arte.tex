@@ -40,15 +40,12 @@ Inicialmente, la solución más clara fue modificar los teclados físicos tradic
 \end{itemize}
 
 \subsection{Las dificultades identificadas en estos primeros modelos}
-Esta estrategia inicial \textbf{rápidamente evidenció numerosas restricciones}:
 
-\begin{itemize}
-	\item \textbf{Errores de tipeo muy frecuentes}: los usuarios perdían la posición de las teclas si no podían verlas directamente.
-	\item \textbf{Baja velocidad de escritura}: diversos estudios de interacción, como el \cite{peng2024exploring}, concluyen que escribir en VR era entre 30\% y 60\% más lento que en un teclado físico normal.
-	\item \textbf{Inadecuación ergonómica}: la necesidad de extender los brazos para llegar a un teclado físico mientras se lleva un visor de gran tamaño resultaba muy antinatural.
-	\item \textbf{Problemas de hardware}: en la Realidad Virtual, las ubicaciones de los dispositivos a menudo no se ajustaban correctamente causando una ``desincronización''  visual con relación a la posición real del teclado.
-	\item \textbf{Dependencia de hardware externo}: no resultaba factible para visores portátiles como Oculus Quest que aspiran a minimizar el uso de cables y complementos externos.
-\end{itemize}
+La puesta en práctica de este enfoque pronto dejó al descubierto serios problemas que lastraban su utilidad real. Para empezar, los errores al teclear se multiplicaban porque los usuarios, al no tener visión directa del teclado, perdían constantemente la orientación sobre dónde estaban las teclas. Pero esto era solo el principio: según documenta \cite{peng2024exploring} y otros trabajos, escribir en estos entornos virtuales resultaba notablemente más lento —entre un 30\% y hasta un 60\%— que usar un teclado físico común.
+
+La cosa se complicaba con la ergonomía. Resulta que mantener los brazos estirados para alcanzar el teclado mientras cargabas con ese visor enorme forzaba posturas poco naturales, algo que los usuarios reportaban como bastante incómodo tras poco tiempo de uso. A esto se sumaba un problema técnico persistente: con frecuencia, lo que veían en el visor no coincidía bien con la posición real del teclado; ese desfase visual —lo llamaban "desincronización"— hacía que teclear fuese como intentar encestar con los ojos cerrados.
+
+Y había un último escollo crucial: el enfoque dependía por completo de periféricos externos. Esto chocaba frontalmente con la esencia de dispositivos como el Oculus Quest, que precisamente buscan liberarte de cables y accesorios. En la práctica, esa dependencia los hacía poco viables para escenarios móviles donde lo que prima es la autonomía.
 
 
 \subsection{Nuevas sugerencias para incorporar texto en Realidad Virtual}
@@ -131,9 +128,13 @@ Las interfaces de usuario tradicionales, como botones, menús, teclado y ratón,
 
 \subsubsection{Hand Tracking}
 
-Esta es una de las tecnologías más sobresalientes en las NUIs para la Realidad Virtual, por no afirmar que es la más sobresaliente. Facilita que los usuarios interactúen directamente con objetos virtuales a través de gestos y movimientos corporales, suprimiendo de esta manera los controles de la ecuación. Para utilizar un ejemplo actual, quisiera mostrar el sistema NUI-VR\textasciicircum2, que integra la manipulación y visualización de volúmenes 3D en entornos de Realidad Virtual, lo que posposibilita la comunicación directa con la información a través de gestos manuales. Esto mejora significativamente la experiencia y la comprensión espacial del usuario. En contraposición, existen métodos, como Zoom-fwd, que evidencian que el reconocimiento de gestos de mano puede incrementar la exactitud y eficacia en la elección y manejo de objetos, incluso si estos se encuentran alejados o escondidos en el ambiente virtual. \cite{NUI-VR2} \cite{FrameworkVR} \cite{ZoomFwd}
+A ver, si hay una tecnología que realmente cambia las reglas del juego en las NUIs de RV, es esta. Sin pelos en la lengua: el hand tracking es probablemente la más revolucionaria de todas. Básicamente, te permite trastear con objetos virtuales usando solo tus gestos, quitando de en medio esos engorrosos mandos. 
 
-Para terminar este apartado, quiero recalcar que en este Asset se ha trabajado con el hand-tracking, usando para ello la tecnología usada por Oculus Quest II, ahora conocido como Meta Quest 2 desde el renombramiento de la compañía desarrolladora el 28 de octubre de 2021. \cite{abdlkarim2024methodological}
+Pongamos el caso del sistema NUI-VR\textasciicircum2, que es un buen ejemplo de lo que hablo. Este sistema —según hemos podido verificar— integra la manipulación de volúmenes 3D en RV de tal modo que tus manos se convierten en la herramienta principal para "dialogar" con los datos. La cosa no es solo más intuitiva; es que los usuarios acaban desarrollando una comprensión espacial mucho más sólida, casi sin darse cuenta. 
+
+Y, por contra, mira métodos como Zoom-fwd: ahí se ve claramente que un buen reconocimiento de gestos puede dar un vuelco a la precisión cuando hay que seleccionar objetos escondidos o lejanos. Vamos, que la cosa funciona \cite{NUI-VR2} \cite{FrameworkVR} \cite{ZoomFwd}.
+
+Para rematar, en este Asset nos hemos tirado a la piscina con el hand-tracking usando el kit del Meta Quest 2 (antes Oculus Quest II, claro, después del cambiazo de nombre que hizo la empresa en octubre del 2021) \cite{abdlkarim2024methodological}.
 
 \subsubsection{Voice Recognition}
 
@@ -159,23 +160,23 @@ Como ya se ha vaticinado, en este proyecto he hecho uso de NUIs. He preparado el
 
 \label{Beneficion_NUIs}
 
-Su uso ofrece ventajas muy significativas y no refutables en el apartado de inmersión, accesibilidad y realismo respecto a sus contrapartes clásicas. Sobre todo en VR y usuarios con necesidades especiales. 
+Su uso ofrece ventajas muy significativas y no refutables en el apartado de inmersión, accesibilidad y realismo respecto a sus contrapartes clásicas; sobre todo en VR y con usuarios con necesidades especiales. 
 
 \subsubsection{Mayor inmersión en entornos VR}
 
-NUIs como el control mediante gestos de manos, recrean la experiencia de tocar un teclado auténtico, lo que facilita la interacción directa con estos. Esto da una sensación presencia e involucramiento ni remotamente comparables a los modelos tradicionales con el mando. \cite{Frazier2018An}
+NUIs como el control mediante gestos de manos recrean la experiencia de tocar un teclado auténtico, lo que facilita la interacción directa con estos. Esto da una sensación de presencia e involucramiento ni remotamente comparables a los modelos tradicionales con el mando. \cite{Frazier2018An}
 
 \subsubsection{Mayor accesibilidad}
 
-Los teclados virtuales basados en NUI pueden ser especialmente útiles para personas con discapacidades o dificultades para usar pantallas táctiles o mandos tradicionales. Por ejemplo, mediante el uso de sensores de movimiento, giroscopios o el habla se puede permitir introducir caracteres sin pulsar teclas activamente. \cite{Kim2014Message}
+Los teclados virtuales basados en NUI pueden ser especialmente útiles para personas con discapacidades o dificultades para usar pantallas táctiles o mandos tradicionales. Por ejemplo, mediante el uso de sensores de movimiento, giroscopios o el habla, se puede permitir introducir caracteres sin pulsar teclas activamente. \cite{Kim2014Message}
 
 \subsubsection{Simulación más realista}
 
-Las NUI consiguen una simulación más realista del uso de un teclado físico mediante el uso de motores físicos y la detección de impactos entre dedos virtuales y teclas. No solo potencia la experiencia del usuario, sino que también tiene el potencial de incrementar la exactitud y la satisfacción al interactuar con el teclado virtual. \cite{Frazier2018An}
+Las NUI consiguen una simulación más realista del uso de un teclado físico mediante la utilización de motores físicos y la detección de impactos entre dedos virtuales y teclas. No solo potencia la experiencia del usuario, sino que también tiene el potencial de incrementar la exactitud y la satisfacción al interactuar con el teclado virtual. \cite{Frazier2018An}
 
 \subsubsection{Conclusión}
 
-Las NUI en teclados virtuales aportan mayor inmersión, accesibilidad y realismo, haciendo que la interacción en entornos VR sea más natural y cómoda para una amplia variedad de usuarios.
+Las NUI en teclados virtuales aportan mayor inmersión, accesibilidad y realismo, haciendo que la interacción en entornos VR sea más natural y cómoda para variedad más amplia de usuarios.
 
 \section{Retos de accesibilidad en realidad virtual}
 
@@ -183,15 +184,15 @@ Las NUI en teclados virtuales aportan mayor inmersión, accesibilidad y realismo
 
 \subsubsection{Dificultades físicas}
 
-Este tipo de tecnologías suponen obstáculos considerables para individuos con movilidad restringida o problemas motores. En numerosos sistemas de Realidad Virtual se asume que los usuarios pueden usar ambas manos de manera óptima, lo que ignora a la categoría de personas previamente citadas. Más del 50\% de las aplicaciones evaluadas resultan inaccesibles para individuos con una sola mano, y ninguna proporciona alternativas de personalización para individuos con limitaciones físicas. Esto pone de relieve la importancia de crear nuevos paradigmas y de ajustar las interfaces a este tipo de individuos \cite{two_hands_vr}.  Además, la dependencia de entradas físicas precisas y rápidas puede dificultar la participación igualitaria de usuarios con discapacidades motoras, ya que las interfaces tradicionales carecen de flexibilidad para adaptarse a las necesidades individuales \cite{reinforcement_learning_vr}\cite{analyzing_challenges}.
+La realidad virtual actual plantea serios problemas para individuos con movilidad restringida o problemas motores. En numerosos sistemas de Realidad Virtual, se asume que los usuarios pueden usar ambas manos de manera óptima, esta suposición ignora a las personas con dificultades o barreras relacionadas con las manos. Más del 50\% de las aplicaciones evaluadas resultan inaccesibles para individuos con una sola mano, y ninguna proporciona alternativas de personalización para individuos con limitaciones físicas. Esto pone de relieve la importancia de crear nuevos paradigmas y de ajustar las interfaces a este tipo de individuos \cite{two_hands_vr}.  Además, la dependencia de entradas físicas precisas y rápidas puede dificultar la participación igualitaria de usuarios con discapacidades motoras, ya que las interfaces tradicionales carecen de flexibilidad para adaptarse a las necesidades individuales \cite{reinforcement_learning_vr}\cite{analyzing_challenges}.
 
-Para enfrentar estos obstáculos, se han sugerido métodos adaptativos fundamentados en el aprendizaje por refuerzo, que posibilitan que las interfaces de Realidad Virtual se adapten de manera dinámica a las habilidades del usuario, mejorando el reconocimiento de gestos y la retroalimentación háptica. Estos sistemas han probado incrementar la exactitud en la interacción y disminuir el tiempo requerido para realizar tareas, lo que aumenta la satisfacción y disminuye la carga cognitiva para los usuarios con problemas motrices \cite{reinforcement_learning_vr}. Sin embargo, la integración de estas soluciones aún no está generalizada en la mayoría de las aplicaciones comerciales.
+Para hacer frente estos obstáculos, se han sugerido métodos adaptativos fundamentados en el aprendizaje por refuerzo, que posibilitan que las interfaces de Realidad Virtual se adapten de manera dinámica a las habilidades del usuario, mejorando el reconocimiento de gestos y la retroalimentación háptica. Estos sistemas han probado incrementar la exactitud en la interacción y disminuir el tiempo requerido para realizar tareas, lo que aumenta la satisfacción y disminuye la carga cognitiva para los usuarios con problemas motrices \cite{reinforcement_learning_vr}. Sin embargo, la integración de estas soluciones aún no está generalizada en la mayoría de las aplicaciones comerciales.
 
 \subsubsection{Dificultades sensoriales}
 
 Las personas con dificultades visuales o auditivas, dos tipos de  trastornos sensoriales, se ven cohibidos ante la Realidad Virtual debido a la necesidad de utilizar señales visuales y auditivas para la navegación e interacción. La escasez de opciones excluye a estos usuarios de experiencias inmersivas. Por ejemplo, la falta de feedback háptico o de interfaces multimodales complica la participación de aquellos que no son capaces de percibir correctamente los estímulos visuales o auditivos. \cite{inclusive_arvr} \cite{analyzing_challenges}\cite{vr_cultural_heritage}
 
-La implementación de feedback multimodal, que fusiona estímulos auditivos, vibrotáctiles y visuales, ha probado incrementar el control y la estabilidad en usuarios con carencias sensoriales o de equilibrio, como individuos con esclerosis múltiple. La incorporación de estos modos sensoriales puede minimizar los obstáculos y potenciar la experiencia global de accesibilidad en Realidad Virtual. Adicionalmente, es crucial personalizar las configuraciones sensoriales para reducir la sobrecarga sensorial y ajustar la experiencia a las necesidades personales, particularmente en usuarios neurodivergentes o con patrones de procesamiento sensorial inusuales. \cite{multimodal_feedback}\cite{neurodivergent_xr}\cite{vr_cultural_heritage}
+La implementación de feedback multimodal, que fusiona estímulos auditivos, vibrotáctiles y visuales, ha probado el incremento del control y la estabilidad en usuarios con carencias sensoriales o de equilibrio, como individuos con esclerosis múltiple. La incorporación de estos modos sensoriales puede minimizar los obstáculos y potenciar la experiencia global de accesibilidad en Realidad Virtual. Asimismo, es crucial personalizar las configuraciones sensoriales para reducir la sobrecarga sensorial y ajustar la experiencia a las necesidades personales, particularmente en usuarios neurodivergentes o con patrones inusuales de procesamiento sensorial. \cite{multimodal_feedback}\cite{neurodivergent_xr}\cite{vr_cultural_heritage}
 
 \subsubsection{Recomendaciones y oportunidades}
 
@@ -201,15 +202,15 @@ Para superar estas barreras, es esencial adoptar principios de diseño inclusivo
 
 \subsubsection{La escritura requiere precisión y buena respuesta visual/háptica}
 
-Para asegurar una experiencia gratificante y eficaz en la escritura en ambientes de Realidad Virtual, se requiere precisión y una respuesta visual y háptica apropiada. La ausencia de feedback tangible, como el que se recibe en teclados convencionales, puede obstaculizar la exactitud y rapidez de la escritura en Realidad Virtual. Por ello, se han desarrollado soluciones como teclados virtuales con retroalimentación háptica realista, utilizando guantes de hápticos y micro-altavoces para simular vibraciones similares a las de un teclado físico, lo que mejora la interacción y el rendimiento del usuario en entornos totalmente inmersivos.  En cambio, la opción de situar el teclado en cualquier sitio dentro del entorno virtual facilita el acceso y la comodidad, eliminando la necesidad de dispositivos físicos adicionales. \cite{Wu2017A}
+Para asegurar una experiencia gratificante y eficaz de la escritura en ambientes de Realidad Virtual, se requiere precisión y una respuesta visual y háptica apropiada. La ausencia de feedback tangible, como el que se recibe en teclados convencionales, puede obstaculizar la exactitud y rapidez de la escritura en Realidad Virtual. Por ello, se han desarrollado soluciones como teclados virtuales con retroalimentación háptica realista, utilizando guantes hápticos y microaltavoces para simular vibraciones similares a las de un teclado físico, lo que mejora la interacción y el rendimiento del usuario en entornos totalmente inmersivos.  En cambio, la opción de situar el teclado en cualquier sitio dentro del entorno virtual facilita el acceso y la comodidad eliminando la necesidad de dispositivos físicos adicionales. \cite{Wu2017A}
 
-La exactitud en la redacción también se basa en el diseño de la interfaz y en el modo de entrada utilizado. Por ejemplo, se ha demostrado que los teclados de tipo ``tap'' ofrecen una mayor facilidad de uso, menor carga de trabajo y una experiencia de usuario superior en comparación con los teclados de gestos (swipe) en Realidad Virtual, además de promover una rápida curva de asimilación \cite{Kern2023Text}.  Otros métodos, como los teclados con metáforas de entretenimiento (como el teclado de batería), han demostrado ser eficaces y divertidos, aunque todavía causan un mal gusto moderado, por lo que necesitan mejoras futuras \cite{Boletsis2019Text}. La incorporación de feedback háptico y visual, además de la personalización de la disposición y funciones del teclado, son componentes esenciales para mejorar la accesibilidad y exactitud en la escritura en Realidad Virtual. \cite{reconviguration}\cite{Wu2017A}
+La exactitud en la redacción también se basa en el diseño de la interfaz y en el modo de entrada utilizado. Por ejemplo, se ha demostrado que los teclados ``tap'' ofrecen una mayor facilidad de uso, menor carga de trabajo y una experiencia de usuario superior en comparación con los teclados de gestos (swipe) en Realidad Virtual, además de promover una rápida curva de asimilación \cite{Kern2023Text}.  Otros métodos, como los teclados con metáforas de entretenimiento (como el teclado de batería), han demostrado ser eficaces y divertidos, aunque todavía causan cierto rechazo, por lo que necesitan mejoras futuras \cite{Boletsis2019Text}. La incorporación de feedback háptico y visual, además de la personalización de la disposición y funciones del teclado, son componentes esenciales para mejorar la accesibilidad y exactitud en la escritura en Realidad Virtual. \cite{reconviguration}\cite{Wu2017A}
 
 \subsubsection{El problema de los idiomas no soportados: exclusión de grandes segmentos de población}
 
-La falta de compatibilidad con múltiples idiomas en los teclados VR constituye un impedimento para la inclusión digital. Esto provoca la exclusión de numerosos grupos de la población que hablan otro idioma al diseñado. La capacidad de adaptar estos modelos de teclados para acomodar diferentes lenguajes, caracteres especiales y atajos, mejora el acceso a usuarios de diversos idiomas y contextos culturales \cite{reconviguration}\cite{Wan2024Design}. Adicionalmente, los sistemas propulsados por aprendizaje automático tienen la capacidad de ajustarse a diversos lenguajes de señas, dialectos y estilos de usuario, simplificando la comunicación y el acceso a la información para individuos con limitaciones auditivas y visuales \cite{Banerjee2024Machine-Learning-Based}.
+La falta de compatibilidad con múltiples idiomas en los teclados VR constituye un impedimento para la inclusión digital. Esto provoca la exclusión de numerosos grupos de la población que hablan otro idioma al diseñado. La capacidad de adaptar estos modelos de teclados para acomodar diferentes lenguajes, caracteres especiales y atajos, mejora el acceso a usuarios de diversos idiomas y contextos culturales \cite{reconviguration}\cite{Wan2024Design}. Además, los sistemas propulsados por aprendizaje automático tienen la capacidad de ajustarse a diversos lenguajes de señas, dialectos y estilos de usuario, simplificando la comunicación y el acceso a la información para individuos con limitaciones auditivas y visuales \cite{Banerjee2024Machine-Learning-Based}.
 
-La adaptabilidad y personalización de los teclados VR además de incrementar la accesibilidad para individuos con discapacidades, también pueden permitir la inclusión de usuarios de diversas procedencias lingüísticas y culturales. Sin un respaldo apropiado para varios idiomas, las soluciones de VR corren el peligro de prolongar la marginación digital y restringir el efecto fficioso de estas tecnologías en la sociedad. \cite{Banerjee2024Machine-Learning-Based}\cite{reconviguration}
+La adaptabilidad y personalización de los teclados VR además de incrementar la accesibilidad para individuos con discapacidades, también pueden permitir la inclusión de usuarios de diversas procedencias lingüísticas y culturales. Sin un respaldo apropiado para varios idiomas, las soluciones de VR corren el peligro de prolongar la marginación digital y restringir el efecto beneficioso de estas tecnologías en la sociedad. \cite{Banerjee2024Machine-Learning-Based}\cite{reconviguration}
 
 \subsubsection{Conclusión}
 
@@ -217,20 +218,20 @@ La accesibilidad en teclados VR requiere una combinación de precisión, retroal
 
 \subsection{Cómo este proyecto aborda la accesibilidad}
 
-Este proyecto tiene como objetivo principal la accesibilidad de distintos colectivos tradicionalmente excluidos. 
+¿La razón de ser de este proyecto? Acabar con esas barreras invisibles que siempre han marginado a tantos colectivos. Nos rompe ver cómo la tecnología, aún hoy, excluye a gente por fallos de diseño que podrían evitarse. 
 
-En primer lugar, la característica del teclado que mas contribuye a este apartado es el hecho de que soporte varios idiomas nativamente, incluyendo idiomas con alfabetos distintos al latinoamericano, o el anglosajón, como son el cirílico, el hangul, el griego o el árabe. Esto permite la utilización de un mayor número de individuos al no tener esta barrera idiomática.
+Por eso quisimos crear una joya de accesibilidad: un teclado con un superpoder oculto. Entiende de forma nativa idiomas tan distintos como el ruso con su cirílico, el coreano con su hangul o hasta el griego con su alfabeto milenario. Así rompemos la gran barrera idiomática. Esta característica permite su utilización a un mayor número de individuos al no tener esta barrera idiomática.
 
-La otra función que también apoya la inclusividad de cierta manera es la capacidad de funcionar con hand tracking. Esto afecta tanto a individuos que, por diferentes motivos, se les dificulte agarrar un mando como a personas que, ya sea por la edad o dificultades cognitivas, encuentren muy complicado el aprender o recordar el uso de botones complejos.
+La otra función que también apoya la inclusividad en cierta manera es la capacidad de funcionar con hand tracking. Esto afecta tanto a individuos que, por diferentes motivos, les sea difícil coger un mando como a personas que, ya sea por la edad o dificultades cognitivas, encuentren muy complicado aprender o recordar el uso de botones complejos.
 
 \subsection{Limitaciones actuales y posibles mejoras}
 
-Actualmente aún hay muchos aspectos en el proyecto que se podrían trabajar para mejorar aún más la accesibilidad. Por ejemplo, aún no se cuenta con la posibilidad de incluir tanto personas con discapacidades visuales agudas, como usuarios con discapacidades motrices severas o directamente sin los dos miembros superiores.
+Actualmente aún hay muchos aspectos en el proyecto que se podrían trabajar para mejorar aún más la accesibilidad. Por ejemplo, aún no se cuenta con la posibilidad de incluir tanto a personas con discapacidades visuales agudas, como usuarios a con discapacidades motrices severas o directamente sin las extremidades superiores.
 
 Los dos grandes caminos para seguir para poder llegar a más gente son los siguientes:
 \begin{itemize}
-	\item Primero, se podría implementar una tecnología de SpeechToText que se activara mediante comandos de voz, esto podría incluir a todos los grupos mencionados en el anterior párrafo al eliminar la necesidad de ver o usar las manos de raíz.
-	\item El segundo camino se trataría de simplemente aumentar el repertorio de idiomas que soportara el teclado.
+	\item Primero, se podría implementar una tecnología de SpeechToText que se activara mediante comandos de voz, esto podría incluir a todos los grupos mencionados en el anterior párrafo eliminando la necesidad de ver o usar las manos de raíz.
+	\item El segundo camino se trataría simplemente de aumentar el repertorio de idiomas que soportara el teclado.
 \end{itemize}
 
 
@@ -240,11 +241,11 @@ Los dos grandes caminos para seguir para poder llegar a más gente son los sigui
 
 \subsubsection{Crecimiento del mercado de VR}
 
-El mercado global de la Realidad Virtual ha experimentado un crecimiento significativo en los últimos años, impulsado por el desarrollo tecnológico y la aparición de dispositivos más asequibles y accesibles para el consumidor. Se estima que el tamaño del mercado mundial de VR aumentará de 7.3 mil millones de dólares en 2018 a 120.5 mil millones de dólares en 2026, según un informe de Fortune Business Insights, citado en el artículo ``Virtual Reality'' de Isabell Wohlgenannt and Alexander Simons y Stefan Stieglitz \cite{Wohlgenannt2020Virtual}, lo que refleja una tendencia de crecimiento acelerado y sostenido hacia 2024 y 2025. Este crecimiento está motivado principalmente por el sector de software de consumo, especialmente los videojuegos, aunque también se observa una expansión en aplicaciones empresariales y de marketing.\cite{Wohlgenannt2020Virtual} \cite{Wedel2020Virtual}
+El mercado global de la Realidad Virtual ha experimentado un crecimiento significativo en los últimos años, impulsado por el desarrollo tecnológico y la aparición de dispositivos más asequibles y accesibles para el consumidor. Se estima que el tamaño del mercado mundial de VR aumentará de 7,3 mil millones de dólares en 2018 a 120,5 mil millones de dólares en 2026, según un informe de Fortune Business Insights, citado en el artículo ``Virtual Reality'' de Isabell Wohlgenannt, Alexander Simons y Stefan Stieglitz \cite{Wohlgenannt2020Virtual}, lo que refleja una tendencia de crecimiento acelerado y sostenido hacia 2024 y 2025. Este crecimiento está motivado principalmente por el sector de software de consumo, especialmente los videojuegos, aunque también se observa una expansión en aplicaciones empresariales y de marketing.\cite{Wohlgenannt2020Virtual} \cite{Wedel2020Virtual}
 
 \subsubsection{Aumento de dispositivos standalone}
 
-La proliferación de dispositivos standalone, como la serie Meta Quest, ha provocado una expansión masiva de este mercado. Estos dispositivos permiten experiencias inmersivas sin necesidad de estar conectados a una PC de alto rendimiento, reduciendo barreras como el costo y la complejidad técnica \cite{Wohlgenannt2020Virtual}\cite{Cummings2022Psychological}\cite{Hennig-Thurau2024EXPRESS:}\cite{Rendevski2022PC}. Los HDM standalone están transformando el acceso a la Realidad Virtual, promoviendo la adopción a gran escala y promoviendo la creación de sistemas leves, como el seguimiento por mano, que optimizan la usabilidad y la experiencia del usuario \cite{Rendevski2022PC}. Para añadir más peso a estos datos, se ha visto, mediante las pruebas de experiencias en el metaverso con estos aparatos, que la intención de uso futuro aumenta, pero que la intención de compra también depende de otros elementos vinculados con la percepción de valor y la experiencia del usuario \cite{Hennig-Thurau2024EXPRESS:}.
+La proliferación de dispositivos standalone, como la serie Meta Quest, ha provocado una expansión masiva de este mercado. Estos dispositivos permiten experiencias inmersivas sin necesidad de estar conectados a una PC de alto rendimiento, reduciendo barreras como el coste y la complejidad técnica \cite{Wohlgenannt2020Virtual}\cite{Cummings2022Psychological}\cite{Hennig-Thurau2024EXPRESS:}\cite{Rendevski2022PC}. Los HDM standalone están transformando el acceso a la Realidad Virtual, promoviendo la adopción a gran escala y promoviendo la creación de sistemas leves, como el seguimiento por mano, que optimizan la usabilidad y la experiencia del usuario \cite{Rendevski2022PC}. Para añadir más peso a estos datos, se ha visto, mediante las pruebas de experiencias en el metaverso con estos aparatos, que la intención de uso futuro aumenta, pero que la intención de compra también depende de otros elementos vinculados con la percepción de valor y la experiencia del usuario \cite{Hennig-Thurau2024EXPRESS:}.
 
 \subsubsection{Factores adicionales y tendencias}
 
@@ -262,66 +263,69 @@ En resumen, el mercado de VR está en una fase de crecimiento acelerado, impulsa
 
 \subsubsection{OpenXR}
 
-Como ha pasado en muchos productos tecnológicos antes, uno de los principales desafíos históricos en el desarrollo de aplicaciones VR y AR ha sido la fragmentación de dispositivos y plataformas. Cada fabricante implementaba sus propias APIs y SDKs, lo que conllevaba hacer muchas versiones de un mismo proyecto para funcionar en cada servicio.
+Como ha pasado en muchos productos tecnológicos anteriormente, uno de los principales desafíos históricos en el desarrollo de aplicaciones VR y AR ha sido la fragmentación de dispositivos y plataformas. Cada fabricante implementaba sus propias APIs y SDKs, lo que conllevaba hacer muchas versiones de un mismo proyecto para funcionar en cada servicio.
 
-Para solucionar esto, el grupo Khronos —organización responsable de estándares como Vulkan y OpenGL—  lanzó en 2019 OpenXR, abierta y gratuita,  para unificar el desarrollo XR y no tener que hacer tantas versiones, una sola valdría para todo. Actualmente, la mayoria de gigantes del ecosistema XR, como Unity, Unreal, Godot, Blender, Valve, Microsoft y muchos otros, ya han adaptado este estándar internamente. \cite{openxr2024}
+Para solucionar esto, el grupo Khronos —organización responsable de estándares como Vulkan y OpenGL— lanzó en 2019 OpenXR, abierta y gratuita, para unificar el desarrollo XR y no tener que hacer tantas versiones; una sola valdría para todo. Actualmente, la mayoría de gigantes del ecosistema XR, como Unity, Unreal, Godot, Blender, Valve, Microsoft y muchos otros, ya han adaptado este estándar internamente. \cite{openxr2024}
 
-Además, al incorporar características de tecnologías avanzadas como hand tracking, renderizado multivista, input dinámico, y espacios anclados, su utilización se convierte en una elección estratégica, incluso para desarrolladores de Assets como este teclado multilingüe, ya que su compatibilidad asegura que el recurso pueda ser empleado de manera sencilla en visores actuales y venideros, sin la necesidad de reconfigurar controladores o ajustes particulares. \cite{openxr2024}
+Además, al incorporar características de tecnologías avanzadas como hand tracking, renderizado multivista, input dinámico y espacios anclados, su utilización se convierte en una elección estratégica, incluso para desarrolladores de Assets como este teclado multilingüe, ya que su compatibilidad asegura que el recurso pueda ser empleado de manera sencilla en visores actuales y venideros, sin la necesidad de reconfigurar controladores o ajustes particulares. \cite{openxr2024}
 
 Desde una perspectiva académica, la normalización sugerida por OpenXR ha sido vista como el elemento esencial para el desarrollo del metaverso y las experiencias XR interoperantes. \cite{nabors2023openxr}
 
 \subsubsection{Tendencia hacia experiencias sin controladores (``controller-free'')}
 
-Otra tendencia tecnológica del VR es el abandono de los mandos físicos en pos de experiencias ``controller-free''. El mayor exponente de este apartado tecnología es la tecnología de hand tracking, explicada anteriormente en el punto \ref{Tec_NUIs} y cuyas ventajas para este proyecto también se han mostrado en el punto \ref{Beneficion_NUIs}.
+Otra tendencia tecnológica del VR es el abandono de los mandos físicos en pos de experiencias ``controller-free''. El mayor exponente de este apartado de tecnología es la tecnología de hand tracking, explicada anteriormente en el punto \ref{Tec_NUIs} y cuyas ventajas para este proyecto también se han mostrado en el punto \ref{Beneficion_NUIs}.
 
-Para aportar más información respecto a este tema y relacionándolo al punto anterior, cabe destacar que gracias a cámaras integradas y modelos de IA, los visores modernos (como las Meta Quest 2 y Quest 3) pueden detectar el movimiento de las manos del usuario en tiempo real, reconociendo gestos como pulsaciones, agarres o desplazamientos.
+Mediante cámaras integradas y sistemas de aprendizaje automático, los visores modernos (como las Meta Quest 2 y Quest 3) capturan el movimiento de las manos del usuario en tiempo real, interpretando gestos como pulsaciones, agarres o desplazamientos.
 
 \section{Selección y justificación de idiomas implementados}
 
 \subsection{Criterios de selección}
 
-Varios factores han sido considerados al elegir los idiomas empleados en este Asset:
+Al seleccionar los idiomas para este Asset, me basé en cuatro criterios principales que equilibraron lo ideal con lo práctico:
 
-\begin{itemize}
-	\item Representatividad geográfica y demográfica: con el objetivo de potenciar el impacto en el mercado, se ha dado prioridad a la inclusión de idiomas con gran cantidad de hablantes y a que abarquen la mayor parte del globo terráqueo.
-	\item Diversidad de sistemas de escritura: se han escogido lenguas que requieran diferentes soluciones gráficas y funcionales, ya que uno de los propósitos del proyecto es investigar la factibilidad de varios alfabetos (latino, árabe, silábico).
-	\item Viabilidad interpretativa: teniendo en consideración mi trayectoria estudiantil y mi escasa capacidad lingüística, se ha dado prioridad a aquellos idiomas cuyo aprendizaje de la teoría de escritura entrara dentro del cronograma establecido.
-	\item Viabilidad técnica: la habilidad técnica individual y la herramienta empleada para el desarrollo del teclado, han jugado un papel crucial en la eliminación o incorporación de distintos idiomas.
-\end{itemize}
+Primero, busqué idiomas con muchos hablantes y amplia distribución geográfica. Quería que el proyecto tuviera el mayor impacto posible en diferentes regiones del mundo.
+
+Segundo, necesitaba variedad en las formas de escribir. Elegí deliberadamente idiomas que usan sistemas de escritura muy diferentes entre sí. Esto me permitiría probar cómo se adapta el teclado a retos técnicos distintos.
+
+Tercero, tuve que considerar mis propios conocimientos. Seleccioné solo idiomas cuyas reglas de escritura podía aprender y entender bien dentro del tiempo disponible para el proyecto.
+
+Por último, evalué cuidadosamente lo que podía lograr con mis habilidades técnicas y las herramientas que tenía. Algunos idiomas prometedores quedaron fuera porque requerían soluciones técnicas que estaban más allá de mis capacidades actuales o de lo que el software podía manejar.
+
+En resumen, busqué un balance entre el alcance global, la variedad técnica, lo que yo podía aprender y lo que podía construir.
 
 \subsubsection{Aclaraciones especiales}
 
-En los siguientes apartados se detallarán todos y cada uno de los idiomas que alguna vez se han planteado e incluso intentado en este proyecto.
+En los siguientes apartados se detallarán todos y cada uno de los idiomas que alguna vez se han planteado e incluso se han intentado desarrollar en este proyecto.
 
-No se mencionará ningún otro idioma que use el mismo teclado que los que se van a nombrar, como por ejemplo el valenciano o catalán, pero esto no restringe su uso si el idioma así pueda usarlo.
+No se mencionará ningún otro idioma que use el mismo teclado que los que se van a nombrar, como por ejemplo el valenciano o catalán, pero esto no restringe su utilización si el idioma así puede emplearlo.
 
 \subsection{Idiomas implementados}
 
 \begin{itemize}
-	\item \textbf{Español}: lengua romance con más de 500 millones de hablantes en el mundo y que utiliza una variante del teclado QWERTY. Seleccionada por ser mi idioma materno y por ello el que tenía mayor facilidad de implementación.
-	\item \textbf{Inglés}: Lengua anglosajona por antonomasia, tiene el mayor uso en el ámbito tecnológico y científico de entre todas las lenguas en estas listas. Utiliza el teclado QWERTY que hace de base de las demás variaciones.
-	\item \textbf{Francés}: Incluido por su presencia en múltiples continentes y por representar una variante del layout AZERTY, lo que implica desafíos específicos en cuanto a disposición de teclas.
+	\item \textbf{Español}: lengua romance con más de 500 millones de hablantes en el mundo y que utiliza una variante del teclado QWERTY. Lo he seleccionado por ser mi idioma materno y, por ello, el que tenía mayor facilidad de implementación.
+	\item \textbf{Inglés}: lengua anglosajona por antonomasia, tiene el mayor uso en el ámbito tecnológico y científico de entre todas las lenguas. Utiliza el teclado QWERTY que hace de base a las demás variaciones.
+	\item \textbf{Francés}: incluido por su presencia en múltiples continentes y por representar una variante del layout AZERTY, lo que implica desafíos específicos en cuanto a disposición de teclas.
 	\item \textbf{Alemán}: Ejemplo del layout QWERTZ, con adaptaciones ortográficas como la ß y umlauts, lo que aporta complejidad a nivel de interfaz.
-	\item \textbf{Griego}: Introduce un alfabeto completamente distinto al latino, lo que permite validar la adaptación del teclado a otros sistemas fonológicos y gráficos.
-	\item \textbf{Ruso}: Sistema cirílico con el layout JCUKEN. Tiene fuerte presencia en Europa del Este y Asia, útil para probar la adaptación a alfabetos de estructura densa y uso frecuente de caracteres exclusivos.
-	\item \textbf{Coreano}: Su inclusión responde al interés por evaluar la capacidad del teclado frente a sistemas de escritura silábicos y de construcción modular como el Hangul y además de ejercer de precedente de la incorporación de lenguas asiáticas.
+	\item \textbf{Griego}: introduce un alfabeto completamente distinto al latino, lo que permite validar la adaptación del teclado a otros sistemas fonológicos y gráficos.
+	\item \textbf{Ruso}: sistema cirílico con el layout JCUKEN. Tiene fuerte presencia en Europa del Este y Asia, útil para probar la adaptación a alfabetos de estructura densa y uso frecuente de caracteres exclusivos.
+	\item \textbf{Coreano}: su inclusión responde al interés por evaluar la capacidad del teclado frente a sistemas de escritura silábicos y de construcción modular como el Hangul, y además ejerce de precedente de la incorporación de lenguas asiáticas.
 \end{itemize}
 
 \subsection{Idiomas descartados y motivos}
 
 \begin{itemize}
-	\item \textbf{Chino}: Mayor exponente de los idiomas asiáticos y idioma con más hablantes nativos del mundo, lo que lo convierte en una elección clara en el caso de querer extender el posible mercado. Este idioma se investigó y se hicieron pruebas técnicas, no obstante, al usar un teclado QWERTY para escribir en pinyin (sistema de escritura que utiliza el alfabeto latino para escribir como se pronuncian las palabras), cosa que luego se traduce a chino mandarín (dialecto más extendido del chino), aparecía el gran problema de que Unity no permite, por el momento, el uso de librerías dedicadas a este propósito, que ya existen en C\# base. La solución pasaba por crear manualmente un archivo o base de datos para poder realizar esta conversión, reto que técnicamente no era complicado pero cuya extensión lo hacía completamente inviable. El chino es un idioma que cuenta con más de 500000 palabras, a esto hay que sumar el hecho de que hay una gran cantidad de palabras que cuentan con la misma fonología que otras, por lo que, al escribir una palabra en pinyin, podían salir hasta 11 coincidencias exactas a elegir.
-	\item \textbf{Japonés}: Idioma de las tierras niponas, que cuenta con tres tipos de escritura distintas, el kanji, de origen chino, el katakana, silabario utilizado para representar palabras que vienen de otro idioma y onomatopeyas, y el hiragana, silabario que se emplea en la escritura de palabras japonesas, partículas y desinencias verbales. Tiene un sistema homólogo con el chino, también utiliza un teclado QWERTY estándar en el que se escribe romanji, que es como el pinyin, pero en este idioma, y se muestran sus homónimos en katakana, hiragana o kanji a elegir. Como con el chino, este idioma se intentó y se descartó por el mismo motivo, la incapacidad de Unity de utilizar librerías que transformaran el romanji y el excesivo trabajo para crear la base de datos.
-	\item \textbf{Árabe}: Este idioma presentaba el mayor aliciente económico en mi proyecto, ya que fui informado por parte de mi tutor de la alta demanda de software por parte de hablantes de este idioma y cuya alternativa, cito textualmente ``moría en el inglés''. No obstante, la extremada complejidad técnica de intentar un idioma, que para empezar se escribe de derecha a izquierda, no existen vocales, que letras presentan grandes cambios dependiendo de que la acompañe y finalizando al hecho de que Unity no está nativamente preparado para estas características, supuso el descartamiento final de este muy a mi pesar.
+	\item \textbf{Chino}: Mayor exponente de los idiomas asiáticos e idioma con más hablantes nativos del mundo, lo que lo convierte en una elección clara en el caso de querer extender el posible mercado. Este idioma se investigó y se hicieron pruebas técnicas; no obstante, al usar un teclado QWERTY para escribir en pinyin (sistema de escritura que utiliza el alfabeto latino para caligrafiar como se pronuncian las palabras), cosa que luego se traduce a chino mandarín (dialecto más extendido del chino), aparecía el gran problema de que Unity no permite, por el momento, el uso de librerías dedicadas a este propósito, que ya existen en C\# base. La solución pasaba por crear manualmente un archivo o base de datos para poder realizar esta conversión, reto que técnicamente no era complicado, pero cuya extensión lo hacía completamente inviable. El chino es un idioma que cuenta con más de 500000 palabras; a esto hay que sumar el hecho de que hay una gran cantidad de términos que cuentan con la misma fonología que otros, por lo que, al escribir una palabra en pinyin, podían salir hasta 11 coincidencias exactas a elegir.
+	\item \textbf{Japonés}: Idioma de las tierras niponas, que cuenta con tres tipos de escritura distintas: el kanji, de origen chino; el katakana, silabario utilizado para representar palabras que vienen de otro idioma y onomatopeyas; y el hiragana, silabario que se emplea en la escritura de palabras japonesas, partículas y desinencias verbales. Tiene un sistema homólogo con el chino; también utiliza un teclado QWERTY estándar en el que se escribe romanji, que es como el pinyin, pero en este idioma, y se muestran sus homónimos en katakana, hiragana o kanji a elegir. Como con el chino, este idioma se intentó y se descartó por el mismo motivo: la incapacidad de Unity de utilizar librerías que transformaran el romanji y el excesivo trabajo para crear la base de datos.
+	\item \textbf{Árabe}: Este idioma presentaba el mayor aliciente económico en mi proyecto, ya que fui informado por parte de mi tutor de la alta demanda de software por parte de hablantes de este idioma y cuya alternativa, cito textualmente, ``moría en el inglés''. No obstante, la extremada complejidad técnica de intentar un idioma que, para empezar, se escribe de derecha a izquierda, no tiene vocales, cuyas letras presentan grandes cambios dependiendo de que las acompañe y finalizando con el hecho de que Unity no está nativamente preparado para estas características, supuso, muy a mi pesar, el descartamiento final de este.
 \end{itemize}
 
 \subsection{Retos técnicos en la implementación}
 
 \begin{itemize}
-	\item \textbf{Soporte tipográfico y codificación Unicode}: Al contar diversos idiomas no latinos como el ruso o el coreano, hubo que jugar con el uso de Unicode y adaptar la salida del TextMeshPro para que se renderizaran correctamente los caracteres.
-	\item \textbf{Diseño y disposición del teclado}: Se han tenido que adaptar los layouts de cada teclado, cambaindo la posición y cantiad de teclas, a su idioma correspondiente.
-	\item \textbf{Reconocimiento de entradas con hand tracking}: Al utilizar esta tecnología, fué necesario el trabajo  de la correcta identificación de los toques para mantener la precisión.
-	\item \textbf{Gestión del ajuste del idioma y del tipo de teclado}: Se ha desarrollado una interfaz que simplifica la transición de idiomas o de tipos de teclado, sin interferir con la experiencia del usuario ni dificultar su inmersión.
+	\item \textbf{Soporte tipográfico y codificación Unicode}: Al contar con diversos idiomas no latinos como el ruso o el coreano, hubo que jugar con el uso de Unicode y adaptar la salida del TextMeshPro para que se renderizaran correctamente los caracteres.
+	\item \textbf{Diseño y disposición del teclado}: Se han tenido que adaptar los layouts de cada teclado, cambiando la posición y cantidad de teclas, a su idioma correspondiente.
+	\item \textbf{Reconocimiento de entradas con hand tracking}: Al utilizar esta tecnología, fue necesario el trabajo de la correcta identificación de los toques para mantener la precisión.
+	\item \textbf{Gestión del ajuste del idioma y del tipo de teclado}: Se ha desarrollado una interfaz que simplifica la transición de idiomas o de tipos de teclado, sin entorpecer con la experiencia del usuario ni dificultar su inmersión.
 	\item \textbf{Creación de sílabas del Hangul}: Dado que el coreano funciona con sílabas en vez de palabras, se ha requerido la implementación de un algoritmo que automatiza la transformación de las sílabas durante la escritura.
 \end{itemize}
 

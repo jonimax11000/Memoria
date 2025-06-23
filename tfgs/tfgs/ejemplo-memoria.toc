@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.3.2}Las dificultades identificadas en estos primeros modelos}{25}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Nuevas sugerencias para incorporar texto en Realidad Virtual}{25}{subsection.2.3.3}%
 \contentsline {subsubsection}{Teclados virtuales flotantes}{25}{section*.2}%
-\contentsline {subsubsection}{Predicción de texto y autocorrección}{26}{section*.3}%
+\contentsline {subsubsection}{Predicción de texto y autocorrección}{25}{section*.3}%
 \contentsline {subsubsection}{Combinación con comandos de voz}{26}{section*.4}%
 \contentsline {subsubsection}{Resultados de estudios recientes}{26}{section*.5}%
 \contentsline {section}{\numberline {2.4}Necesidad de soporte multilingüe en VR}{26}{section.2.4}%
@@ -31,7 +31,7 @@
 \contentsline {subsubsection}{Body Tracking}{30}{section*.9}%
 \contentsline {subsection}{\numberline {2.5.3}Implementación de NUI en este proyecto}{30}{subsection.2.5.3}%
 \contentsline {subsection}{\numberline {2.5.4}Beneficios de usar NUI en teclados virtuales}{30}{subsection.2.5.4}%
-\contentsline {subsubsection}{Mayor inmersión en entornos VR}{31}{section*.10}%
+\contentsline {subsubsection}{Mayor inmersión en entornos VR}{30}{section*.10}%
 \contentsline {subsubsection}{Mayor accesibilidad}{31}{section*.11}%
 \contentsline {subsubsection}{Simulación más realista}{31}{section*.12}%
 \contentsline {subsubsection}{Conclusión}{31}{section*.13}%
@@ -63,13 +63,14 @@
 \contentsline {chapter}{\numberline {3}Requisitos, especificaciones, coste, riesgos, viabilidad}{39}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Requisitos}{39}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Especificaciones}{39}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Costes}{41}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Riesgos}{42}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Viabilidad}{44}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Viabilidad técnica}{44}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Viabilidad económica}{45}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Viabilidad temporal}{46}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Conclusión sobre la viabilidad}{46}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.3}Especificaciones}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Costes}{41}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Riesgos}{42}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Viabilidad}{44}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Viabilidad técnica}{44}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Viabilidad económica}{45}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Viabilidad temporal}{45}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Conclusión sobre la viabilidad}{46}{subsection.3.6.4}%
 \contentsline {chapter}{\numberline {4}Análisis}{47}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introducción}{47}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Diagrama de casos de uso}{47}{section.4.2}%
@@ -132,27 +133,35 @@
 \contentsline {subsubsection}{Primer fragmento}{67}{section*.59}%
 \contentsline {subsubsection}{Segundo fragmento}{68}{section*.60}%
 \contentsline {subsection}{\numberline {5.4.7}Otras funciones del keyboard}{69}{subsection.5.4.7}%
-\contentsline {subsection}{\numberline {5.4.8}Inicio del programa}{69}{subsection.5.4.8}%
-\contentsline {subsubsection}{Conjunto}{69}{section*.61}%
-\contentsline {subsubsection}{KeyboardControlator}{70}{section*.62}%
-\contentsline {subsubsection}{KeyboardButton}{70}{section*.63}%
+\contentsline {subsection}{\numberline {5.4.8}Inicio del programa}{70}{subsection.5.4.8}%
+\contentsline {subsubsection}{Conjunto}{70}{section*.61}%
+\contentsline {subsubsection}{KeyboardControlator}{71}{section*.62}%
+\contentsline {subsubsection}{KeyboardButton}{71}{section*.63}%
 \contentsline {chapter}{\numberline {6}Implementación y pruebas}{73}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Implementación}{73}{section.6.1}%
 \contentsline {subsection}{\numberline {6.1.1}Tecnologías y herramientas}{73}{subsection.6.1.1}%
 \contentsline {subsection}{\numberline {6.1.2}Desafíos técnicos específicos}{73}{subsection.6.1.2}%
 \contentsline {subsubsection}{Soporte de carácteres complejos}{73}{section*.64}%
 \contentsline {subsubsection}{silabas del Hangul}{74}{section*.65}%
-\contentsline {section}{\numberline {6.2}Pruebas funcionales}{75}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Pruebas de rendimiento}{75}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Pruebas de usabilidad}{75}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Metodología SUS}{75}{subsection.6.4.1}%
-\contentsline {subsubsection}{NPS}{76}{section*.66}%
-\contentsline {chapter}{\numberline {7}Conclusiones}{79}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Revisión de costes}{79}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Conclusiones}{79}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Trabajo futuro}{79}{section.7.3}%
-\contentsline {chapter}{\numberline {A}Apéndice}{81}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Apéndice del capítulo 3.2}{81}{section.Alph1.1}%
-\contentsline {section}{\numberline {A.2}Apéndice del capítulo 5.3}{81}{section.Alph1.2}%
-\contentsline {section}{\numberline {A.3}Apéndice del capítulo 6}{83}{section.Alph1.3}%
-\contentsline {chapter}{Bibliografía}{84}{figure.Alph1.7}%
+\contentsline {section}{\numberline {6.2}Validando el sistema: Mi experiencia práctica}{75}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Pruebas de rendimiento}{76}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Lo que aprendí en el camino}{76}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Pruebas de usabilidad}{76}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Metodología SUS}{76}{subsection.6.5.1}%
+\contentsline {subsubsection}{Análisis del Net Promoter Score (NPS)}{78}{section*.66}%
+\contentsline {subsection}{\numberline {6.5.2}Video de demostración}{79}{subsection.6.5.2}%
+\contentsline {chapter}{\numberline {7}Conclusiones}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Revisión de costes}{81}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Tiempo: Mi recurso más gastado}{81}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}La batalla de los idiomas}{81}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}Recursos: Mi equipo sufriendo conmigo}{81}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}Conclusiones}{82}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Triunfos técnicos}{82}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Sorpresas agradables}{82}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Lecciones aprendidas}{82}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Trabajo futuro}{82}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Apéndice}{85}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Apéndice del capítulo 3.2}{85}{section.Alph1.1}%
+\contentsline {section}{\numberline {A.2}Apéndice del capítulo 5.3}{85}{section.Alph1.2}%
+\contentsline {section}{\numberline {A.3}Apéndice del capítulo 6}{87}{section.Alph1.3}%
+\contentsline {chapter}{Bibliografía}{88}{figure.Alph1.7}%

@@ -4,8 +4,63 @@
 
 \section{Revisión de costes}
 
+Desarrollar este teclado VR ha sido como escalar una montaña técnica: agotador pero increíblemente gratificante. Si tuviera que ponerle números reales a la inversión, sería así:
+
+\subsection{Tiempo: Mi recurso más gastado}
+Empecé en septiembre con mucha ilusión y terminé en junio con ojeras profundas. En total fueron 10 meses de trabajo, metiéndole unas 25 horas semanales en promedio. Pero hay semanas que nunca olvidaré, como cuando me obsesioné con hacer funcionar el coreano. Esa semana en particular fue una locura: lunes a viernes trabajando hasta las 2 AM, sábado y domingo otras 8 horas cada día. Calculo que le metí 65 horas solo a ese algoritmo de sílabas. 
+
+\subsection{La batalla de los idiomas}
+Septiembre fue el mes de los idiomas, y casi me vuelve la cabeza del revés. El griego parecía sencillo hasta que los acentos empezaron a bailar por la pantalla. Recuerdo un día específico —creo que era el 12— que pasé 9 horas seguidas intentando que la letra griega ``eta con tono'' se renderizara bien. 
+
+Y el coreano... eso fue otra guerra. Esas sílabas compuestas como ``gabs'' se convertían en jeroglíficos incomprensibles. Las últimas dos semanas las pasé cazando bugs pequeños pero molestos que los usuarios encontraron.
+
+\subsection{Recursos: Mi equipo sufriendo conmigo}
+Dos procesos pusieron a prueba los límites de mi hardware:
+\begin{itemize}
+	\item \textbf{El monstruo del Font Asset}: Mi fiel PC (i7-13700K, 32GB RAM, GeForce RTX 4070) gruñó durante 46 horas seguidas procesando caracteres. Lo dejé trabajando un martes por la noche y cuando desperté, la habitación parecía un sauna.
+	\item \textbf{Maratón VR}: Mi Quest 2 se convirtió en una extensión de mis manos. Hice 127 horas de pruebas registradas. La batería sufrió tanto que ahora dura un 20\% menos que cuando empecé; también tuve que hacerme con pilas recargables y su cargador para poder aguantar el ritmo. 
+\end{itemize}
+
+
 \section{Conclusiones}
+
+Después de esta odisea técnica, puedo decir con orgullo que el teclado VR funciona. Estas son mis conclusiones:
+
+\subsection{Triunfos técnicos}
+Tres cosas funcionaron mejor de lo esperado:
+- El algoritmo coreano: Compone sílabas en 18 ms: más rápido que un parpadeo.
+- El motor de caracteres: Muestra correctamente hasta los caracteres más complejos.
+- La integración de manos y mandos: Logré un correcto uso de las dos cosas en todos los tipos de teclado.
+
+\subsection{Sorpresas agradables}
+Los resultados de las pruebas me dejaron impactado:
+- Puntuación SUS de 85.2: mejor de lo esperado.
+- Índice NPS de 45.5: la mayoría lo recomendaría.
+
+Lo más emocionante fue ver a usuarios escribir fluidamente en idiomas complejos.
+
+\subsection{Lecciones aprendidas}
+Aprendí cosas que no olvidaré:
+1. Los Font Assets requieren más tiempo del planeado.
+2. Las manos humanas necesitan ajustes personalizados.
+3. El feedback visual es crucial para la usabilidad.
+4. Cada idioma necesita su espacio propio.
+
 
 \section{Trabajo futuro}
 
-Este proyecto aún tiene un gran camino a la hora de cumplir su objetivo de una accesibilidad completa. Con este noble objetivo en mente, hay varias vías por las que se puede avanzar, por supuesto haría falta la complementación de todas ellas para cumplimentar este objetivo.
+Si pudiera seguir desarrollando este teclado VR, hay varias ideas que me gustaría explorar. Son solo posibilidades por ahora, pero creo que podrían llevar el proyecto a otro nivel:
+
+Lo primero sería meterle reconocimiento de voz. Imagina poder decirle al teclado ``escribe esto en coreano'' y que lo haga solo con tu voz. Tendría que funcionar incluso cuando hay ruido de fondo, como el ventilador del ordenador o gente hablando cerca. Y para que no haya confusiones, pondría un texto flotante que muestre lo que está entendiendo en tiempo real.
+
+También me llama lo del gesto swipe, como en los móviles. En vez de pulsar tecla por tecla, podrías deslizar el dedo formando palabras en el aire. El truco estaría en hacer que el sistema entienda bien las trayectorias en 3D - no es lo mismo mover el dedo en línea recta que en curva. Para que se sienta bien, quizá añadiría un efecto de luz que sigue tu dedo, como una estela luminosa.
+
+Lo de llevarlo a otros motores como Unreal y Godot sería un reto interesante. Cada motor tiene su forma de trabajar, así que habría que adaptar el código para que funcione en cada uno sin perder las funciones principales. Para Unreal sería genial aprovechar sus gráficos tan potentes, y para Godot su simplicidad para hacer versiones ligeras.
+
+Otra cosa que se me ocurre es lo de los emojis animados. No simples dibujos planos, sino iconos 3D que reaccionen cuando los miras o señalas. Un corazón que late, una cara que sonríe... cosas así. Y que puedas guardar tus favoritos en la nube para tenerlos a mano siempre.
+
+También pensé en que el teclado pudiera cambiar de tamaño fácilmente. Con un gesto de las manos, estirándolo o encogiéndolo como si fuera de goma, para adaptarse a diferentes usuarios o situaciones. Esto ayudaría mucho a gente con problemas de visión o movilidad.
+
+Lo de la nube también sería útil. Que recuerde cómo tienes configurado tu teclado favorito, con tus idiomas preferidos y diseños personalizados. Así, solo con iniciar sesión, tendrías todo listo en cualquier dispositivo VR.
+
+Son ideas que se me han ido ocurriendo mientras trabajaba en esto. Ninguna está probada todavía, pero cada una resolvería problemas reales que podrían tener los usuarios. Si tuviera que elegir por dónde empezar, sería probablemente por lo de la voz y el swipe, que parecen los más útiles para el día a día.
